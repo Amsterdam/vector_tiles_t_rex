@@ -4,26 +4,26 @@ T-REX vector tile creation
 
 https://t-rex.tileserver.ch/
 
-1 For now we start by importing the latest version of the basiskaart db 
+- For now we start by importing the latest version of the basiskaart db 
 
-docker-compose up -d database  
-docker-compose exec database update-db.sh basiskaart
+`docker-compose up -d database`  
+`docker-compose exec database update-db.sh basiskaart`
 
-2 Create the mviews which contains the BGT en KBK10 and KBK50 data, first login in database
+- Create the mviews which contains the BGT en KBK10 and KBK50 data, first login in database
 
-docker exec -it vector_tiles_t_rex_database_1 bash
+`docker exec -it vector_tiles_t_rex_database_1 bash`
 
-3 secondly, create mviews
-psql -U basiskaart -W -d basiskaart -f /database/create_all_mviews.sql
+- secondly, create mviews
+`psql -U [basiskaartuser] -d basiskaart -f /database/create_all_mviews.sql`
 
-4 To generate a new version for config.toml do:
+- To generate a new version for config.toml do:
 
-docker-compose run t_rex genconfig --dbconn postgresql://basiskaart:insecure@database/basiskaart > config/config.toml.template
+`docker-compose run t_rex genconfig --dbconn postgresql://basiskaart:insecure@database/basiskaart > config/config.toml.template`
 
-5 Run T-Rex tileserver: 
-docker-compose run -p 6767:6767 t_rex serve --config  /var/config/config.toml
+- Run T-Rex tileserver: 
+`docker-compose run -p 6767:6767 t_rex serve --config  /var/config/config.toml`
 
-6 Then go to :
+- Then go to :
  
  `http://localhost:6767/`
  
