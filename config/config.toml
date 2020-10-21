@@ -845,7 +845,10 @@ query_limit = 1000
 bind = "0.0.0.0"
 port = 6767
 
-#[[webserver.static]]
-#path = "/static"
-#dir = "./public/"
+[cache.file]
+base = "/var/cache/mvtcache"
+
+[[webserver.static]]
+path = "/static"
+dir = "/static"
 

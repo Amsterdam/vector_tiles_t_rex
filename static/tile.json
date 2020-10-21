@@ -1,0 +1,74 @@
+{
+    "tilejson": "2.2.0",
+    "name": "amsterdam",
+    "description": "",
+    "version": "1.0.2",
+    "attribution": "",
+    "tiles": [
+        "http://localhost:6767/waterdeel_vlak0/{z}/{x}/{y}.pbf"
+    ],
+    "minzoom": 0,
+    "maxzoom": 16,
+    "center": [
+        52.373012,
+        4.891438,
+        16
+    ],
+    "vector_layers": [
+        {
+            "maxzoom": 22,
+            "minzoom": 0,
+            "id": "boundaries"
+        },
+        {
+            "maxzoom": 22,
+            "minzoom": 0,
+            "id": "infrastructure"
+        },
+        {
+            "maxzoom": 22,
+            "minzoom": 0,
+            "id": "natural"
+        },
+        {
+            "maxzoom": 22,
+            "minzoom": 0,
+            "id": "agricultural"
+        },
+        {
+            "maxzoom": 22,
+            "minzoom": 0,
+            "id": "waterdeel_vlak0"
+        },
+        {
+            "maxzoom": 22,
+            "minzoom": 0,
+            "id": "waterline"
+        },
+        {
+            "maxzoom": 22,
+            "minzoom": 0,
+            "id": "builtup"
+        },
+        {
+            "maxzoom": 22,
+            "minzoom": 0,
+            "id": "roads"
+        },
+        {
+            "maxzoom": 22,
+            "minzoom": 0,
+            "id": "railways"
+        },
+        {
+            "maxzoom": 22,
+            "minzoom": 0,
+            "id": "labels"
+        },
+        {
+            "maxzoom": 22,
+            "minzoom": 0,
+            "id": "pois"
+        }
+    ]
+}
