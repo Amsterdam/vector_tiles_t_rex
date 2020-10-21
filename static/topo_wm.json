@@ -1,0 +1,38 @@
+{
+    "version": 8,
+    "name": "Example",
+    "glyphs": "https://ta.webmapper.nl/wm/glyphs/{fontstack}/{range}.pbf",
+    "sprite": "https://ta.webmapper.nl/wm/sprite",
+    "sources": {
+        "amsterdam": {
+            "type": "vector",
+            "url": "http://localhost:6767/static/tile_water.json"
+        },
+        "gebouwen": {
+            "type": "vector",
+            "url": "http://localhost:6767/static/tile_gebouw.json"
+
+}
+    },
+    "layers": [
+        {
+            "id": "water",
+            "source":"amsterdam",
+            "source-layer":"waterdeel_vlak0",
+            "type": "fill",
+            "paint": {
+                "fill-color": "#6d87a0"
+            }
+        },
+        {
+            "id": "buildings",
+            "source": "gebouwen",
+            "source-layer": "gebouw_vlak0",
+            "type": "fill",
+            "paint": {
+                "fill-color": "#e07b39",
+                "fill-outline-color": "#ff9154"
+            }
+        }
+    ]
+}

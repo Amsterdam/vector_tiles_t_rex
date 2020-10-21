@@ -25,4 +25,6 @@ services:
       - "$PWD/data/in:/var/data/in:ro"
       - "$PWD/data/out:/var/data/out"
       - "$PWD/config:/var/config:ro"
+      - "$PWD/cache:/var/cache/mvtcache"
+      - "$PWD/static:/static"
 
