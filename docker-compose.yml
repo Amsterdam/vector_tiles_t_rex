@@ -2,6 +2,8 @@ version: "3.0"
 services:
   database:
     image: amsterdam/postgres11
+    volumes:
+      - "$PWD/config/database:/database"
     ports:
       - "5402:5432"
     environment:
