@@ -6,7 +6,7 @@
     "sources": {
         "amsterdam": {
             "type": "vector",
-            "url": "http://localhost:6767/static/tile.json"
+            "url": "http://localhost:6767/static/tile_water.json"
         },
         "gebouwen": {
             "type": "vector",
