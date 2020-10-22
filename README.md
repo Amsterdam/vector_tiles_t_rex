@@ -23,6 +23,10 @@ https://t-rex.tileserver.ch/
 - Run T-Rex tileserver: 
 `docker-compose run -p 6767:6767 t_rex serve --config  /var/config/config.toml`
 
+or to use the new mview
+
+`docker-compose run -p 6767:6767 t_rex serve --config  /var/config/topo_wm.tomls` 
+
 - Then go to :
  
  `http://localhost:6767/`
