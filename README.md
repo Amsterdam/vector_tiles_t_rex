@@ -9,12 +9,10 @@ https://t-rex.tileserver.ch/
 `docker-compose up -d database`  
 `docker-compose exec database update-db.sh basiskaart`
 
-- Create the mviews which contains the BGT en KBK10 and KBK50 data, first login in database
+- Create the mviews which contains the BGT en KBK10 and KBK50 data, run from the repro root dir
 
-`docker exec -it vector_tiles_t_rex_database_1 bash`
+`docker exec -it vector_tiles_t_rex_database_1 bash ``psql -h localhost -p5402 -U [basiskaartuser] -d basiskaart -f ./config/database/create_all_mviews.sql``
 
-- secondly, create mviews
-`psql -U [basiskaartuser] -d basiskaart -f /database/create_all_mviews.sql`
 
 - To generate a new version for config.toml do:
 
