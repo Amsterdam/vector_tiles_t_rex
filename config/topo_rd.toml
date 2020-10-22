@@ -12,7 +12,7 @@ default = true
 predefined = "web_mercator"
 
 [[tileset]]
-name = "bgt_vw_gebouw_vlak"
+name = "bgt_vw"
 extent = [4.63974, 52.25158, 5.10768, 52.50593]
 [[tileset.layer]]
 name = "bgt_vw_gebouw_vlak"
@@ -27,8 +27,6 @@ query_limit = 1000
 #[[tileset.layer.query]]
 #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_gebouw_vlak WHERE geometrie && !bbox!"""
 
-[[tileset]]
-name = "bgt_vw_inrichtingselement_lijn"
 extent = [4.63970, 52.25015, 5.11899, 52.50827]
 [[tileset.layer]]
 name = "bgt_vw_inrichtingselement_lijn"
@@ -43,8 +41,6 @@ query_limit = 1000
 #[[tileset.layer.query]]
 #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_inrichtingselement_lijn WHERE geometrie && !bbox!"""
 
-[[tileset]]
-name = "bgt_vw_inrichtingselement_punt"
 extent = [4.64004, 52.26967, 5.10734, 52.50536]
 [[tileset.layer]]
 name = "bgt_vw_inrichtingselement_punt"
@@ -59,9 +55,6 @@ query_limit = 1000
 #[[tileset.layer.query]]
 #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_inrichtingselement_punt WHERE geometrie && !bbox!"""
 
-[[tileset]]
-name = "bgt_vw_inrichtingselement_vlak"
-#extent = [-180.0,-90.0,180.0,90.0]
 [[tileset.layer]]
 name = "bgt_vw_inrichtingselement_vlak"
 table_name = "bgt.bgt_vw_inrichtingselement_vlak"
@@ -75,9 +68,6 @@ query_limit = 1000
 #[[tileset.layer.query]]
 #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_inrichtingselement_vlak WHERE geometrie && !bbox!"""
 
-[[tileset]]
-name = "bgt_vw_spoor_lijn"
-extent = [4.30618, 52.03337, 5.75714, 52.71182]
 [[tileset.layer]]
 name = "bgt_vw_spoor_lijn"
 table_name = "bgt.bgt_vw_spoor_lijn"
@@ -91,9 +81,6 @@ query_limit = 1000
 #[[tileset.layer.query]]
 #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_spoor_lijn WHERE geometrie && !bbox!"""
 
-[[tileset]]
-name = "bgt_vw_terreindeel_vlak"
-extent = [4.63614, 52.24241, 5.13124, 52.50910]
 [[tileset.layer]]
 name = "bgt_vw_terreindeel_vlak"
 table_name = "bgt.bgt_vw_terreindeel_vlak"
@@ -107,9 +94,6 @@ query_limit = 1000
 #[[tileset.layer.query]]
 #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_terreindeel_vlak WHERE geometrie && !bbox!"""
 
-[[tileset]]
-name = "bgt_vw_waterdeel_lijn"
-extent = [4.29422, 52.03326, 5.75714, 52.71182]
 [[tileset.layer]]
 name = "bgt_vw_waterdeel_lijn"
 table_name = "bgt.bgt_vw_waterdeel_lijn"
@@ -123,9 +107,6 @@ query_limit = 1000
 #[[tileset.layer.query]]
 #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_waterdeel_lijn WHERE geometrie && !bbox!"""
 
-[[tileset]]
-name = "bgt_vw_waterdeel_vlak"
-extent = [4.29422, 52.03326, 5.75714, 52.71182]
 [[tileset.layer]]
 name = "bgt_vw_waterdeel_vlak"
 table_name = "bgt.bgt_vw_waterdeel_vlak"
@@ -139,9 +120,6 @@ query_limit = 1000
 #[[tileset.layer.query]]
 #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_waterdeel_vlak WHERE geometrie && !bbox!"""
 
-[[tileset]]
-name = "bgt_vw_wegdeel_lijn"
-extent = [4.29422, 52.03326, 5.75714, 52.71182]
 [[tileset.layer]]
 name = "bgt_vw_wegdeel_lijn"
 table_name = "bgt.bgt_vw_wegdeel_lijn"
@@ -155,9 +133,6 @@ query_limit = 1000
 #[[tileset.layer.query]]
 #sql = """SELECT geom,identificatie_lokaalid::TEXT,type,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_lijn WHERE geom && !bbox!"""
 
-[[tileset]]
-name = "bgt_vw_wegdeel_vlak"
-extent = [4.58565, 52.03560, 5.75714, 52.71182]
 [[tileset.layer]]
 name = "bgt_vw_wegdeel_vlak"
 table_name = "bgt.bgt_vw_wegdeel_vlak"
