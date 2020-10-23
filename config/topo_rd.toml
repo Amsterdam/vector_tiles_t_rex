@@ -8,12 +8,21 @@ name = "dbconn"
 default = true
 
 
-[grid]
-predefined = "web_mercator"
+[grid.user]
+width = 256
+height = 256
+extent = { minx = -285401.92, miny = 22598.080, maxx = 595401.92, maxy = 903401.92 }
+srid = 28992
+units = "m"
+resolutions = [3440.64,1720.32,860.16,430.08,215.04,107.52,53.76,26.88,13.44,6.72,3.36,1.68,0.84,0.42,0.21]
+origin = "TopLeft"
 
 [[tileset]]
 name = "bgt_vw"
-extent = [4.63974, 52.25158, 5.10768, 52.50593]
+extent = [104000,474000,136000,502100]
+minzoom = 0
+maxzoom = 14
+
 [[tileset.layer]]
 name = "bgt_vw_gebouw_vlak"
 table_name = "bgt.bgt_vw_gebouw_vlak"
