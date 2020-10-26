@@ -9,8 +9,8 @@ AS SELECT
     "BGTPLUS_OSDG_damwand".geometrie,
     "BGTPLUS_OSDG_damwand".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_OSDG_damwand"
   WHERE 1=1
 UNION
@@ -20,8 +20,8 @@ UNION
     "BGTPLUS_OSDG_geluidsscherm".geometrie,
     "BGTPLUS_OSDG_geluidsscherm".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_OSDG_geluidsscherm"
   WHERE 1=1
 UNION
@@ -31,8 +31,8 @@ UNION
     "BGTPLUS_OSDG_hek".geometrie,
     "BGTPLUS_OSDG_hek".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_OSDG_hek"
   WHERE 1=1
 UNION
@@ -42,8 +42,8 @@ UNION
     "BGTPLUS_OSDG_kademuur_L".geometrie,
     "BGTPLUS_OSDG_kademuur_L".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_OSDG_kademuur_L"
   WHERE 1=1
 UNION
@@ -53,8 +53,8 @@ UNION
     "BGTPLUS_OSDG_muur_L".geometrie,
     "BGTPLUS_OSDG_muur_L".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_OSDG_muur_L"
   WHERE 1=1
 UNION
@@ -64,8 +64,8 @@ UNION
     "BGTPLUS_OSDG_walbescherming".geometrie,
     "BGTPLUS_OSDG_walbescherming".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_OSDG_walbescherming"
   WHERE 1=1
 UNION
@@ -75,8 +75,8 @@ UNION
     "BGTPLUS_SDG_draadraster".geometrie,
     "BGTPLUS_SDG_draadraster".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_SDG_draadraster"
   WHERE 1=1
 UNION
@@ -86,8 +86,8 @@ UNION
     "BGTPLUS_SDG_faunaraster".geometrie,
     "BGTPLUS_SDG_faunaraster".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_SDG_faunaraster"
   WHERE 1=1
 UNION
@@ -97,8 +97,8 @@ UNION
     "BGTPLUS_VGT_haag_L".geometrie,
     "BGTPLUS_VGT_haag_L".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_VGT_haag_L"
   WHERE 1=1
 UNION
@@ -108,8 +108,8 @@ UNION
     "BGTPLUS_WDI_geleidewerk".geometrie,
     "BGTPLUS_WDI_geleidewerk".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_WDI_geleidewerk"
   WHERE 1=1
 UNION
@@ -119,8 +119,8 @@ UNION
     "BGTPLUS_WDI_remmingswerk".geometrie,
     "BGTPLUS_WDI_remmingswerk".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_WDI_remmingswerk"
   WHERE 1=1
 UNION
@@ -130,8 +130,8 @@ UNION
     "BGTPLUS_WGI_balustrade".geometrie,
     "BGTPLUS_WGI_balustrade".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_WGI_balustrade"
   WHERE 1=1
 UNION
@@ -141,8 +141,8 @@ UNION
     "BGTPLUS_WGI_geleideconstructie_L".geometrie,
     "BGTPLUS_WGI_geleideconstructie_L".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_WGI_geleideconstructie_L"
   WHERE 1=1
 UNION
@@ -152,8 +152,8 @@ UNION
     "BGTPLUS_WGI_rooster_L".geometrie,
     "BGTPLUS_WGI_rooster_L".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_WGI_rooster_L"
   WHERE 1=1
 UNION
@@ -163,8 +163,8 @@ UNION
     "BGTPLUS_WGI_wildrooster_L".geometrie,
     "BGTPLUS_WGI_wildrooster_L".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_WGI_wildrooster_L"
   WHERE 1=1
 UNION
@@ -174,8 +174,8 @@ UNION
     "BGT_KDL_stuw_L".geometrie,
     "BGT_KDL_stuw_L".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_KDL_stuw_L"
   WHERE 1=1
 UNION
@@ -185,8 +185,8 @@ UNION
     "BGT_SDG_damwand".geometrie,
     "BGT_SDG_damwand".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_SDG_damwand"
   WHERE 1=1
 UNION
@@ -196,8 +196,8 @@ UNION
     "BGT_SDG_geluidsscherm".geometrie,
     "BGT_SDG_geluidsscherm".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_SDG_geluidsscherm"
   WHERE 1=1
 UNION
@@ -207,8 +207,8 @@ UNION
     "BGT_SDG_hek".geometrie,
     "BGT_SDG_hek".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_SDG_hek"
   WHERE 1=1
 UNION
@@ -218,8 +218,8 @@ UNION
     "BGT_SDG_kademuur_L".geometrie,
     "BGT_SDG_kademuur_L".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_SDG_kademuur_L"
   WHERE 1=1
 UNION
@@ -229,8 +229,8 @@ UNION
     "BGT_SDG_muur_L".geometrie,
     "BGT_SDG_muur_L".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_SDG_muur_L"
   WHERE 1=1
 UNION
@@ -240,8 +240,8 @@ UNION
     "BGT_SDG_walbescherming".geometrie,
     "BGT_SDG_walbescherming".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_SDG_walbescherming"
   WHERE 1=1
 UNION
@@ -251,8 +251,8 @@ UNION
     "BGTPLUS_KDL_onbekend_L".geometrie,
     "BGTPLUS_KDL_onbekend_L".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_KDL_onbekend_L"
   WHERE 1=1
 UNION
@@ -262,8 +262,8 @@ UNION
     "BGTPLUS_SDG_onbekend_L".geometrie,
     "BGTPLUS_SDG_onbekend_L".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_SDG_onbekend_L"
   WHERE 1=1
 UNION
@@ -273,8 +273,8 @@ UNION
     "BGTPLUS_VGT_onbekend_L".geometrie,
     "BGTPLUS_VGT_onbekend_L".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_VGT_onbekend_L"
   WHERE 1=1
 UNION
@@ -284,8 +284,8 @@ UNION
     "BGTPLUS_WGI_lijnafwatering".geometrie,
     "BGTPLUS_WGI_lijnafwatering".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_WGI_lijnafwatering"
   WHERE 1=1
 UNION
@@ -295,8 +295,8 @@ UNION
     "BGTPLUS_WGI_molgoot".geometrie,
     "BGTPLUS_WGI_molgoot".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_WGI_molgoot"
   WHERE 1=1
 
@@ -308,8 +308,8 @@ UNION
     "WDL_waterbassin".geom, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
   FROM kbk10."WDL_waterbassin"
  UNION 
   SELECT
@@ -318,8 +318,8 @@ UNION
     "WDL_smal_water_3_tot_6m".geom, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
   FROM kbk10."WDL_smal_water_3_tot_6m"
  UNION 
   SELECT
@@ -328,8 +328,8 @@ UNION
     "WDL_smal_water_tot_3m".geom, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
   FROM kbk10."WDL_smal_water_tot_3m"
  UNION 
   SELECT
@@ -338,8 +338,8 @@ UNION
     "KRT_tunnelcontour".geom, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
   FROM kbk10."KRT_tunnelcontour"
  UNION 
   SELECT
@@ -348,8 +348,8 @@ UNION
     "IRT_aanlegsteiger_smal".geom, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
   FROM kbk10."IRT_aanlegsteiger_smal"
 
 WITH DATA;

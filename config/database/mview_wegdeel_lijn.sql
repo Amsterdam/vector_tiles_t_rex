@@ -11,8 +11,8 @@ TABLESPACE pg_default AS
         "WGL_smalle_weg".geom,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
     from
         kbk10."WGL_smalle_weg"
     where 1 = 1
@@ -25,8 +25,8 @@ UNION
         "WGL_straat_in_tunnel".geom,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	6  as minzoom, 
- 	 	8  as maxzoom
+ 	 	NULL::int  as minzoom, 
+ 	 	12 as maxzoom
     FROM kbk50."WGL_straat_in_tunnel"
     WHERE 1=1
 UNION
@@ -36,8 +36,8 @@ UNION
         "WGL_hoofdweg_in_tunnel".geom,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	6  as minzoom, 
- 	 	8  as maxzoom
+ 	 	NULL::int  as minzoom, 
+ 	 	12 as maxzoom
     FROM kbk50."WGL_hoofdweg_in_tunnel"
     WHERE 1=1
 UNION
@@ -47,8 +47,8 @@ UNION
         "WGL_regionale_weg_in_tunnel".geom,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	6  as minzoom, 
- 	 	8  as maxzoom
+ 	 	NULL::int  as minzoom, 
+ 	 	12  as maxzoom
     FROM kbk50."WGL_regionale_weg_in_tunnel"
     WHERE 1=1
 UNION
@@ -58,8 +58,8 @@ UNION
         "WGL_autosnelweg_in_tunnel".geom,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	6  as minzoom, 
- 	 	8  as maxzoom
+ 	 	NULL::int  as minzoom,
+ 	 	12  as maxzoom
     FROM kbk50."WGL_autosnelweg_in_tunnel"
     WHERE 1=1
 UNION
@@ -69,8 +69,8 @@ UNION
         "WGL_straat".geom,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	6  as minzoom, 
- 	 	8  as maxzoom
+ 	 	NULL::int  as minzoom, 
+ 	 	12  as maxzoom
     FROM kbk50."WGL_straat"
     WHERE 1=1
 UNION
@@ -80,8 +80,8 @@ UNION
         "WGL_hoofdweg".geom,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	6  as minzoom, 
- 	 	8  as maxzoom
+ 	 	NULL::int  as minzoom,
+ 	 	12  as maxzoom
     FROM kbk50."WGL_hoofdweg"
     WHERE 1=1
 UNION
@@ -91,8 +91,8 @@ UNION
         "WGL_autosnelweg".geom,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	6  as minzoom, 
- 	 	8  as maxzoom
+ 	 	NULL::int  as minzoom,
+ 	 	12  as maxzoom
     FROM kbk50."WGL_autosnelweg"
     WHERE 1=1
 WITH DATA;
