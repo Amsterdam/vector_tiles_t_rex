@@ -4,7 +4,7 @@ drop INDEX IF exists bgt_vw_waterdeel_lijn_geom_idx;
 CREATE MATERIALIZED VIEW bgt.bgt_vw_waterdeel_lijn
 TABLESPACE pg_default
 AS SELECT
- 		"BGTPLUS_KDL_duiker_L".identificatie_lokaalid,
+ 		"BGTPLUS_KDL_duiker_L".identificatie_lokaalid || 'BGTPLUS_KDL_duiker_L' as identificatie_lokaalid,
     "BGTPLUS_KDL_duiker_L".plus_type as type,
     "BGTPLUS_KDL_duiker_L".geometrie,
     "BGTPLUS_KDL_duiker_L".relatievehoogteligging, 
@@ -18,7 +18,7 @@ AS SELECT
 
  UNION  
  SELECT
- 		"WDL_brede_waterloop".ogc_fid::character as identificatie_lokaalid,
+ 		"WDL_brede_waterloop".ogc_fid::text || 'WDL_brede_waterloop' as identificatie_lokaal_id,
     'brede_waterloop' as type,
     "WDL_brede_waterloop".geom, 
     0  as relatievehoogteligging, 
@@ -30,7 +30,7 @@ AS SELECT
 
  UNION  
  SELECT
- 		"WDL_smalle_waterloop".ogc_fid::character as identificatie_lokaalid,
+ 		"WDL_smalle_waterloop".ogc_fid::text || 'WDL_smalle_waterloop' as identificatie_lokaal_id,
     'smalle_waterloop' as type,
     "WDL_smalle_waterloop".geom, 
     0  as relatievehoogteligging, 

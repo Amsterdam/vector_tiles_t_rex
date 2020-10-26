@@ -5,7 +5,7 @@ drop INDEX IF exists bgt_vw_terreindeel_vlak_geom_idx;
 CREATE MATERIALIZED VIEW bgt.bgt_vw_terreindeel_vlak
 TABLESPACE pg_default
 AS SELECT
- 		"BGT_BTRN_boomteelt".identificatie_lokaalid,
+ 		"BGT_BTRN_boomteelt".identificatie_lokaalid || 'BGT_BTRN_boomteelt' as identificatie_lokaalid,
     "BGT_BTRN_boomteelt".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_boomteelt".geometrie,
     "BGT_BTRN_boomteelt".relatievehoogteligging, 
@@ -16,7 +16,7 @@ AS SELECT
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_bouwland".identificatie_lokaalid,
+ 		"BGT_BTRN_bouwland".identificatie_lokaalid || 'BGT_BTRN_bouwland' as identificatie_lokaalid,
     "BGT_BTRN_bouwland".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_bouwland".geometrie,
     "BGT_BTRN_bouwland".relatievehoogteligging, 
@@ -27,7 +27,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_fruitteelt".identificatie_lokaalid,
+ 		"BGT_BTRN_fruitteelt".identificatie_lokaalid || 'BGT_BTRN_fruitteelt' as identificatie_lokaalid,
     "BGT_BTRN_fruitteelt".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_fruitteelt".geometrie,
     "BGT_BTRN_fruitteelt".relatievehoogteligging, 
@@ -38,7 +38,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_gemengd_bos".identificatie_lokaalid,
+ 		"BGT_BTRN_gemengd_bos".identificatie_lokaalid || 'BGT_BTRN_gemengd_bos' as identificatie_lokaalid,
     "BGT_BTRN_gemengd_bos".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_gemengd_bos".geometrie,
     "BGT_BTRN_gemengd_bos".relatievehoogteligging, 
@@ -49,7 +49,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_grasland_agrarisch".identificatie_lokaalid,
+ 		"BGT_BTRN_grasland_agrarisch".identificatie_lokaalid ||'-'||  "BGT_BTRN_grasland_agrarisch".tijdstipregistratie ||'-'||  'BGT_BTRN_grasland_agrarisch' as identificatie_lokaalid,
     "BGT_BTRN_grasland_agrarisch".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_grasland_agrarisch".geometrie,
     "BGT_BTRN_grasland_agrarisch".relatievehoogteligging, 
@@ -60,7 +60,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_grasland_overig".identificatie_lokaalid,
+ 		"BGT_BTRN_grasland_overig".identificatie_lokaalid ||'-'||  "BGT_BTRN_grasland_overig".tijdstipregistratie ||'-'|| 'BGT_BTRN_grasland_overig' as identificatie_lokaalid,
     "BGT_BTRN_grasland_overig".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_grasland_overig".geometrie,
     "BGT_BTRN_grasland_overig".relatievehoogteligging, 
@@ -71,7 +71,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_groenvoorziening".identificatie_lokaalid,
+ 		"BGT_BTRN_groenvoorziening".identificatie_lokaalid || 'BGT_BTRN_groenvoorziening' as identificatie_lokaalid,
     "BGT_BTRN_groenvoorziening".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_groenvoorziening".geometrie,
     "BGT_BTRN_groenvoorziening".relatievehoogteligging, 
@@ -82,7 +82,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_houtwal".identificatie_lokaalid,
+ 		"BGT_BTRN_houtwal".identificatie_lokaalid || 'BGT_BTRN_houtwal' as identificatie_lokaalid,
     "BGT_BTRN_houtwal".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_houtwal".geometrie,
     "BGT_BTRN_houtwal".relatievehoogteligging, 
@@ -93,7 +93,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_loofbos".identificatie_lokaalid,
+ 		"BGT_BTRN_loofbos".identificatie_lokaalid || 'BGT_BTRN_loofbos' as identificatie_lokaalid,
     "BGT_BTRN_loofbos".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_loofbos".geometrie,
     "BGT_BTRN_loofbos".relatievehoogteligging, 
@@ -104,7 +104,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_moeras".identificatie_lokaalid,
+ 		"BGT_BTRN_moeras".identificatie_lokaalid || 'BGT_BTRN_moeras' as identificatie_lokaalid,
     "BGT_BTRN_moeras".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_moeras".geometrie,
     "BGT_BTRN_moeras".relatievehoogteligging, 
@@ -115,7 +115,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_naaldbos".identificatie_lokaalid,
+ 		"BGT_BTRN_naaldbos".identificatie_lokaalid || 'BGT_BTRN_naaldbos' as identificatie_lokaalid,
     "BGT_BTRN_naaldbos".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_naaldbos".geometrie,
     "BGT_BTRN_naaldbos".relatievehoogteligging, 
@@ -126,7 +126,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_rietland".identificatie_lokaalid,
+ 		"BGT_BTRN_rietland".identificatie_lokaalid || 'BGT_BTRN_rietland' as identificatie_lokaalid,
     "BGT_BTRN_rietland".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_rietland".geometrie,
     "BGT_BTRN_rietland".relatievehoogteligging, 
@@ -137,7 +137,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_struiken".identificatie_lokaalid,
+ 		"BGT_BTRN_struiken".identificatie_lokaalid || 'BGT_BTRN_struiken' as identificatie_lokaalid,
     "BGT_BTRN_struiken".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_struiken".geometrie,
     "BGT_BTRN_struiken".relatievehoogteligging, 
@@ -148,7 +148,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_KDL_perron".identificatie_lokaalid,
+ 		"BGT_KDL_perron".identificatie_lokaalid || 'BGT_KDL_perron' as identificatie_lokaalid,
     "BGT_KDL_perron".bgt_type as type,
     "BGT_KDL_perron".geometrie,
     "BGT_KDL_perron".relatievehoogteligging, 
@@ -159,7 +159,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_KDL_strekdam".identificatie_lokaalid,
+ 		"BGT_KDL_strekdam".identificatie_lokaalid || 'BGT_KDL_strekdam' as identificatie_lokaalid,
     "BGT_KDL_strekdam".bgt_type as type,
     "BGT_KDL_strekdam".geometrie,
     "BGT_KDL_strekdam".relatievehoogteligging, 
@@ -170,7 +170,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_OTRN_erf".identificatie_lokaalid,
+ 		"BGT_OTRN_erf".identificatie_lokaalid ||'-'||  	"BGT_OTRN_erf".tijdstipregistratie ||'-'|| 'BGT_OTRN_erf' as identificatie_lokaalid,
     "BGT_OTRN_erf".bgt_fysiekvoorkomen as type,
     "BGT_OTRN_erf".geometrie,
     "BGT_OTRN_erf".relatievehoogteligging, 
@@ -181,7 +181,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_OTRN_gesloten_verharding".identificatie_lokaalid,
+ 		"BGT_OTRN_gesloten_verharding".identificatie_lokaalid || 'BGT_OTRN_gesloten_verharding' as identificatie_lokaalid,
     "BGT_OTRN_gesloten_verharding".bgt_fysiekvoorkomen as type,
     "BGT_OTRN_gesloten_verharding".geometrie,
     "BGT_OTRN_gesloten_verharding".relatievehoogteligging, 
@@ -192,7 +192,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_OTRN_half_verhard".identificatie_lokaalid,
+ 		"BGT_OTRN_half_verhard".identificatie_lokaalid || 'BGT_OTRN_half_verhard' as identificatie_lokaalid,
     "BGT_OTRN_half_verhard".bgt_fysiekvoorkomen as type,
     "BGT_OTRN_half_verhard".geometrie,
     "BGT_OTRN_half_verhard".relatievehoogteligging, 
@@ -203,7 +203,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		 "BGT_OTRN_onverhard".identificatie_lokaalid,
+ 		 "BGT_OTRN_onverhard".identificatie_lokaalid || 'BGT_OTRN_onverhard' as identificatie_lokaalid,
     "BGT_OTRN_onverhard".bgt_fysiekvoorkomen as type,
     "BGT_OTRN_onverhard".geometrie,
     "BGT_OTRN_onverhard".relatievehoogteligging, 
@@ -214,7 +214,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_OTRN_open_verharding".identificatie_lokaalid,
+ 		"BGT_OTRN_open_verharding".identificatie_lokaalid || 'BGT_OTRN_open_verharding' as identificatie_lokaalid,
     "BGT_OTRN_open_verharding".bgt_fysiekvoorkomen as type,
     "BGT_OTRN_open_verharding".geometrie,
     "BGT_OTRN_open_verharding".relatievehoogteligging, 
@@ -225,7 +225,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_OTRN_zand".identificatie_lokaalid,
+ 		"BGT_OTRN_zand".identificatie_lokaalid || 'BGT_OTRN_zand' as identificatie_lokaalid,
     "BGT_OTRN_zand".bgt_fysiekvoorkomen as type,
     "BGT_OTRN_zand".geometrie,
     "BGT_OTRN_zand".relatievehoogteligging, 
@@ -236,7 +236,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_OWDL_oever_slootkant".identificatie_lokaalid,
+ 		"BGT_OWDL_oever_slootkant".identificatie_lokaalid ||'-'||  	"BGT_OWDL_oever_slootkant".tijdstipregistratie ||'-'|| 'BGT_OWDL_oever_slootkant' as identificatie_lokaalid,
     "BGT_OWDL_oever_slootkant".bgt_type as type,
     "BGT_OWDL_oever_slootkant".geometrie,
     "BGT_OWDL_oever_slootkant".relatievehoogteligging, 
@@ -247,7 +247,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_WGL_spoorbaan".identificatie_lokaalid,
+ 		"BGT_WGL_spoorbaan".identificatie_lokaalid || 'BGT_WGL_spoorbaan' as identificatie_lokaalid,
     "BGT_WGL_spoorbaan".bgt_fysiekvoorkomen as type,
     "BGT_WGL_spoorbaan".geometrie,
     "BGT_WGL_spoorbaan".relatievehoogteligging, 
@@ -258,7 +258,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_BTRN_heide".identificatie_lokaalid,
+ 		"BGT_BTRN_heide".identificatie_lokaalid || 'BGT_BTRN_heide' as identificatie_lokaalid,
     "BGT_BTRN_heide".bgt_fysiekvoorkomen as type,
     "BGT_BTRN_heide".geometrie,
     "BGT_BTRN_heide".relatievehoogteligging, 
