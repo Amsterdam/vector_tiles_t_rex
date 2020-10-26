@@ -10,8 +10,8 @@ AS SELECT
     "BGTPLUS_BAK_afvalbak".geometrie,
     "BGTPLUS_BAK_afvalbak".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_BAK_afvalbak"
   WHERE 1 = 1
 UNION
@@ -21,8 +21,8 @@ UNION
     "BGTPLUS_BAK_afval_apart_plaats".geometrie,
     "BGTPLUS_BAK_afval_apart_plaats".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_BAK_afval_apart_plaats"
   WHERE 1 = 1
 UNION
@@ -32,8 +32,8 @@ UNION
     "BGTPLUS_ISE_onbekend".geometrie,
     "BGTPLUS_ISE_onbekend".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_ISE_onbekend"
   WHERE 1 = 1
 UNION
@@ -43,8 +43,8 @@ UNION
     "BGTPLUS_ISE_pomp".geometrie,
     "BGTPLUS_ISE_pomp".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_ISE_pomp"
   WHERE 1 = 1
 UNION
@@ -54,8 +54,8 @@ UNION
     "BGTPLUS_KST_cai-kast".geometrie,
     "BGTPLUS_KST_cai-kast".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_KST_cai-kast"
   WHERE 1 = 1
 UNION
@@ -65,8 +65,8 @@ UNION
     "BGTPLUS_KST_elektrakast".geometrie,
     "BGTPLUS_KST_elektrakast".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_KST_elektrakast"
   WHERE 1 = 1
 UNION
@@ -76,8 +76,8 @@ UNION
     "BGTPLUS_KST_onbekend".geometrie,
     "BGTPLUS_KST_onbekend".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_KST_onbekend"
   WHERE 1 = 1
 UNION
@@ -87,8 +87,8 @@ UNION
     "BGTPLUS_PAL_lichtmast".geometrie,
     "BGTPLUS_PAL_lichtmast".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PAL_lichtmast"
   WHERE 1 = 1
 UNION
@@ -98,8 +98,8 @@ UNION
     "BGTPLUS_PUT_brandkraan_-put".geometrie,
     "BGTPLUS_PUT_brandkraan_-put".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PUT_brandkraan_-put"
   WHERE 1 = 1
 UNION
@@ -109,8 +109,8 @@ UNION
     "BGTPLUS_PUT_inspectie-_rioolput".geometrie,
     "BGTPLUS_PUT_inspectie-_rioolput".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PUT_inspectie-_rioolput"
   WHERE 1 = 1
 UNION
@@ -120,8 +120,8 @@ UNION
     "BGTPLUS_PUT_kolk".geometrie,
     "BGTPLUS_PUT_kolk".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PUT_kolk"
   WHERE 1 = 1
 UNION
@@ -131,8 +131,8 @@ UNION
     "BGTPLUS_SMR_abri".geometrie,
     "BGTPLUS_SMR_abri".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_abri"
   WHERE 1 = 1
 UNION
@@ -142,8 +142,8 @@ UNION
     "BGTPLUS_SMR_betaalautomaat".geometrie,
     "BGTPLUS_SMR_betaalautomaat".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_betaalautomaat"
   WHERE 1 = 1
 UNION
@@ -153,8 +153,8 @@ UNION
     "BGTPLUS_SMR_fietsenrek".geometrie,
     "BGTPLUS_SMR_fietsenrek".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_fietsenrek"
   WHERE 1 = 1
 UNION
@@ -164,8 +164,8 @@ UNION
     "BGTPLUS_SMR_herdenkingsmonument".geometrie,
     "BGTPLUS_SMR_herdenkingsmonument".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_herdenkingsmonument"
   WHERE 1 = 1
 UNION
@@ -175,8 +175,8 @@ UNION
     "BGTPLUS_SMR_kunstobject".geometrie,
     "BGTPLUS_SMR_kunstobject".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_kunstobject"
   WHERE 1 = 1
 UNION
@@ -186,8 +186,8 @@ UNION
     "BGTPLUS_SMR_openbaar_toilet".geometrie,
     "BGTPLUS_SMR_openbaar_toilet".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_openbaar_toilet"
   WHERE 1 = 1
 UNION
@@ -197,8 +197,8 @@ UNION
     "BGTPLUS_SMR_reclamezuil".geometrie,
     "BGTPLUS_SMR_reclamezuil".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_reclamezuil"
   WHERE 1 = 1
 UNION
@@ -208,8 +208,8 @@ UNION
     "BGTPLUS_SMR_telefooncel".geometrie,
     "BGTPLUS_SMR_telefooncel".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_telefooncel"
   WHERE 1 = 1
 UNION
@@ -219,8 +219,8 @@ UNION
     "BGTPLUS_VGT_boom".geometrie,
     "BGTPLUS_VGT_boom".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_VGT_boom"
   WHERE 1 = 1
 UNION
@@ -230,8 +230,8 @@ UNION
     "BGT_KDL_hoogspanningsmast_P".geometrie,
     "BGT_KDL_hoogspanningsmast_P".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGT_KDL_hoogspanningsmast_P"
   WHERE 1 = 1
 UNION
@@ -241,8 +241,8 @@ UNION
     "BGTPLUS_BRD_informatiebord".geometrie,
     "BGTPLUS_BRD_informatiebord".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_BRD_informatiebord"
   WHERE 1 = 1
 UNION
@@ -252,8 +252,8 @@ UNION
     "BGTPLUS_BRD_reclamebord".geometrie,
     "BGTPLUS_BRD_reclamebord".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_BRD_reclamebord"
   WHERE 1 = 1
 UNION
@@ -263,8 +263,8 @@ UNION
     "BGTPLUS_BRD_straatnaambord".geometrie,
     "BGTPLUS_BRD_straatnaambord".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_BRD_straatnaambord"
   WHERE 1 = 1
 UNION
@@ -274,8 +274,8 @@ UNION
     "BGTPLUS_BRD_verkeersbord".geometrie,
     "BGTPLUS_BRD_verkeersbord".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_BRD_verkeersbord"
   WHERE 1 = 1
 UNION
@@ -285,8 +285,8 @@ UNION
     "BGTPLUS_BRD_verklikker_transportleiding".geometrie,
     "BGTPLUS_BRD_verklikker_transportleiding".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_BRD_verklikker_transportleiding"
   WHERE 1 = 1
 UNION
@@ -296,8 +296,8 @@ UNION
     "BGTPLUS_BRD_wegwijzer".geometrie,
     "BGTPLUS_BRD_wegwijzer".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_BRD_wegwijzer"
   WHERE 1 = 1
 UNION
@@ -307,8 +307,8 @@ UNION
     "BGTPLUS_KST_gaskast".geometrie,
     "BGTPLUS_KST_gaskast".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_KST_gaskast"
   WHERE 1 = 1
 UNION
@@ -318,8 +318,8 @@ UNION
     "BGTPLUS_KST_gms_kast".geometrie,
     "BGTPLUS_KST_gms_kast".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_KST_gms_kast"
   WHERE 1 = 1
 UNION
@@ -329,8 +329,8 @@ UNION
     "BGTPLUS_KST_openbare_verlichtingkast".geometrie,
     "BGTPLUS_KST_openbare_verlichtingkast".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_KST_openbare_verlichtingkast"
   WHERE 1 = 1
 UNION
@@ -340,8 +340,8 @@ UNION
     "BGTPLUS_KST_rioolkast".geometrie,
     "BGTPLUS_KST_rioolkast".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_KST_rioolkast"
   WHERE 1 = 1
 UNION
@@ -351,8 +351,8 @@ UNION
     "BGTPLUS_KST_telecom_kast".geometrie,
     "BGTPLUS_KST_telecom_kast".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_KST_telecom_kast"
   WHERE 1 = 1
 UNION
@@ -362,8 +362,8 @@ UNION
     "BGTPLUS_KST_telkast".geometrie,
     "BGTPLUS_KST_telkast".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_KST_telkast"
   WHERE 1 = 1
 UNION
@@ -373,8 +373,8 @@ UNION
     "BGTPLUS_KST_verkeersregelinstallatiekast".geometrie,
     "BGTPLUS_KST_verkeersregelinstallatiekast".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_KST_verkeersregelinstallatiekast"
   WHERE 1 = 1
 UNION
@@ -384,8 +384,8 @@ UNION
     "BGTPLUS_MST_onbekend".geometrie,
     "BGTPLUS_MST_onbekend".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_MST_onbekend"
   WHERE 1 = 1
 UNION
@@ -395,8 +395,8 @@ UNION
     "BGTPLUS_MST_zendmast".geometrie,
     "BGTPLUS_MST_zendmast".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_MST_zendmast"
   WHERE 1 = 1
 UNION
@@ -406,8 +406,8 @@ UNION
     "BGTPLUS_PAL_afsluitpaal".geometrie,
     "BGTPLUS_PAL_afsluitpaal".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PAL_afsluitpaal"
   WHERE 1 = 1
 UNION
@@ -417,8 +417,8 @@ UNION
     "BGTPLUS_PAL_drukknoppaal".geometrie,
     "BGTPLUS_PAL_drukknoppaal".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PAL_drukknoppaal"
   WHERE 1 = 1
 UNION
@@ -428,8 +428,8 @@ UNION
     "BGTPLUS_PAL_haltepaal".geometrie,
     "BGTPLUS_PAL_haltepaal".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PAL_haltepaal"
   WHERE 1 = 1
 UNION
@@ -439,8 +439,8 @@ UNION
     "BGTPLUS_PAL_hectometerpaal".geometrie,
     "BGTPLUS_PAL_hectometerpaal".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PAL_hectometerpaal"
   WHERE 1 = 1
 UNION
@@ -450,8 +450,8 @@ UNION
     "BGTPLUS_PAL_poller".geometrie,
     "BGTPLUS_PAL_poller".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PAL_poller"
   WHERE 1 = 1
 UNION
@@ -461,8 +461,8 @@ UNION
     "BGTPLUS_PAL_telpaal".geometrie,
     "BGTPLUS_PAL_telpaal".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PAL_telpaal"
   WHERE 1 = 1
 UNION
@@ -472,8 +472,8 @@ UNION
     "BGTPLUS_PAL_verkeersbordpaal".geometrie,
     "BGTPLUS_PAL_verkeersbordpaal".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PAL_verkeersbordpaal"
   WHERE 1 = 1
 UNION
@@ -483,8 +483,8 @@ UNION
     "BGTPLUS_PAL_verkeersregelinstallatiepaal".geometrie,
     "BGTPLUS_PAL_verkeersregelinstallatiepaal".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PAL_verkeersregelinstallatiepaal"
   WHERE 1 = 1
 UNION
@@ -494,8 +494,8 @@ UNION
     "BGTPLUS_PAL_vlaggenmast".geometrie,
     "BGTPLUS_PAL_vlaggenmast".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PAL_vlaggenmast"
   WHERE 1 = 1
 UNION
@@ -505,8 +505,8 @@ UNION
     "BGTPLUS_PUT_benzine-_olieput".geometrie,
     "BGTPLUS_PUT_benzine-_olieput".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PUT_benzine-_olieput"
   WHERE 1 = 1
 UNION
@@ -516,8 +516,8 @@ UNION
     "BGTPLUS_PUT_drainageput".geometrie,
     "BGTPLUS_PUT_drainageput".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PUT_drainageput"
   WHERE 1 = 1
 UNION
@@ -527,8 +527,8 @@ UNION
     "BGTPLUS_PUT_gasput".geometrie,
     "BGTPLUS_PUT_gasput".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PUT_gasput"
   WHERE 1 = 1
 UNION
@@ -538,8 +538,8 @@ UNION
     "BGTPLUS_PUT_onbekend".geometrie,
     "BGTPLUS_PUT_onbekend".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PUT_onbekend"
   WHERE 1 = 1
 UNION
@@ -549,8 +549,8 @@ UNION
     "BGTPLUS_PUT_waterleidingput".geometrie,
     "BGTPLUS_PUT_waterleidingput".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_PUT_waterleidingput"
   WHERE 1 = 1
 UNION
@@ -560,8 +560,8 @@ UNION
     "BGTPLUS_SMR_bank".geometrie,
     "BGTPLUS_SMR_bank".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_bank"
   WHERE 1 = 1
 UNION
@@ -571,8 +571,8 @@ UNION
     "BGTPLUS_SMR_brievenbus".geometrie,
     "BGTPLUS_SMR_brievenbus".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_brievenbus"
   WHERE 1 = 1
 UNION
@@ -582,8 +582,8 @@ UNION
     "BGTPLUS_SMR_fietsenkluis".geometrie,
     "BGTPLUS_SMR_fietsenkluis".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_fietsenkluis"
   WHERE 1 = 1
 UNION
@@ -593,8 +593,8 @@ UNION
     "BGTPLUS_SMR_lichtpunt".geometrie,
     "BGTPLUS_SMR_lichtpunt".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_lichtpunt"
   WHERE 1 = 1
 UNION
@@ -604,8 +604,8 @@ UNION
     "BGTPLUS_SMR_slagboom".geometrie,
     "BGTPLUS_SMR_slagboom".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_slagboom"
   WHERE 1 = 1
 UNION
@@ -615,8 +615,8 @@ UNION
     "BGTPLUS_SMR_speelvoorziening".geometrie,
     "BGTPLUS_SMR_speelvoorziening".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SMR_speelvoorziening"
   WHERE 1 = 1
 UNION
@@ -626,8 +626,8 @@ UNION
     "BGTPLUS_SSR_camera".geometrie,
     "BGTPLUS_SSR_camera".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SSR_camera"
   WHERE 1 = 1
 UNION
@@ -637,8 +637,8 @@ UNION
     "BGTPLUS_SSR_flitser".geometrie,
     "BGTPLUS_SSR_flitser".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SSR_flitser"
   WHERE 1 = 1
 UNION
@@ -648,8 +648,8 @@ UNION
     "BGTPLUS_SSR_waterstandmeter".geometrie,
     "BGTPLUS_SSR_waterstandmeter".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_SSR_waterstandmeter"
   WHERE 1 = 1
 UNION
@@ -659,8 +659,8 @@ UNION
     "BGTPLUS_WDI_meerpaal".geometrie,
     "BGTPLUS_WDI_meerpaal".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	NULL as minzoom, 
- 	 	NULL as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL  as maxzoom
    FROM bgt."BGTPLUS_WDI_meerpaal"
   WHERE 1 = 1
 WITH DATA;

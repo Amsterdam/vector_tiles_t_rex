@@ -10,8 +10,8 @@ TABLESPACE pg_default AS
         "BGT_SPR_sneltram".geometrie,
         "BGT_SPR_sneltram".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_SPR_sneltram"
     WHERE  1=1
 UNION
@@ -21,8 +21,8 @@ UNION
         "BGT_SPR_tram".geometrie,
         "BGT_SPR_tram".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_SPR_tram"
     WHERE 1=1
 UNION
@@ -32,8 +32,8 @@ UNION
         "BGT_SPR_trein".geometrie,
         "BGT_SPR_trein".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_SPR_trein"
     WHERE 1=1
 
@@ -46,8 +46,8 @@ UNION
         "SBL_metro_overdekt".geom,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
     FROM kbk10."SBL_metro_overdekt"
     WHERE 1=1
 UNION
@@ -57,8 +57,8 @@ UNION
         "SBL_trein_overdekt_1sp".geom,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
     FROM kbk10."SBL_trein_overdekt_1sp"
     WHERE 1=1
 UNION
@@ -68,8 +68,8 @@ UNION
         "SBL_trein_overdekt_nsp".geom,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
     FROM kbk10."SBL_trein_overdekt_nsp"
     WHERE 1=1
 UNION
@@ -79,8 +79,8 @@ UNION
         "SBL_metro_nietoverdekt_1sp".geom,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
     FROM kbk10."SBL_metro_nietoverdekt_1sp"
     WHERE 1=1
 UNION
@@ -90,8 +90,8 @@ UNION
         "SBL_metro_nietoverdekt_nsp".geom,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
     FROM kbk10."SBL_metro_nietoverdekt_nsp"
     WHERE 1=1
 UNION
@@ -101,8 +101,8 @@ UNION
         "SBL_trein_ongeelektrificeerd".geom,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
     FROM kbk10."SBL_trein_ongeelektrificeerd"
     WHERE 1=1
 UNION
@@ -112,8 +112,8 @@ UNION
         "SBL_trein_ongeelektrificeerd".geom,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
     FROM kbk10."SBL_trein_ongeelektrificeerd"
     WHERE 1=1
 UNION
@@ -123,8 +123,8 @@ UNION
         "SBL_trein_nietoverdekt_1sp".geom,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
     FROM kbk10."SBL_trein_nietoverdekt_1sp"
     WHERE 1=1
 UNION
@@ -134,8 +134,8 @@ UNION
         "SBL_trein_nietoverdekt_nsp".geom,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
     FROM kbk10."SBL_trein_nietoverdekt_nsp"
     WHERE 1=1
 
@@ -147,8 +147,8 @@ UNION
         "SBL_metro_sneltram_in_tunnel".geom,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	6  as minzoom, 
- 	 	8  as maxzoom
+ 	 	NULL::int  as minzoom, 
+ 	 	12  as maxzoom
     FROM kbk50."SBL_metro_sneltram_in_tunnel"
     WHERE 1=1
 UNION
@@ -158,8 +158,8 @@ UNION
         "SBL_trein_in_tunnel".geom,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	6  as minzoom, 
- 	 	8  as maxzoom
+ 	 	NULL::int  as minzoom, 
+ 	 	12  as maxzoom
     FROM kbk50."SBL_trein_in_tunnel"
     WHERE 1=1
 UNION
@@ -169,8 +169,8 @@ UNION
         "SBL_metro_sneltram".geom,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	6  as minzoom, 
- 	 	8  as maxzoom
+ 	 	NULL::int  as minzoom, 
+ 	 	12  as maxzoom
     FROM kbk50."SBL_metro_sneltram"
     WHERE 1=1
 UNION
@@ -180,8 +180,8 @@ UNION
         "SBL_trein_ongeelektrificeerd".geom,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	6  as minzoom, 
- 	 	8  as maxzoom
+ 	 	NULL::int  as minzoom, 
+ 	 	12  as maxzoom
     FROM kbk50."SBL_trein_ongeelektrificeerd"
     WHERE 1=1
 UNION
@@ -191,8 +191,8 @@ UNION
         "SBL_trein".geom,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	6  as minzoom, 
- 	 	8  as maxzoom
+ 	 	NULL::int  as minzoom, 
+ 	 	12  as maxzoom
     FROM kbk50."SBL_trein"
     WHERE 1=1
 

@@ -12,8 +12,8 @@ AS
         "BGT_OWGL_berm". geometrie,
         "BGT_OWGL_berm".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_OWGL_berm"
     WHERE 1=1
 UNION
@@ -25,8 +25,8 @@ UNION
         "BGT_OWGL_verkeerseiland". geometrie,
         "BGT_OWGL_verkeerseiland".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_OWGL_verkeerseiland"
     WHERE 1=1
 UNION
@@ -38,8 +38,8 @@ UNION
         "BGT_WGL_baan_voor_vliegverkeer". geometrie,
         "BGT_WGL_baan_voor_vliegverkeer".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_baan_voor_vliegverkeer"
     WHERE 1=1
 UNION
@@ -51,8 +51,8 @@ UNION
         "BGT_WGL_fietspad". geometrie,
         "BGT_WGL_fietspad".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_fietspad"
     WHERE 1=1
 UNION
@@ -64,8 +64,8 @@ UNION
         "BGT_WGL_inrit". geometrie,
         "BGT_WGL_inrit".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_inrit"
     WHERE 1=1
 UNION
@@ -77,8 +77,8 @@ UNION
         "BGT_WGL_ov-baan". geometrie,
         "BGT_WGL_ov-baan".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_ov-baan"
     WHERE 1=1
 UNION
@@ -90,8 +90,8 @@ UNION
         "BGT_WGL_overweg". geometrie,
         "BGT_WGL_overweg".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_overweg"
     WHERE 1=1
 UNION
@@ -103,8 +103,8 @@ UNION
         "BGT_WGL_parkeervlak". geometrie,
         "BGT_WGL_parkeervlak".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_parkeervlak"
     WHERE 1=1
 UNION
@@ -116,8 +116,8 @@ UNION
         "BGT_WGL_rijbaan_autosnelweg". geometrie,
         "BGT_WGL_rijbaan_autosnelweg".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_rijbaan_autosnelweg"
     WHERE 1=1
 UNION
@@ -129,8 +129,8 @@ UNION
         "BGT_WGL_rijbaan_autoweg". geometrie,
         "BGT_WGL_rijbaan_autoweg".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_rijbaan_autoweg"
     WHERE 1=1
 UNION
@@ -142,8 +142,8 @@ UNION
         "BGT_WGL_rijbaan_lokale_weg". geometrie,
         "BGT_WGL_rijbaan_lokale_weg".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_rijbaan_lokale_weg"
     WHERE 1=1
 UNION
@@ -155,8 +155,8 @@ UNION
         "BGT_WGL_rijbaan_regionale_weg". geometrie,
         "BGT_WGL_rijbaan_regionale_weg".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_rijbaan_regionale_weg"
     WHERE 1=1
 UNION
@@ -168,8 +168,8 @@ UNION
         "BGT_WGL_ruiterpad". geometrie,
         "BGT_WGL_ruiterpad".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_ruiterpad"
     WHERE 1=1
 UNION
@@ -181,8 +181,8 @@ UNION
         "BGT_WGL_voetgangersgebied". geometrie,
         "BGT_WGL_voetgangersgebied".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_voetgangersgebied"
     WHERE 1=1
 UNION
@@ -194,8 +194,8 @@ UNION
         "BGT_WGL_voetpad". geometrie,
         "BGT_WGL_voetpad".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_voetpad"
     WHERE 1=1
 UNION
@@ -207,8 +207,8 @@ UNION
         "BGT_WGL_voetpad_op_trap". geometrie,
         "BGT_WGL_voetpad_op_trap".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_voetpad_op_trap"
     WHERE 1=1
 UNION
@@ -220,8 +220,8 @@ UNION
         "BGT_WGL_woonerf". geometrie,
         "BGT_WGL_woonerf".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
     FROM bgt."BGT_WGL_woonerf"
     WHERE 1=1
 UNION
@@ -236,8 +236,8 @@ UNION
         "WGL_startbaan_landingsbaan".geom,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
     FROM kbk10."WGL_startbaan_landingsbaan"
     WHERE 1=1
 UNION
@@ -249,8 +249,8 @@ UNION
         "TRN_spoorbaanlichaam".geom,
         0  as relatievehoogteligging, 
  	    'kbk10' as bron, 
- 	 	9  as minzoom, 
- 	 	21  as maxzoom
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
     FROM kbk10."TRN_spoorbaanlichaam"
     WHERE 1=1
 WITH DATA;

@@ -10,8 +10,8 @@ AS SELECT
     "BGTPLUS_GISE_bordes".geometrie,
     "BGTPLUS_GISE_bordes".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_GISE_bordes"
   WHERE 1=1
 UNION
@@ -21,8 +21,8 @@ UNION
     "BGTPLUS_GISE_luifel".geometrie,
     "BGTPLUS_GISE_luifel".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_GISE_luifel"
   WHERE 1=1
 UNION
@@ -32,8 +32,8 @@ UNION
     "BGTPLUS_GISE_onbekend".geometrie,
     "BGTPLUS_GISE_onbekend".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_GISE_onbekend"
   WHERE 1=1
 UNION
@@ -43,8 +43,8 @@ UNION
     "BGTPLUS_GISE_toegangstrap".geometrie,
     "BGTPLUS_GISE_toegangstrap".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_GISE_toegangstrap"
   WHERE 1=1
 UNION
@@ -54,8 +54,8 @@ UNION
     "BGTPLUS_OBW_bunker".geometrie,
     "BGTPLUS_OBW_bunker".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_OBW_bunker"
   WHERE 1=1
 UNION
@@ -65,8 +65,8 @@ UNION
     "BGTPLUS_OBW_onbekend".geometrie,
     "BGTPLUS_OBW_onbekend".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_OBW_onbekend"
   WHERE 1=1
 UNION
@@ -76,8 +76,8 @@ UNION
     "BGTPLUS_OBW_schuur".geometrie,
     "BGTPLUS_OBW_schuur".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_OBW_schuur"
   WHERE 1=1
 UNION
@@ -87,8 +87,8 @@ UNION
     "BGTPLUS_OBW_voedersilo".geometrie,
     "BGTPLUS_OBW_voedersilo".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGTPLUS_OBW_voedersilo"
   WHERE 1=1
 UNION
@@ -98,8 +98,8 @@ UNION
     "BGT_OBW_bassin".geometrie,
     "BGT_OBW_bassin".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_OBW_bassin"
   WHERE 1=1
 UNION
@@ -109,8 +109,8 @@ UNION
     "BGT_OBW_bezinkbak".geometrie,
     "BGT_OBW_bezinkbak".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_OBW_bezinkbak"
   WHERE 1=1
 UNION
@@ -120,8 +120,8 @@ UNION
     "BGT_OBW_lage_trafo".geometrie,
     "BGT_OBW_lage_trafo".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_OBW_lage_trafo"
   WHERE 1=1
 UNION
@@ -131,8 +131,8 @@ UNION
     "BGT_OBW_open_loods".geometrie,
     "BGT_OBW_open_loods".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_OBW_open_loods"
   WHERE 1=1
 UNION
@@ -142,8 +142,8 @@ UNION
     "BGT_OBW_opslagtank".geometrie,
     "BGT_OBW_opslagtank".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_OBW_opslagtank"
   WHERE 1=1
 UNION
@@ -153,8 +153,8 @@ UNION
     "BGT_OBW_overkapping".geometrie,
     "BGT_OBW_overkapping".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_OBW_overkapping"
   WHERE 1=1
 UNION
@@ -164,8 +164,8 @@ UNION
     "BGT_OBW_transitie".geometrie,
     "BGT_OBW_transitie".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_OBW_transitie"
   WHERE 1=1
 UNION
@@ -175,8 +175,8 @@ UNION
     "BGT_OBW_windturbine".geometrie,
     "BGT_OBW_windturbine".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_OBW_windturbine"
   WHERE 1=1
 UNION
@@ -186,8 +186,8 @@ UNION
     "BGT_PND_pand".geometrie,
     "BGT_PND_pand".relatievehoogteligging, 
  	 	'bgt' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BGT_PND_pand"
   WHERE 1=1
 UNION
@@ -197,8 +197,8 @@ UNION
     "CFT_Onderbouw".geometrie,
     "CFT_Onderbouw".relatievehoogteligging, 
  	 	'cft' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."CFT_Onderbouw"
   WHERE 1=1
 UNION
@@ -208,8 +208,8 @@ UNION
     "CFT_Overbouw".geometrie, 
     "CFT_Overbouw".relatievehoogteligging, 
  	 	'cft' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."CFT_Overbouw"
   WHERE 1=1
 
@@ -221,8 +221,8 @@ UNION
     "BAG_Standplaats".geometrie, 
     0 as relatievehoogteligging, 
  	 	'bag' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BAG_Standplaats"
   WHERE 1=1
 UNION
@@ -232,8 +232,8 @@ UNION
     "BAG_Ligplaats".geometrie, 
     0 as relatievehoogteligging, 
  	 	'bag' as bron, 
- 	 	6  as minzoom, 
- 	 	21  as maxzoom
+ 	 	16  as minzoom, 
+ 	 	NULL::int  as maxzoom
    FROM bgt."BAG_Ligplaats"
   WHERE 1=1
 
