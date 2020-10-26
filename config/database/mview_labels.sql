@@ -10,8 +10,8 @@ AS SELECT
     "BAG_LBL_Ligplaatsnummeraanduidingreeks".hoek, 
     "BAG_LBL_Ligplaatsnummeraanduidingreeks".tekst, 
  	'bag/bgt' as bron, 
- 	6  as minzoom, 
- 	21  as maxzoom
+ 	16  as minzoom, 
+ 	NULL::int  as maxzoom
    FROM bgt."BAG_LBL_Ligplaatsnummeraanduidingreeks"
   WHERE 1=1
 union
@@ -22,8 +22,8 @@ SELECT
     "BAG_LBL_Standplaatsnummeraanduidingreeks".hoek, 
     "BAG_LBL_Standplaatsnummeraanduidingreeks".tekst, 
  	'bag/bgt' as bron, 
- 	6  as minzoom, 
- 	21  as maxzoom
+ 	16  as minzoom, 
+ 	NULL::int  as maxzoom
    FROM bgt."BAG_LBL_Standplaatsnummeraanduidingreeks"
   WHERE 1=1
 union
@@ -34,8 +34,8 @@ SELECT
     "BGT_LBL_administratief_gebied".hoek, 
     "BGT_LBL_administratief_gebied".tekst, 
  	'bgt' as bron, 
- 	6  as minzoom, 
- 	21  as maxzoom
+ 	16  as minzoom, 
+ 	NULL::int  as maxzoom
    FROM bgt."BGT_LBL_administratief_gebied"
   WHERE 1=1
 union
@@ -46,8 +46,8 @@ SELECT
     "BGT_LBL_kunstwerk".hoek, 
     "BGT_LBL_kunstwerk".tekst, 
  	'bgt' as bron, 
- 	6  as minzoom, 
- 	21  as maxzoom
+ 	16  as minzoom, 
+ 	NULL::int  as maxzoom
    FROM bgt."BGT_LBL_kunstwerk"
   WHERE 1=1
 union
@@ -58,8 +58,8 @@ SELECT
     "BGT_LBL_landschappelijk_gebied".hoek, 
     "BGT_LBL_landschappelijk_gebied".tekst, 
  	'bgt' as bron, 
- 	6  as minzoom, 
- 	21  as maxzoom
+ 	16  as minzoom, 
+ 	NULL::int  as maxzoom
    FROM bgt."BGT_LBL_landschappelijk_gebied"
   WHERE 1=1
 union
@@ -70,8 +70,8 @@ SELECT
     "BGT_LBL_nummeraanduidingreeks".hoek, 
     "BGT_LBL_nummeraanduidingreeks".tekst, 
  	'bgt' as bron, 
- 	6  as minzoom, 
- 	21  as maxzoom
+ 	16  as minzoom, 
+ 	NULL::int  as maxzoom
    FROM bgt."BGT_LBL_nummeraanduidingreeks"
   WHERE 1=1
 union
@@ -82,8 +82,8 @@ SELECT
     "BGT_LBL_terrein".hoek, 
     "BGT_LBL_terrein".tekst, 
  	'bgt' as bron, 
- 	6  as minzoom, 
- 	21  as maxzoom
+ 	16  as minzoom, 
+ 	NULL::int  as maxzoom
    FROM bgt."BGT_LBL_terrein"
   WHERE 1=1
 union
@@ -94,8 +94,8 @@ SELECT
     "BGT_LBL_water".hoek, 
     "BGT_LBL_water".tekst, 
  	'bgt' as bron, 
- 	6  as minzoom, 
- 	21  as maxzoom
+ 	16  as minzoom, 
+ 	NULL::int  as maxzoom
    FROM bgt."BGT_LBL_water"
   WHERE 1=1
 union
@@ -106,8 +106,8 @@ SELECT
     "BGT_LBL_weg".hoek, 
     "BGT_LBL_weg".tekst, 
  	'bgt' as bron, 
- 	6  as minzoom, 
- 	21  as maxzoom
+ 	16  as minzoom, 
+ 	NULL::int  as maxzoom
    FROM bgt."BGT_LBL_weg"
   WHERE 1=1
 
