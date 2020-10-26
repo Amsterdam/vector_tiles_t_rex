@@ -5,7 +5,7 @@ drop INDEX IF exists bgt_vw_waterdeel_vlak_geom_idx;
 CREATE MATERIALIZED VIEW bgt.bgt_vw_waterdeel_vlak
 TABLESPACE pg_default
 AS SELECT
- 		"BGTPLUS_KDL_duiker_V".identificatie_lokaalid,
+ 		"BGTPLUS_KDL_duiker_V".identificatie_lokaalid || 'BGTPLUS_KDL_duiker_V' as identificatie_lokaalid,
     "BGTPLUS_KDL_duiker_V".plus_type as type,
     "BGTPLUS_KDL_duiker_V". geometrie, 
     "BGTPLUS_KDL_duiker_V".relatievehoogteligging, 
@@ -16,7 +16,7 @@ AS SELECT
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_WDL_greppel_droge_sloot".identificatie_lokaalid,
+ 		"BGT_WDL_greppel_droge_sloot".identificatie_lokaalid || 'BGT_WDL_greppel_droge_sloot' as identificatie_lokaalid,
     "BGT_WDL_greppel_droge_sloot".bgt_type as type,
     "BGT_WDL_greppel_droge_sloot". geometrie, 
     "BGT_WDL_greppel_droge_sloot".relatievehoogteligging, 
@@ -27,7 +27,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_WDL_waterloop".identificatie_lokaalid,
+ 		"BGT_WDL_waterloop".identificatie_lokaalid ||'-'|| "BGT_WDL_waterloop".tijdstipregistratie ||'-'|| 'BGT_WDL_waterloop' as identificatie_lokaalid,
     "BGT_WDL_waterloop".bgt_type as type,
     "BGT_WDL_waterloop". geometrie, 
     "BGT_WDL_waterloop".relatievehoogteligging, 
@@ -38,7 +38,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
- 		"BGT_WDL_watervlakte".identificatie_lokaalid,
+ 		"BGT_WDL_watervlakte".identificatie_lokaalid || 'BGT_WDL_watervlakte' as identificatie_lokaalid,
     "BGT_WDL_watervlakte".bgt_type as type,
     "BGT_WDL_watervlakte". geometrie, 
     "BGT_WDL_watervlakte".relatievehoogteligging, 
@@ -52,7 +52,7 @@ UNION
 
  UNION 
  SELECT
- 		"WDL_breed_water".ogc_fid::character as identificatie_lokaalid,
+ 		"WDL_breed_water".ogc_fid::text || 'WDL_breed_water' as identificatie_lokaal_id,
     'breed_water' as type,
     "WDL_breed_water".geom, 
     0  as relatievehoogteligging, 
@@ -66,7 +66,7 @@ UNION
 
  UNION 
  SELECT
- 		"WDL_wateroppervlak".ogc_fid::character as identificatie_lokaalid,
+ 		"WDL_wateroppervlak".ogc_fid::text || 'WDL_wateroppervlak' as identificatie_lokaal_id,
     'breed_water' as type,
     "WDL_wateroppervlak".geom, 
     0  as relatievehoogteligging, 

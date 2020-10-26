@@ -4,7 +4,7 @@ drop INDEX IF exists bgt_vw_inrichtingselement_lijn_geom_idx;
 CREATE MATERIALIZED VIEW bgt.bgt_vw_inrichtingselement_lijn
 TABLESPACE pg_default
 AS SELECT
-		"BGTPLUS_OSDG_damwand".identificatie_lokaalid,
+		"BGTPLUS_OSDG_damwand".identificatie_lokaalid || 'BGTPLUS_OSDG_damwand' as identificatie_lokaalid,
     "BGTPLUS_OSDG_damwand".plus_type as type,
     "BGTPLUS_OSDG_damwand".geometrie,
     "BGTPLUS_OSDG_damwand".relatievehoogteligging, 
@@ -15,7 +15,7 @@ AS SELECT
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_OSDG_geluidsscherm".identificatie_lokaalid,
+		"BGTPLUS_OSDG_geluidsscherm".identificatie_lokaalid || 'BGTPLUS_OSDG_geluidsscherm' as identificatie_lokaalid,
     "BGTPLUS_OSDG_geluidsscherm".plus_type as type,
     "BGTPLUS_OSDG_geluidsscherm".geometrie,
     "BGTPLUS_OSDG_geluidsscherm".relatievehoogteligging, 
@@ -26,7 +26,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_OSDG_hek".identificatie_lokaalid,
+		"BGTPLUS_OSDG_hek".identificatie_lokaalid || 'BGTPLUS_OSDG_hek' as identificatie_lokaalid,
     "BGTPLUS_OSDG_hek".plus_type as type,
     "BGTPLUS_OSDG_hek".geometrie,
     "BGTPLUS_OSDG_hek".relatievehoogteligging, 
@@ -37,7 +37,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_OSDG_kademuur_L".identificatie_lokaalid,
+		"BGTPLUS_OSDG_kademuur_L".identificatie_lokaalid || 'BGTPLUS_OSDG_kademuur_L' as identificatie_lokaalid,
     "BGTPLUS_OSDG_kademuur_L".plus_type as type,
     "BGTPLUS_OSDG_kademuur_L".geometrie,
     "BGTPLUS_OSDG_kademuur_L".relatievehoogteligging, 
@@ -48,7 +48,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_OSDG_muur_L".identificatie_lokaalid,
+		"BGTPLUS_OSDG_muur_L".identificatie_lokaalid || 'BGTPLUS_OSDG_muur_L' as identificatie_lokaalid,
     "BGTPLUS_OSDG_muur_L".plus_type as type,
     "BGTPLUS_OSDG_muur_L".geometrie,
     "BGTPLUS_OSDG_muur_L".relatievehoogteligging, 
@@ -59,7 +59,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_OSDG_walbescherming".identificatie_lokaalid,
+		"BGTPLUS_OSDG_walbescherming".identificatie_lokaalid || 'BGTPLUS_OSDG_walbescherming' as identificatie_lokaalid,
     "BGTPLUS_OSDG_walbescherming".plus_type as type,
     "BGTPLUS_OSDG_walbescherming".geometrie,
     "BGTPLUS_OSDG_walbescherming".relatievehoogteligging, 
@@ -70,7 +70,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_SDG_draadraster".identificatie_lokaalid,
+		"BGTPLUS_SDG_draadraster".identificatie_lokaalid || 'BGTPLUS_SDG_draadraster' as identificatie_lokaalid,
     "BGTPLUS_SDG_draadraster".plus_type as type,
     "BGTPLUS_SDG_draadraster".geometrie,
     "BGTPLUS_SDG_draadraster".relatievehoogteligging, 
@@ -81,7 +81,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_SDG_faunaraster".identificatie_lokaalid,
+		"BGTPLUS_SDG_faunaraster".identificatie_lokaalid || 'BGTPLUS_SDG_faunaraster' as identificatie_lokaalid,
     "BGTPLUS_SDG_faunaraster".plus_type as type,
     "BGTPLUS_SDG_faunaraster".geometrie,
     "BGTPLUS_SDG_faunaraster".relatievehoogteligging, 
@@ -92,7 +92,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_VGT_haag_L".identificatie_lokaalid,
+		"BGTPLUS_VGT_haag_L".identificatie_lokaalid || 'BGTPLUS_VGT_haag_L' as identificatie_lokaalid,
     "BGTPLUS_VGT_haag_L".plus_type as type,
     "BGTPLUS_VGT_haag_L".geometrie,
     "BGTPLUS_VGT_haag_L".relatievehoogteligging, 
@@ -103,7 +103,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_WDI_geleidewerk".identificatie_lokaalid,
+		"BGTPLUS_WDI_geleidewerk".identificatie_lokaalid || 'BGTPLUS_WDI_geleidewerk' as identificatie_lokaalid,
     "BGTPLUS_WDI_geleidewerk".plus_type as type,
     "BGTPLUS_WDI_geleidewerk".geometrie,
     "BGTPLUS_WDI_geleidewerk".relatievehoogteligging, 
@@ -114,7 +114,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_WDI_remmingswerk".identificatie_lokaalid,
+		"BGTPLUS_WDI_remmingswerk".identificatie_lokaalid || 'BGTPLUS_WDI_remmingswerk' as identificatie_lokaalid,
     "BGTPLUS_WDI_remmingswerk".plus_type as type,
     "BGTPLUS_WDI_remmingswerk".geometrie,
     "BGTPLUS_WDI_remmingswerk".relatievehoogteligging, 
@@ -125,7 +125,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_WGI_balustrade".identificatie_lokaalid,
+		"BGTPLUS_WGI_balustrade".identificatie_lokaalid || 'BGTPLUS_WGI_balustrade' as identificatie_lokaalid,
     "BGTPLUS_WGI_balustrade".plus_type as type,
     "BGTPLUS_WGI_balustrade".geometrie,
     "BGTPLUS_WGI_balustrade".relatievehoogteligging, 
@@ -136,7 +136,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_WGI_geleideconstructie_L".identificatie_lokaalid,
+		"BGTPLUS_WGI_geleideconstructie_L".identificatie_lokaalid || 'BGTPLUS_WGI_geleideconstructie_L' as identificatie_lokaalid,
     "BGTPLUS_WGI_geleideconstructie_L".plus_type as type,
     "BGTPLUS_WGI_geleideconstructie_L".geometrie,
     "BGTPLUS_WGI_geleideconstructie_L".relatievehoogteligging, 
@@ -147,7 +147,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_WGI_rooster_L".identificatie_lokaalid,
+		"BGTPLUS_WGI_rooster_L".identificatie_lokaalid || 'BGTPLUS_WGI_rooster_L' as identificatie_lokaalid,
     "BGTPLUS_WGI_rooster_L".plus_type as type,
     "BGTPLUS_WGI_rooster_L".geometrie,
     "BGTPLUS_WGI_rooster_L".relatievehoogteligging, 
@@ -158,7 +158,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_WGI_wildrooster_L".identificatie_lokaalid,
+		"BGTPLUS_WGI_wildrooster_L".identificatie_lokaalid || 'BGTPLUS_WGI_wildrooster_L' as identificatie_lokaalid,
     "BGTPLUS_WGI_wildrooster_L".plus_type as type,
     "BGTPLUS_WGI_wildrooster_L".geometrie,
     "BGTPLUS_WGI_wildrooster_L".relatievehoogteligging, 
@@ -169,7 +169,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_KDL_stuw_L".identificatie_lokaalid,
+		"BGT_KDL_stuw_L".identificatie_lokaalid || 'BGT_KDL_stuw_L' as identificatie_lokaalid,
     "BGT_KDL_stuw_L".bgt_type as type,
     "BGT_KDL_stuw_L".geometrie,
     "BGT_KDL_stuw_L".relatievehoogteligging, 
@@ -180,7 +180,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_SDG_damwand".identificatie_lokaalid,
+		"BGT_SDG_damwand".identificatie_lokaalid || 'BGT_SDG_damwand' as identificatie_lokaalid,
     "BGT_SDG_damwand".bgt_type as type,
     "BGT_SDG_damwand".geometrie,
     "BGT_SDG_damwand".relatievehoogteligging, 
@@ -191,7 +191,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_SDG_geluidsscherm".identificatie_lokaalid,
+		"BGT_SDG_geluidsscherm".identificatie_lokaalid || 'BGT_SDG_geluidsscherm' as identificatie_lokaalid,
     "BGT_SDG_geluidsscherm".bgt_type as type,
     "BGT_SDG_geluidsscherm".geometrie,
     "BGT_SDG_geluidsscherm".relatievehoogteligging, 
@@ -202,7 +202,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_SDG_hek".identificatie_lokaalid,
+		"BGT_SDG_hek".identificatie_lokaalid || 'BGT_SDG_hek' as identificatie_lokaalid,
     "BGT_SDG_hek".bgt_type as type,
     "BGT_SDG_hek".geometrie,
     "BGT_SDG_hek".relatievehoogteligging, 
@@ -213,7 +213,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_SDG_kademuur_L".identificatie_lokaalid,
+		"BGT_SDG_kademuur_L".identificatie_lokaalid || 'BGT_SDG_kademuur_L' as identificatie_lokaalid,
     "BGT_SDG_kademuur_L".bgt_type as type,
     "BGT_SDG_kademuur_L".geometrie,
     "BGT_SDG_kademuur_L".relatievehoogteligging, 
@@ -224,7 +224,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_SDG_muur_L".identificatie_lokaalid,
+		"BGT_SDG_muur_L".identificatie_lokaalid || 'BGT_SDG_muur_L' as identificatie_lokaalid,
     "BGT_SDG_muur_L".bgt_type as type,
     "BGT_SDG_muur_L".geometrie,
     "BGT_SDG_muur_L".relatievehoogteligging, 
@@ -235,7 +235,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_SDG_walbescherming".identificatie_lokaalid,
+		"BGT_SDG_walbescherming".identificatie_lokaalid || 'BGT_SDG_walbescherming' as identificatie_lokaalid,
     "BGT_SDG_walbescherming".bgt_type as type,
     "BGT_SDG_walbescherming".geometrie,
     "BGT_SDG_walbescherming".relatievehoogteligging, 
@@ -246,7 +246,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_KDL_onbekend_L".identificatie_lokaalid,
+		"BGTPLUS_KDL_onbekend_L".identificatie_lokaalid || 'BGTPLUS_KDL_onbekend_L' as identificatie_lokaalid,
     "BGTPLUS_KDL_onbekend_L".plus_type as type,
     "BGTPLUS_KDL_onbekend_L".geometrie,
     "BGTPLUS_KDL_onbekend_L".relatievehoogteligging, 
@@ -257,7 +257,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_SDG_onbekend_L".identificatie_lokaalid,
+		"BGTPLUS_SDG_onbekend_L".identificatie_lokaalid || 'BGTPLUS_SDG_onbekend_L' as identificatie_lokaalid,
     "BGTPLUS_SDG_onbekend_L".plus_type as type,
     "BGTPLUS_SDG_onbekend_L".geometrie,
     "BGTPLUS_SDG_onbekend_L".relatievehoogteligging, 
@@ -268,7 +268,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_VGT_onbekend_L".identificatie_lokaalid,
+		"BGTPLUS_VGT_onbekend_L".identificatie_lokaalid || 'BGTPLUS_VGT_onbekend_L' as identificatie_lokaalid,
     "BGTPLUS_VGT_onbekend_L".plus_type as type,
     "BGTPLUS_VGT_onbekend_L".geometrie,
     "BGTPLUS_VGT_onbekend_L".relatievehoogteligging, 
@@ -279,7 +279,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_WGI_lijnafwatering".identificatie_lokaalid,
+		"BGTPLUS_WGI_lijnafwatering".identificatie_lokaalid || 'BGTPLUS_WGI_lijnafwatering' as identificatie_lokaalid,
     "BGTPLUS_WGI_lijnafwatering".plus_type as type,
     "BGTPLUS_WGI_lijnafwatering".geometrie,
     "BGTPLUS_WGI_lijnafwatering".relatievehoogteligging, 
@@ -290,7 +290,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_WGI_molgoot".identificatie_lokaalid,
+		"BGTPLUS_WGI_molgoot".identificatie_lokaalid || 'BGTPLUS_WGI_molgoot' as identificatie_lokaalid,
     "BGTPLUS_WGI_molgoot".plus_type as type,
     "BGTPLUS_WGI_molgoot".geometrie,
     "BGTPLUS_WGI_molgoot".relatievehoogteligging, 
@@ -303,7 +303,7 @@ UNION
 /* ---- KBK10 ---- */
   UNION
   SELECT
-		"WDL_waterbassin".ogc_fid::character as identificatie_lokaalid,
+		"WDL_waterbassin".ogc_fid::text || 'WDL_waterbassin' as identificatie_lokaal_id,
     'waterbassin' as type,
     "WDL_waterbassin".geom, 
     0  as relatievehoogteligging, 
@@ -313,7 +313,7 @@ UNION
   FROM kbk10."WDL_waterbassin"
  UNION 
   SELECT
-		"WDL_smal_water_3_tot_6m".ogc_fid::character as identificatie_lokaalid,
+		"WDL_smal_water_3_tot_6m".ogc_fid::text || 'WDL_smal_water_3_tot_6m' as identificatie_lokaal_id,
     'smal_water_3_tot_6m' as type,
     "WDL_smal_water_3_tot_6m".geom, 
     0  as relatievehoogteligging, 
@@ -323,7 +323,7 @@ UNION
   FROM kbk10."WDL_smal_water_3_tot_6m"
  UNION 
   SELECT
-		"WDL_smal_water_tot_3m".ogc_fid::character as identificatie_lokaalid,
+		"WDL_smal_water_tot_3m".ogc_fid::text || 'WDL_smal_water_tot_3m' as identificatie_lokaal_id,
     'smal_water_tot_3m' as type,
     "WDL_smal_water_tot_3m".geom, 
     0  as relatievehoogteligging, 
@@ -333,7 +333,7 @@ UNION
   FROM kbk10."WDL_smal_water_tot_3m"
  UNION 
   SELECT
-		"KRT_tunnelcontour".ogc_fid::character as identificatie_lokaalid,
+		"KRT_tunnelcontour".ogc_fid::text || 'KRT_tunnelcontour' as identificatie_lokaal_id,
     'tunnelcontour' as type,
     "KRT_tunnelcontour".geom, 
     0  as relatievehoogteligging, 
@@ -343,7 +343,7 @@ UNION
   FROM kbk10."KRT_tunnelcontour"
  UNION 
   SELECT
-		"IRT_aanlegsteiger_smal".ogc_fid::character as identificatie_lokaalid,
+		"IRT_aanlegsteiger_smal".ogc_fid::text || 'IRT_aanlegsteiger_smal' as identificatie_lokaal_id,
     'aanlegsteiger_smal' as type,
     "IRT_aanlegsteiger_smal".geom, 
     0  as relatievehoogteligging, 

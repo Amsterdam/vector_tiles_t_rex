@@ -4,7 +4,7 @@ drop INDEX IF exists bgt_vw_labels_geom_idx;
 CREATE MATERIALIZED VIEW bgt.bgt_vw_labels
 TABLESPACE pg_default
 AS SELECT		
-    "BAG_LBL_Ligplaatsnummeraanduidingreeks"."BAG_identificatie" as identificatie_lokaalid,
+    "BAG_LBL_Ligplaatsnummeraanduidingreeks"."BAG_identificatie" || 'BAG_LBL_Ligplaatsnummeraanduidingreeks' as identificatie_lokaalid,
     'ligplaats' as type,
     "BAG_LBL_Ligplaatsnummeraanduidingreeks".geometrie,
     "BAG_LBL_Ligplaatsnummeraanduidingreeks".hoek, 
@@ -16,7 +16,7 @@ AS SELECT
   WHERE 1=1
 union
 SELECT
-    "BAG_LBL_Standplaatsnummeraanduidingreeks"."BAG_identificatie" as identificatie_lokaalid,
+    "BAG_LBL_Standplaatsnummeraanduidingreeks"."BAG_identificatie" || 'BAG_LBL_Standplaatsnummeraanduidingreeks' as identificatie_lokaalid,
     'standplaats' as type,
     "BAG_LBL_Standplaatsnummeraanduidingreeks".geometrie,
     "BAG_LBL_Standplaatsnummeraanduidingreeks".hoek, 
@@ -28,7 +28,7 @@ SELECT
   WHERE 1=1
 union
 SELECT
-    "BGT_LBL_administratief_gebied".identificatie_lokaalid,
+    "BGT_LBL_administratief_gebied".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_LBL_administratief_gebied".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'|| 'BGT_LBL_administratief_gebied' as identificatie_lokaalid,
     "BGT_LBL_administratief_gebied".openbareruimtetype as type,
     "BGT_LBL_administratief_gebied".geometrie,
     "BGT_LBL_administratief_gebied".hoek, 
@@ -40,7 +40,7 @@ SELECT
   WHERE 1=1
 union
 SELECT
-    "BGT_LBL_kunstwerk".identificatie_lokaalid,
+    "BGT_LBL_kunstwerk".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_LBL_kunstwerk".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'||  'BGT_LBL_kunstwerk' as identificatie_lokaalid,
     "BGT_LBL_kunstwerk".openbareruimtetype as type,
     "BGT_LBL_kunstwerk".geometrie,
     "BGT_LBL_kunstwerk".hoek, 
@@ -52,7 +52,7 @@ SELECT
   WHERE 1=1
 union
 SELECT
-    "BGT_LBL_landschappelijk_gebied".identificatie_lokaalid,
+    "BGT_LBL_landschappelijk_gebied".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_LBL_landschappelijk_gebied".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'|| 'BGT_LBL_landschappelijk_gebied' as identificatie_lokaalid,
     "BGT_LBL_landschappelijk_gebied".openbareruimtetype as type,
     "BGT_LBL_landschappelijk_gebied".geometrie,
     "BGT_LBL_landschappelijk_gebied".hoek, 
@@ -64,7 +64,7 @@ SELECT
   WHERE 1=1
 union
 SELECT
-    "BGT_LBL_nummeraanduidingreeks".identificatie_lokaalid,
+    "BGT_LBL_nummeraanduidingreeks".identificatie_lokaalid ||'-'|| "BGT_LBL_nummeraanduidingreeks".tekst ||'-'|| "BGT_LBL_nummeraanduidingreeks".ogc_fid ||'-'|| 'BGT_LBL_nummeraanduidingreeks' as identificatie_lokaalid,
     'nummeraanduiding' as type,
     "BGT_LBL_nummeraanduidingreeks".geometrie,
     "BGT_LBL_nummeraanduidingreeks".hoek, 
@@ -76,7 +76,7 @@ SELECT
   WHERE 1=1
 union
 SELECT
-    "BGT_LBL_terrein".identificatie_lokaalid,
+    "BGT_LBL_terrein".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_LBL_terrein".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'|| 'BGT_LBL_terrein' as identificatie_lokaalid,
     "BGT_LBL_terrein".openbareruimtetype as type,
     "BGT_LBL_terrein".geometrie,
     "BGT_LBL_terrein".hoek, 
@@ -88,7 +88,7 @@ SELECT
   WHERE 1=1
 union
 SELECT
-    "BGT_LBL_water".identificatie_lokaalid,
+    "BGT_LBL_water".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_LBL_water".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'|| 'BGT_LBL_water' as identificatie_lokaalid,
     "BGT_LBL_water".openbareruimtetype as type,
     "BGT_LBL_water".geometrie,
     "BGT_LBL_water".hoek, 
@@ -100,7 +100,7 @@ SELECT
   WHERE 1=1
 union
 SELECT
-    "BGT_LBL_weg".identificatie_lokaalid,
+    "BGT_LBL_weg".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_LBL_weg".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'|| 'BGT_LBL_weg' as identificatie_lokaalid,
     "BGT_LBL_weg".openbareruimtetype as type,
     "BGT_LBL_weg".geometrie,
     "BGT_LBL_weg".hoek, 

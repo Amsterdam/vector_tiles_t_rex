@@ -5,7 +5,7 @@ CREATE MATERIALIZED VIEW bgt.bgt_vw_wegdeel_vlak
 TABLESPACE pg_default
 AS
     SELECT
- 		"BGT_OWGL_berm".identificatie_lokaalid,
+ 		"BGT_OWGL_berm".identificatie_lokaalid ||'-'|| "BGT_OWGL_berm".tijdstipregistratie ||'-'|| 'BGT_OWGL_berm' as identificatie_lokaalid,
         "BGT_OWGL_berm".bgt_functie as type,
         "BGT_OWGL_berm".bgt_fysiekvoorkomen as subtype,
         "BGT_OWGL_berm".plus_fysiekvoorkomen as subsubtype,
@@ -18,7 +18,7 @@ AS
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_OWGL_verkeerseiland".identificatie_lokaalid,
+ 		"BGT_OWGL_verkeerseiland".identificatie_lokaalid || 'BGT_OWGL_verkeerseiland' as identificatie_lokaalid,
         "BGT_OWGL_verkeerseiland".bgt_functie as type,
         "BGT_OWGL_verkeerseiland".bgt_fysiekvoorkomen as subtype,
         "BGT_OWGL_verkeerseiland".plus_fysiekvoorkomen as subsubtype,
@@ -31,7 +31,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_baan_voor_vliegverkeer".identificatie_lokaalid,
+ 		"BGT_WGL_baan_voor_vliegverkeer".identificatie_lokaalid || 'BGT_WGL_baan_voor_vliegverkeer' as identificatie_lokaalid,
         "BGT_WGL_baan_voor_vliegverkeer".bgt_functie as type,
         "BGT_WGL_baan_voor_vliegverkeer".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_baan_voor_vliegverkeer".plus_fysiekvoorkomen as subsubtype,
@@ -44,7 +44,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_fietspad".identificatie_lokaalid,
+ 		"BGT_WGL_fietspad".identificatie_lokaalid ||'-'|| "BGT_WGL_fietspad".tijdstipregistratie ||'-'||  'BGT_WGL_fietspad' as identificatie_lokaalid,
         "BGT_WGL_fietspad".bgt_functie as type,
         "BGT_WGL_fietspad".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_fietspad".plus_fysiekvoorkomen as subsubtype,
@@ -57,7 +57,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_inrit".identificatie_lokaalid,
+ 		"BGT_WGL_inrit".identificatie_lokaalid || 'BGT_WGL_inrit' as identificatie_lokaalid,
         "BGT_WGL_inrit".bgt_functie as type,
         "BGT_WGL_inrit".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_inrit".plus_fysiekvoorkomen as subsubtype,
@@ -70,7 +70,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_ov-baan".identificatie_lokaalid,
+ 		"BGT_WGL_ov-baan".identificatie_lokaalid || 'BGT_WGL_ov-baan' as identificatie_lokaalid,
         "BGT_WGL_ov-baan".bgt_functie as type,
         "BGT_WGL_ov-baan".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_ov-baan".plus_fysiekvoorkomen as subsubtype,
@@ -83,7 +83,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_overweg".identificatie_lokaalid,
+ 		"BGT_WGL_overweg".identificatie_lokaalid || 'BGT_WGL_overweg' as identificatie_lokaalid,
         "BGT_WGL_overweg".bgt_functie as type,
         "BGT_WGL_overweg".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_overweg".plus_fysiekvoorkomen as subsubtype,
@@ -96,7 +96,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_parkeervlak".identificatie_lokaalid,
+ 		"BGT_WGL_parkeervlak".identificatie_lokaalid || 'BGT_WGL_parkeervlak' as identificatie_lokaalid,
         "BGT_WGL_parkeervlak".bgt_functie as type,
         "BGT_WGL_parkeervlak".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_parkeervlak".plus_fysiekvoorkomen as subsubtype,
@@ -109,7 +109,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_rijbaan_autosnelweg".identificatie_lokaalid,
+ 		"BGT_WGL_rijbaan_autosnelweg".identificatie_lokaalid ||'-'|| "BGT_WGL_rijbaan_autosnelweg".tijdstipregistratie ||'-'||  'BGT_WGL_rijbaan_autosnelweg' as identificatie_lokaalid,
         "BGT_WGL_rijbaan_autosnelweg".bgt_functie as type,
         "BGT_WGL_rijbaan_autosnelweg".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_rijbaan_autosnelweg".plus_fysiekvoorkomen as subsubtype,
@@ -122,7 +122,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_rijbaan_autoweg".identificatie_lokaalid,
+ 		"BGT_WGL_rijbaan_autoweg".identificatie_lokaalid ||'-'|| "BGT_WGL_rijbaan_autoweg".tijdstipregistratie ||'-'||  'BGT_WGL_rijbaan_autoweg' as identificatie_lokaalid,
         "BGT_WGL_rijbaan_autoweg".bgt_functie as type,
         "BGT_WGL_rijbaan_autoweg".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_rijbaan_autoweg".plus_fysiekvoorkomen as subsubtype,
@@ -135,7 +135,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_rijbaan_lokale_weg".identificatie_lokaalid,
+ 		"BGT_WGL_rijbaan_lokale_weg".identificatie_lokaalid ||'-'|| "BGT_WGL_rijbaan_lokale_weg".tijdstipregistratie ||'-'||   'BGT_WGL_rijbaan_lokale_weg' as identificatie_lokaalid,
         "BGT_WGL_rijbaan_lokale_weg".bgt_functie as type,
         "BGT_WGL_rijbaan_lokale_weg".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_rijbaan_lokale_weg".plus_fysiekvoorkomen as subsubtype,
@@ -148,7 +148,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_rijbaan_regionale_weg".identificatie_lokaalid,
+ 		"BGT_WGL_rijbaan_regionale_weg".identificatie_lokaalid ||'-'|| "BGT_WGL_rijbaan_regionale_weg".tijdstipregistratie ||'-'|| 'BGT_WGL_rijbaan_regionale_weg' as identificatie_lokaalid,
         "BGT_WGL_rijbaan_regionale_weg".bgt_functie as type,
         "BGT_WGL_rijbaan_regionale_weg".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_rijbaan_regionale_weg".plus_fysiekvoorkomen as subsubtype,
@@ -161,7 +161,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_ruiterpad".identificatie_lokaalid,
+ 		"BGT_WGL_ruiterpad".identificatie_lokaalid ||'-'|| "BGT_WGL_ruiterpad".tijdstipregistratie ||'-'||  'BGT_WGL_ruiterpad' as identificatie_lokaalid,
         "BGT_WGL_ruiterpad".bgt_functie as type,
         "BGT_WGL_ruiterpad".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_ruiterpad".plus_fysiekvoorkomen as subsubtype,
@@ -174,7 +174,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_voetgangersgebied".identificatie_lokaalid,
+ 		"BGT_WGL_voetgangersgebied".identificatie_lokaalid ||'-'|| "BGT_WGL_voetgangersgebied".tijdstipregistratie ||'-'||  'BGT_WGL_voetgangersgebied' as identificatie_lokaalid,
         "BGT_WGL_voetgangersgebied".bgt_functie as type,
         "BGT_WGL_voetgangersgebied".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_voetgangersgebied".plus_fysiekvoorkomen as subsubtype,
@@ -187,7 +187,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT
- 		"BGT_WGL_voetpad".identificatie_lokaalid,
+ 		"BGT_WGL_voetpad".identificatie_lokaalid ||'-'|| "BGT_WGL_voetpad".tijdstipregistratie ||'-'||  'BGT_WGL_voetpad' as identificatie_lokaalid,
         "BGT_WGL_voetpad".bgt_functie as type,
         "BGT_WGL_voetpad".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_voetpad".plus_fysiekvoorkomen as subsubtype,
@@ -200,7 +200,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT 
-        "BGT_WGL_voetpad_op_trap".identificatie_lokaalid,
+        "BGT_WGL_voetpad_op_trap".identificatie_lokaalid ||'-'|| "BGT_WGL_voetpad_op_trap".tijdstipregistratie ||'-'||  'BGT_WGL_voetpad_op_trap' as identificatie_lokaalid,
         "BGT_WGL_voetpad_op_trap".bgt_functie as type,
         "BGT_WGL_voetpad_op_trap".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_voetpad_op_trap".plus_fysiekvoorkomen as subsubtype,
@@ -213,7 +213,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT 
-        "BGT_WGL_woonerf".identificatie_lokaalid,
+        "BGT_WGL_woonerf".identificatie_lokaalid ||'-'|| "BGT_WGL_woonerf".tijdstipregistratie ||'-'||  'BGT_WGL_woonerf' as identificatie_lokaalid,
         "BGT_WGL_woonerf".bgt_functie as type,
         "BGT_WGL_woonerf".bgt_fysiekvoorkomen as subtype,
         "BGT_WGL_woonerf".plus_fysiekvoorkomen as subsubtype,
@@ -229,7 +229,7 @@ UNION
     /* KBK10 */
 
     SELECT 
-        "WGL_startbaan_landingsbaan".ogc_fid::character as identificatie_lokaalid,
+        "WGL_startbaan_landingsbaan".ogc_fid::text || 'WGL_startbaan_landingsbaan' as identificatie_lokaal_id,
         'startbaan_landingsbaan' as type,
         NULL as subtype,
         NULL as subsubtype,
@@ -242,7 +242,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT 
-        "TRN_spoorbaanlichaam".ogc_fid::character as identificatie_lokaalid,
+        "TRN_spoorbaanlichaam".ogc_fid::text || 'TRN_spoorbaanlichaam' as identificatie_lokaal_id,
         'spoorbaanlichaam' as type,
         NULL as subtype,
         NULL as subsubtype,

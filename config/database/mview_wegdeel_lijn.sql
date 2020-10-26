@@ -6,7 +6,7 @@ TABLESPACE pg_default AS
 
 /* --- KBK10 ---- */
     select
-        "WGL_smalle_weg".ogc_fid::character as identificatie_lokaalid,
+        "WGL_smalle_weg".ogc_fid::text || 'WGL_smalle_weg' as identificatie_lokaalid,
         'smalle_weg' as type,
         "WGL_smalle_weg".geom,
         0  as relatievehoogteligging, 
@@ -20,7 +20,7 @@ TABLESPACE pg_default AS
  /* --- KBK50 ---- */
 UNION
     SELECT 
-        "WGL_straat_in_tunnel".ogc_fid::character as identificatie_lokaalid,
+        "WGL_straat_in_tunnel".ogc_fid::text || 'WGL_straat_in_tunnel' as identificatie_lokaalid,
         'straat_in_tunnel' as type,
         "WGL_straat_in_tunnel".geom,
         0  as relatievehoogteligging, 
@@ -31,7 +31,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT 
-        "WGL_hoofdweg_in_tunnel".ogc_fid::character as identificatie_lokaalid,
+        "WGL_hoofdweg_in_tunnel".ogc_fid::text || 'WGL_hoofdweg_in_tunnel' as identificatie_lokaalid,
         'hoofdweg_in_tunnel' as type,
         "WGL_hoofdweg_in_tunnel".geom,
         0  as relatievehoogteligging, 
@@ -42,7 +42,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT 
-        "WGL_regionale_weg_in_tunnel".ogc_fid::character as identificatie_lokaalid,
+        "WGL_regionale_weg_in_tunnel".ogc_fid::text || 'WGL_regionale_weg_in_tunnel' as identificatie_lokaalid,
         'regionale_weg_in_tunnel' as type,
         "WGL_regionale_weg_in_tunnel".geom,
         0  as relatievehoogteligging, 
@@ -53,7 +53,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT 
-        "WGL_autosnelweg_in_tunnel".ogc_fid::character as identificatie_lokaalid,
+        "WGL_autosnelweg_in_tunnel".ogc_fid::text || 'WGL_autosnelweg_in_tunnel' as identificatie_lokaalid,
         'autosnelweg_in_tunnel' as type,
         "WGL_autosnelweg_in_tunnel".geom,
         0  as relatievehoogteligging, 
@@ -64,7 +64,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT 
-        "WGL_straat".ogc_fid::character as identificatie_lokaalid,
+        "WGL_straat".ogc_fid::text || 'WGL_straat' as identificatie_lokaalid,
         'straat' as type,
         "WGL_straat".geom,
         0  as relatievehoogteligging, 
@@ -75,7 +75,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT 
-        "WGL_hoofdweg".ogc_fid::character as identificatie_lokaalid,
+        "WGL_hoofdweg".ogc_fid::text || 'WGL_hoofdweg' as identificatie_lokaalid,
         'hoofdweg' as type,
         "WGL_hoofdweg".geom,
         0  as relatievehoogteligging, 
@@ -86,7 +86,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT 
-        "WGL_autosnelweg".ogc_fid::character as identificatie_lokaalid,
+        "WGL_autosnelweg".ogc_fid::text || 'WGL_autosnelweg' as identificatie_lokaalid,
         'autosnelweg' as type,
         "WGL_autosnelweg".geom,
         0  as relatievehoogteligging, 

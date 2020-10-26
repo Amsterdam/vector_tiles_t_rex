@@ -4,8 +4,7 @@ drop INDEX IF exists bgt_vw_gebouw_vlak_geom_idx;
 CREATE MATERIALIZED VIEW bgt.bgt_vw_gebouw_vlak
 TABLESPACE pg_default
 AS SELECT
-		
-    "BGTPLUS_GISE_bordes".identificatie_lokaalid,
+		"BGTPLUS_GISE_bordes".identificatie_lokaalid || 'BGTPLUS_GISE_bordes' as identificatie_lokaalid,
     "BGTPLUS_GISE_bordes".plus_type as type,
     "BGTPLUS_GISE_bordes".geometrie,
     "BGTPLUS_GISE_bordes".relatievehoogteligging, 
@@ -16,7 +15,7 @@ AS SELECT
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_GISE_luifel".identificatie_lokaalid,
+		"BGTPLUS_GISE_luifel".identificatie_lokaalid || 'BGTPLUS_GISE_luifel' as identificatie_lokaalid,
     "BGTPLUS_GISE_luifel".plus_type as type,
     "BGTPLUS_GISE_luifel".geometrie,
     "BGTPLUS_GISE_luifel".relatievehoogteligging, 
@@ -27,7 +26,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_GISE_onbekend".identificatie_lokaalid,
+		"BGTPLUS_GISE_onbekend".identificatie_lokaalid || 'BGTPLUS_GISE_onbekend' as identificatie_lokaalid,
     "BGTPLUS_GISE_onbekend".plus_type as type,
     "BGTPLUS_GISE_onbekend".geometrie,
     "BGTPLUS_GISE_onbekend".relatievehoogteligging, 
@@ -38,7 +37,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_GISE_toegangstrap".identificatie_lokaalid,
+		"BGTPLUS_GISE_toegangstrap".identificatie_lokaalid || 'BGTPLUS_GISE_toegangstrap' as identificatie_lokaalid,
     "BGTPLUS_GISE_toegangstrap".plus_type as type,
     "BGTPLUS_GISE_toegangstrap".geometrie,
     "BGTPLUS_GISE_toegangstrap".relatievehoogteligging, 
@@ -49,7 +48,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_OBW_bunker".identificatie_lokaalid,
+		"BGTPLUS_OBW_bunker".identificatie_lokaalid || 'BGTPLUS_OBW_bunker' as identificatie_lokaalid,
     "BGTPLUS_OBW_bunker".plus_type as type,
     "BGTPLUS_OBW_bunker".geometrie,
     "BGTPLUS_OBW_bunker".relatievehoogteligging, 
@@ -60,7 +59,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_OBW_onbekend".identificatie_lokaalid,
+		"BGTPLUS_OBW_onbekend".identificatie_lokaalid || 'BGTPLUS_OBW_onbekend' as identificatie_lokaalid,
     "BGTPLUS_OBW_onbekend".plus_type as type,
     "BGTPLUS_OBW_onbekend".geometrie,
     "BGTPLUS_OBW_onbekend".relatievehoogteligging, 
@@ -71,7 +70,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_OBW_schuur".identificatie_lokaalid,
+		"BGTPLUS_OBW_schuur".identificatie_lokaalid || 'BGTPLUS_OBW_schuur' as identificatie_lokaalid,
     "BGTPLUS_OBW_schuur".plus_type as type,
     "BGTPLUS_OBW_schuur".geometrie,
     "BGTPLUS_OBW_schuur".relatievehoogteligging, 
@@ -82,7 +81,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGTPLUS_OBW_voedersilo".identificatie_lokaalid,
+		"BGTPLUS_OBW_voedersilo".identificatie_lokaalid || 'BGTPLUS_OBW_voedersilo' as identificatie_lokaalid,
     "BGTPLUS_OBW_voedersilo".plus_type as type,
     "BGTPLUS_OBW_voedersilo".geometrie,
     "BGTPLUS_OBW_voedersilo".relatievehoogteligging, 
@@ -93,7 +92,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_OBW_bassin".identificatie_lokaalid,
+		"BGT_OBW_bassin".identificatie_lokaalid || 'BGT_OBW_bassin' as identificatie_lokaalid,
     "BGT_OBW_bassin".bgt_type as type,
     "BGT_OBW_bassin".geometrie,
     "BGT_OBW_bassin".relatievehoogteligging, 
@@ -104,7 +103,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_OBW_bezinkbak".identificatie_lokaalid,
+		"BGT_OBW_bezinkbak".identificatie_lokaalid || 'BGT_OBW_bezinkbak' as identificatie_lokaalid,
     "BGT_OBW_bezinkbak".bgt_type as type,
     "BGT_OBW_bezinkbak".geometrie,
     "BGT_OBW_bezinkbak".relatievehoogteligging, 
@@ -115,7 +114,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_OBW_lage_trafo".identificatie_lokaalid,
+		"BGT_OBW_lage_trafo".identificatie_lokaalid || 'BGT_OBW_lage_trafo' as identificatie_lokaalid,
     "BGT_OBW_lage_trafo".bgt_type as type,
     "BGT_OBW_lage_trafo".geometrie,
     "BGT_OBW_lage_trafo".relatievehoogteligging, 
@@ -126,7 +125,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_OBW_open_loods".identificatie_lokaalid,
+		"BGT_OBW_open_loods".identificatie_lokaalid || 'BGT_OBW_open_loods' as identificatie_lokaalid,
     "BGT_OBW_open_loods".bgt_type as type,
     "BGT_OBW_open_loods".geometrie,
     "BGT_OBW_open_loods".relatievehoogteligging, 
@@ -137,7 +136,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_OBW_opslagtank".identificatie_lokaalid,
+		"BGT_OBW_opslagtank".identificatie_lokaalid || 'BGT_OBW_opslagtank' as identificatie_lokaalid,
     "BGT_OBW_opslagtank".bgt_type as type,
     "BGT_OBW_opslagtank".geometrie,
     "BGT_OBW_opslagtank".relatievehoogteligging, 
@@ -148,7 +147,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_OBW_overkapping".identificatie_lokaalid,
+		"BGT_OBW_overkapping".identificatie_lokaalid || 'BGT_OBW_overkapping' as identificatie_lokaalid,
     "BGT_OBW_overkapping".bgt_type as type,
     "BGT_OBW_overkapping".geometrie,
     "BGT_OBW_overkapping".relatievehoogteligging, 
@@ -159,7 +158,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_OBW_transitie".identificatie_lokaalid,
+		"BGT_OBW_transitie".identificatie_lokaalid || 'BGT_OBW_transitie' as identificatie_lokaalid,
     "BGT_OBW_transitie".bgt_type as type,
     "BGT_OBW_transitie".geometrie,
     "BGT_OBW_transitie".relatievehoogteligging, 
@@ -170,7 +169,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_OBW_windturbine".identificatie_lokaalid,
+		"BGT_OBW_windturbine".identificatie_lokaalid || 'BGT_OBW_windturbine' as identificatie_lokaalid,
     "BGT_OBW_windturbine".bgt_type as type,
     "BGT_OBW_windturbine".geometrie,
     "BGT_OBW_windturbine".relatievehoogteligging, 
@@ -181,7 +180,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BGT_PND_pand".identificatie_lokaalid,
+		"BGT_PND_pand".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_PND_pand".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'|| 'BGT_PND_pand' as identificatie_lokaalid,
     "BGT_PND_pand".bgt_status as type,
     "BGT_PND_pand".geometrie,
     "BGT_PND_pand".relatievehoogteligging, 
@@ -192,7 +191,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"CFT_Onderbouw".guid AS identificatie_lokaalid,
+		"CFT_Onderbouw".guid || 'CFT_Onderbouw' AS identificatie_lokaalid,
     'onderbouw' as type,
     "CFT_Onderbouw".geometrie,
     "CFT_Onderbouw".relatievehoogteligging, 
@@ -203,7 +202,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"CFT_Overbouw".guid AS identificatie_lokaalid,
+		"CFT_Overbouw".guid || 'CFT_Overbouw' AS identificatie_lokaalid,
     'overbouw' as type,
     "CFT_Overbouw".geometrie, 
     "CFT_Overbouw".relatievehoogteligging, 
@@ -216,7 +215,7 @@ UNION
 /* BAG (uit BGT dataset) */
 UNION
   SELECT
-		"BAG_Standplaats"."BAG_identificatie"  AS identificatie_lokaalid,
+		"BAG_Standplaats"."BAG_identificatie"  || 'BAG_Standplaats' AS identificatie_lokaalid,
     'standplaats' as type,
     "BAG_Standplaats".geometrie, 
     0 as relatievehoogteligging, 
@@ -227,7 +226,7 @@ UNION
   WHERE 1=1
 UNION
  SELECT
-		"BAG_Ligplaats"."BAG_identificatie" AS identificatie_lokaalid,
+		"BAG_Ligplaats"."BAG_identificatie" || 'BAG_Ligplaats' AS identificatie_lokaalid,
     'ligplaats' as type,
     "BAG_Ligplaats".geometrie, 
     0 as relatievehoogteligging, 
