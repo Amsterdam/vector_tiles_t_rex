@@ -9,3 +9,4 @@
 \i ./config/database/mview_wegdeel_lijn.sql
 \i ./config/database/mview_wegdeel_vlak.sql
 \i ./config/database/mview_gebouw_vlak.sql
+\i ./config/database/mview_labels.sql

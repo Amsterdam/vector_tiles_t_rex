@@ -1,4 +1,4 @@
-# KBK10 elementen en de plaatsing naar BGT views
+# KBK10 elementen en de plaatsing naar BGT (basiskaart) views
 
 ------- BGT waterdeel
 - WDL_breed_water
@@ -58,7 +58,7 @@
 - SBL_trein_nietoverdekt_nsp-dash
 
 
-# KBK50 elementen en de plaatsing naar BGT views
+# KBK50 elementen en de plaatsing naar BGT (basiskaart) views
 ------- BGT waterdeel
 - WDL_wateroppervlak
 - WDL_brede_waterloop
@@ -103,3 +103,9 @@
 - SBL_trein_ongeelektrificeerd-dash
 - SBL_trein-line
 - SBL_trein-dash
+
+# BAG stand en ligplaats en de plaatsing naar BGT (basiskaart) views
+
+------- BGT gebouw
+- BGT_BAG_Standplaats
+- BGT_BAG_Ligplaats
