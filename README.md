@@ -21,9 +21,9 @@ https://t-rex.tileserver.ch/
 - Run T-Rex tileserver: 
 `docker-compose run -p 6767:6767 t_rex serve --config  /var/config/config.toml`
 
-or to use the new mview
+or to use the new mviews
 
-`docker-compose run -p 6767:6767 t_rex serve --config  /var/config/topo_wm.tomls` 
+`docker-compose run -p 6767:6767 t_rex serve --config  /var/config/topo_wm.toml` 
 
 - Then go to :
  
@@ -38,6 +38,9 @@ or to use the new mview
  
  `http://localhost:6767/static/leaflet_topo_wm.html`
  
+- Generate all cache files
+
+`docker-compose run t_rex generate --config  /var/config/topo_wm_100000.toml`
  
 - Load basiskaart schema BGT in other database: 
  

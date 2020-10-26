@@ -28,3 +28,11 @@ services:
       - "$PWD/cache:/var/cache/mvtcache"
       - "$PWD/static:/static"
 
+  tileserver_gl:
+    image: maptiler/tileserver-gl
+    ports:
+      - "8080:80"
+    volumes:
+      - "$PWD/data/mbtiles:/data"
+
+
