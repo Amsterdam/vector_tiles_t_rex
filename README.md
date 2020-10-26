@@ -20,9 +20,11 @@ https://t-rex.tileserver.ch/
 Before runnning the tileserver, make sure it can actually cache the files to disk
 
 `mkdir -p cache`
+
 `sudo chown -Rf www-data:wwww-data cache`
 
-- Run T-Rex tileserver: 
+- Run T-Rex tileserver:
+
 `docker-compose run -p 6767:6767 t_rex serve --config  /var/config/config.toml`
 
 or to use the new mview
