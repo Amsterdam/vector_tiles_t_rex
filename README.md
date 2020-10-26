@@ -11,7 +11,7 @@ https://t-rex.tileserver.ch/
 
 - Create the mviews which contains the BGT en KBK10 and KBK50 data, run from the repro root dir
 
-``docker exec -it vector_tiles_t_rex_database_1 bash `psql -h localhost -p5402 -U [basiskaartuser] -d basiskaart -f ./config/database/create_all_mviews.sql` ``
+`docker exec -it vector_tiles_t_rex_database_1 bash ``psql -h localhost -p5402 -U [basiskaartuser] -d basiskaart -f ./config/database/create_all_mviews.sql``
 
 
 - To generate a new version for config.toml do:
@@ -21,9 +21,9 @@ https://t-rex.tileserver.ch/
 - Run T-Rex tileserver: 
 `docker-compose run -p 6767:6767 t_rex serve --config  /var/config/config.toml`
 
-or to use the new mviews
+or to use the new mview
 
-`docker-compose run -p 6767:6767 t_rex serve --config  /var/config/topo_wm.toml` 
+`docker-compose run -p 6767:6767 t_rex serve --config  /var/config/topo_wm_100000.toml` 
 
 - Then go to :
  
@@ -38,9 +38,11 @@ or to use the new mviews
  
  `http://localhost:6767/static/leaflet_topo_wm.html`
  
-- Generate all cache files
 
-`docker-compose run t_rex generate --config  /var/config/topo_wm_100000.toml`
+ - to generate vector tiles, run cmd:
+
+ `docker-compose run t_rex generate --config  /var/config/topo_wm_100000.toml`
+
  
 - Load basiskaart schema BGT in other database: 
  
