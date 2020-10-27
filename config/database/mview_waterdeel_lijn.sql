@@ -6,7 +6,7 @@ TABLESPACE pg_default
 AS SELECT
  		"BGTPLUS_KDL_duiker_L".identificatie_lokaalid || 'BGTPLUS_KDL_duiker_L' as identificatie_lokaalid,
     "BGTPLUS_KDL_duiker_L".plus_type as type,
-    "BGTPLUS_KDL_duiker_L".geometrie,
+		ST_makeValid(    "BGTPLUS_KDL_duiker_L".geometrie) as geometrie,
     "BGTPLUS_KDL_duiker_L".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
@@ -20,7 +20,7 @@ AS SELECT
  SELECT
  		"WDL_brede_waterloop".ogc_fid::text || 'WDL_brede_waterloop' as identificatie_lokaal_id,
     'brede_waterloop' as type,
-    "WDL_brede_waterloop".geom, 
+		ST_makeValid(    "WDL_brede_waterloop".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	NULL::int  as minzoom, 
@@ -32,7 +32,7 @@ AS SELECT
  SELECT
  		"WDL_smalle_waterloop".ogc_fid::text || 'WDL_smalle_waterloop' as identificatie_lokaal_id,
     'smalle_waterloop' as type,
-    "WDL_smalle_waterloop".geom, 
+		ST_makeValid(    "WDL_smalle_waterloop".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	NULL::int  as minzoom, 

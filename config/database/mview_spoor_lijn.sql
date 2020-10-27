@@ -7,7 +7,7 @@ TABLESPACE pg_default AS
     SELECT
  		"BGT_SPR_sneltram".identificatie_lokaalid || 'BGT_SPR_sneltram' as identificatie_lokaalid,
         "BGT_SPR_sneltram".bgt_functie as type,
-        "BGT_SPR_sneltram".geometrie,
+		ST_makeValid(        "BGT_SPR_sneltram".geometrie) as geometrie,
         "BGT_SPR_sneltram".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -18,7 +18,7 @@ UNION
     SELECT
  		"BGT_SPR_tram".identificatie_lokaalid || 'BGT_SPR_tram' as identificatie_lokaalid,
         "BGT_SPR_tram".bgt_functie as type,
-        "BGT_SPR_tram".geometrie,
+		ST_makeValid(        "BGT_SPR_tram".geometrie) as geometrie,
         "BGT_SPR_tram".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -29,7 +29,7 @@ UNION
     SELECT
  		"BGT_SPR_trein".identificatie_lokaalid || 'BGT_SPR_trein' as identificatie_lokaalid,
         "BGT_SPR_trein".bgt_functie as type,
-        "BGT_SPR_trein".geometrie,
+		ST_makeValid(        "BGT_SPR_trein".geometrie) as geometrie,
         "BGT_SPR_trein".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -43,7 +43,7 @@ UNION
     SELECT
  		"SBL_metro_overdekt".ogc_fid::text || 'SBL_metro_overdekt' as identificatie_lokaal_id,
         'SBL_metro_overdekt' as type,
-        "SBL_metro_overdekt".geom,
+		ST_makeValid(        "SBL_metro_overdekt".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -54,7 +54,7 @@ UNION
     SELECT
  		"SBL_trein_overdekt_1sp".ogc_fid::text || 'SBL_trein_overdekt_1sp' as identificatie_lokaal_id,
         'trein_overdekt_1sp' as type,
-        "SBL_trein_overdekt_1sp".geom,
+		ST_makeValid(        "SBL_trein_overdekt_1sp".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -65,7 +65,7 @@ UNION
     SELECT
  		"SBL_trein_overdekt_nsp".ogc_fid::text || 'SBL_trein_overdekt_nsp' as identificatie_lokaal_id,
         'SBL_trein_overdekt_nsp' as type,
-        "SBL_trein_overdekt_nsp".geom,
+		ST_makeValid(        "SBL_trein_overdekt_nsp".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -76,7 +76,7 @@ UNION
     SELECT
  		"SBL_metro_nietoverdekt_1sp".ogc_fid::text || 'SBL_metro_nietoverdekt_1sp' as identificatie_lokaal_id,
         'SBL_metro_nietoverdekt_1sp' as type,
-        "SBL_metro_nietoverdekt_1sp".geom,
+		ST_makeValid(        "SBL_metro_nietoverdekt_1sp".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -87,7 +87,7 @@ UNION
     SELECT
  		"SBL_metro_nietoverdekt_nsp".ogc_fid::text || 'SBL_metro_nietoverdekt_nsp' as identificatie_lokaal_id,
         'SBL_metro_nietoverdekt_nsp' as type,
-        "SBL_metro_nietoverdekt_nsp".geom,
+		ST_makeValid(        "SBL_metro_nietoverdekt_nsp".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -98,7 +98,7 @@ UNION
     SELECT
  		"SBL_trein_ongeelektrificeerd".ogc_fid::text || 'SBL_trein_ongeelektrificeerd_kbk10' as identificatie_lokaal_id,
         'SBL_trein_ongeelektrificeerd' as type,
-        "SBL_trein_ongeelektrificeerd".geom,
+		ST_makeValid(        "SBL_trein_ongeelektrificeerd".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -109,7 +109,7 @@ UNION
     SELECT
  		"SBL_trein_nietoverdekt_1sp".ogc_fid::text || 'SBL_trein_nietoverdekt_1sp' as identificatie_lokaal_id,
         'SBL_trein_nietoverdekt_1sp' as type,
-        "SBL_trein_nietoverdekt_1sp".geom,
+		ST_makeValid(        "SBL_trein_nietoverdekt_1sp".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -120,7 +120,7 @@ UNION
     SELECT
  		"SBL_trein_nietoverdekt_nsp".ogc_fid::text || 'SBL_trein_nietoverdekt_nsp' as identificatie_lokaal_id,
         'SBL_trein_nietoverdekt_nsp' as type,
-        "SBL_trein_nietoverdekt_nsp".geom,
+		ST_makeValid(        "SBL_trein_nietoverdekt_nsp".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -133,7 +133,7 @@ UNION
     SELECT
  		"SBL_metro_sneltram_in_tunnel".ogc_fid::text || 'SBL_metro_sneltram_in_tunnel' as identificatie_lokaal_id,
         'metro_sneltram_in_tunnel' as type,
-        "SBL_metro_sneltram_in_tunnel".geom,
+		ST_makeValid(        "SBL_metro_sneltram_in_tunnel".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	NULL::int  as minzoom, 
@@ -144,7 +144,7 @@ UNION
     SELECT
  		"SBL_trein_in_tunnel".ogc_fid::text || 'SBL_trein_in_tunnel' as identificatie_lokaal_id,
         'trein_in_tunnel' as type,
-        "SBL_trein_in_tunnel".geom,
+		ST_makeValid(        "SBL_trein_in_tunnel".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	NULL::int  as minzoom, 
@@ -155,7 +155,7 @@ UNION
     SELECT
  		"SBL_metro_sneltram".ogc_fid::text || 'SBL_metro_sneltram' as identificatie_lokaal_id,
         'metro_sneltram' as type,
-        "SBL_metro_sneltram".geom,
+		ST_makeValid(        "SBL_metro_sneltram".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	NULL::int  as minzoom, 
@@ -166,7 +166,7 @@ UNION
     SELECT
  		"SBL_trein_ongeelektrificeerd".ogc_fid::text || 'SBL_trein_ongeelektrificeerd_kbk50' as identificatie_lokaal_id,
         'trein_ongeelektrificeerd' as type,
-        "SBL_trein_ongeelektrificeerd".geom,
+		ST_makeValid(        "SBL_trein_ongeelektrificeerd".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	NULL::int  as minzoom, 
@@ -177,7 +177,7 @@ UNION
     SELECT
  		"SBL_trein".ogc_fid::text || 'SBL_trein' as identificatie_lokaal_id,
         'trein' as type,
-        "SBL_trein".geom,
+		ST_makeValid(        "SBL_trein".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	NULL::int  as minzoom, 
@@ -188,5 +188,4 @@ UNION
 WITH DATA;
 
 -- View indexes:
-CREATE INDEX bgt_vw_spoor_lijn_geom_idx ON bgt.bgt_vw_spoor_lijn USING gist
-(geometrie);
+CREATE INDEX bgt_vw_spoor_lijn_geom_idx ON bgt.bgt_vw_spoor_lijn USING gist (geometrie);

@@ -7,7 +7,7 @@ TABLESPACE pg_default
 AS SELECT
 		"BGTPLUS_KDL_keermuur".identificatie_lokaalid || 'BGTPLUS_KDL_keermuur' as identificatie_lokaalid,
     "BGTPLUS_KDL_keermuur".plus_type as type,
-    "BGTPLUS_KDL_keermuur". geometrie, 
+		ST_makeValid(    "BGTPLUS_KDL_keermuur". geometrie) as geometrie, 
      "BGTPLUS_KDL_keermuur".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
@@ -18,7 +18,7 @@ UNION
  SELECT
 		"BGTPLUS_OSDG_muur_V".identificatie_lokaalid || 'BGTPLUS_OSDG_muur_V' as identificatie_lokaalid,
      "BGTPLUS_OSDG_muur_V".plus_type as type,
-    "BGTPLUS_OSDG_muur_V". geometrie, 
+		ST_makeValid(    "BGTPLUS_OSDG_muur_V". geometrie) as geometrie, 
      "BGTPLUS_OSDG_muur_V".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
@@ -29,7 +29,7 @@ UNION
  SELECT
 		"BGTPLUS_VGT_haag_V".identificatie_lokaalid || 'BGTPLUS_VGT_haag_V' as identificatie_lokaalid,
     "BGTPLUS_VGT_haag_V".plus_type as type,
-    "BGTPLUS_VGT_haag_V". geometrie, 
+		ST_makeValid(    "BGTPLUS_VGT_haag_V". geometrie) as geometrie, 
      "BGTPLUS_VGT_haag_V".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
@@ -40,7 +40,7 @@ UNION
  SELECT
 		"BGTPLUS_WGI_boomspiegel_V".identificatie_lokaalid || 'BGTPLUS_WGI_boomspiegel_V' as identificatie_lokaalid,
     "BGTPLUS_WGI_boomspiegel_V".plus_type as type,
-    "BGTPLUS_WGI_boomspiegel_V". geometrie, 
+		ST_makeValid(    "BGTPLUS_WGI_boomspiegel_V". geometrie) as geometrie, 
      "BGTPLUS_WGI_boomspiegel_V".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
@@ -51,7 +51,7 @@ UNION
  SELECT
 		"BGTPLUS_WGI_rooster_V".identificatie_lokaalid || 'BGTPLUS_WGI_rooster_V' as identificatie_lokaalid,
     "BGTPLUS_WGI_rooster_V".plus_type as type,
-    "BGTPLUS_WGI_rooster_V". geometrie, 
+		ST_makeValid(    "BGTPLUS_WGI_rooster_V". geometrie) as geometrie, 
      "BGTPLUS_WGI_rooster_V".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
@@ -62,7 +62,7 @@ UNION
  SELECT
 		"BGTPLUS_WGI_wildrooster_V".identificatie_lokaalid || 'BGTPLUS_WGI_wildrooster_V' as identificatie_lokaalid,
     "BGTPLUS_WGI_wildrooster_V".plus_type as type,
-    "BGTPLUS_WGI_wildrooster_V". geometrie, 
+		ST_makeValid(    "BGTPLUS_WGI_wildrooster_V". geometrie) as geometrie, 
      "BGTPLUS_WGI_wildrooster_V".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
@@ -73,7 +73,7 @@ UNION
  SELECT
 		"BGT_KDL_gemaal".identificatie_lokaalid || 'BGT_KDL_gemaal' as identificatie_lokaalid,
     "BGT_KDL_gemaal".bgt_type as type,
-    "BGT_KDL_gemaal". geometrie, 
+		ST_makeValid(    "BGT_KDL_gemaal". geometrie) as geometrie, 
      "BGT_KDL_gemaal".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -84,7 +84,7 @@ UNION
  SELECT
 		"BGT_KDL_hoogspanningsmast_V".identificatie_lokaalid || 'BGT_KDL_hoogspanningsmast_V' as identificatie_lokaalid,
     "BGT_KDL_hoogspanningsmast_V".bgt_type as type,
-    "BGT_KDL_hoogspanningsmast_V". geometrie, 
+		ST_makeValid(    "BGT_KDL_hoogspanningsmast_V". geometrie) as geometrie, 
      "BGT_KDL_hoogspanningsmast_V".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -95,7 +95,7 @@ UNION
  SELECT
 		"BGT_KDL_sluis".identificatie_lokaalid || 'BGT_KDL_sluis' as identificatie_lokaalid,
     "BGT_KDL_sluis".bgt_type as type,
-    "BGT_KDL_sluis". geometrie, 
+		ST_makeValid(    "BGT_KDL_sluis". geometrie) as geometrie, 
      "BGT_KDL_sluis".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -106,7 +106,7 @@ UNION
  SELECT
 		"BGT_KDL_steiger".identificatie_lokaalid || 'BGT_KDL_steiger' as identificatie_lokaalid,
     "BGT_KDL_steiger".bgt_type as type,
-    "BGT_KDL_steiger". geometrie, 
+		ST_makeValid(    "BGT_KDL_steiger". geometrie) as geometrie, 
      "BGT_KDL_steiger".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -117,7 +117,7 @@ UNION
  SELECT
 		"BGT_KDL_stuw_V".identificatie_lokaalid || 'BGT_KDL_stuw_V' as identificatie_lokaalid,
     "BGT_KDL_stuw_V".bgt_type as type,
-    "BGT_KDL_stuw_V". geometrie, 
+		ST_makeValid(    "BGT_KDL_stuw_V". geometrie) as geometrie, 
      "BGT_KDL_stuw_V".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -128,7 +128,7 @@ UNION
  SELECT
 		"BGT_SDG_kademuur_V".identificatie_lokaalid || 'BGT_SDG_kademuur_V' as identificatie_lokaalid,
     "BGT_SDG_kademuur_V".bgt_type as type,
-    "BGT_SDG_kademuur_V". geometrie, 
+		ST_makeValid(    "BGT_SDG_kademuur_V". geometrie) as geometrie, 
      "BGT_SDG_kademuur_V".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -139,7 +139,7 @@ UNION
  SELECT
 		"BGT_SDG_muur_V".identificatie_lokaalid || 'BGT_SDG_muur_V' as identificatie_lokaalid,
     "BGT_SDG_muur_V".bgt_type as type,
-    "BGT_SDG_muur_V". geometrie, 
+		ST_makeValid(    "BGT_SDG_muur_V". geometrie) as geometrie, 
      "BGT_SDG_muur_V".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -152,7 +152,7 @@ UNION
   SELECT
 		"WDL_waterbassin".ogc_fid::text || 'WDL_waterbassin' as identificatie_lokaal_id,
     'waterbassin' as type,
-    "WDL_waterbassin".geom, 
+		ST_makeValid(    "WDL_waterbassin".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -162,7 +162,7 @@ UNION
    SELECT
 		"WDL_haven".ogc_fid::text || 'WDL_haven_kbk10' as identificatie_lokaal_id,
     'haven' as type,
-    "WDL_haven".geom, 
+		ST_makeValid(    "WDL_haven".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -173,7 +173,7 @@ UNION
    SELECT
 		"TRN_aanlegsteiger".ogc_fid::text || 'TRN_aanlegsteiger_kbk10' as identificatie_lokaal_id,
     'aanlegsteiger' as type,
-    "TRN_aanlegsteiger".geom, 
+		ST_makeValid(    "TRN_aanlegsteiger".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -184,7 +184,7 @@ UNION
   SELECT
 		"TRN_basaltblokken_steenglooiing".ogc_fid::text || 'TRN_basaltblokken_steenglooiing_kbk10' as identificatie_lokaal_id,
     'basaltblokken_steenglooiing' as type,
-    "TRN_basaltblokken_steenglooiing".geom, 
+		ST_makeValid(    "TRN_basaltblokken_steenglooiing".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -194,7 +194,7 @@ UNION
   SELECT
 		"TRN_grasland".ogc_fid::text || 'TRN_grasland_kbk10' as identificatie_lokaal_id,
     'grasland' as type,
-    "TRN_grasland".geom, 
+		ST_makeValid(    "TRN_grasland".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -204,7 +204,7 @@ UNION
   SELECT
 		"TRN_akkerland".ogc_fid::text || 'TRN_akkerland_kbk10' as identificatie_lokaal_id,
     'akkerland' as type,
-    "TRN_akkerland".geom, 
+		ST_makeValid(    "TRN_akkerland".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -214,7 +214,7 @@ UNION
   SELECT
 		"TRN_overig".ogc_fid::text || 'TRN_overig_kbk10' as identificatie_lokaal_id,
     'overig' as type,
-    "TRN_overig".geom, 
+		ST_makeValid(    "TRN_overig".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -224,7 +224,7 @@ UNION
   SELECT
 		"TRN_bedrijfsterrein".ogc_fid::text || 'TRN_bedrijfsterrein_kbk10' as identificatie_lokaal_id,
     'bedrijfsterrein' as type,
-    "TRN_bedrijfsterrein".geom, 
+		ST_makeValid(    "TRN_bedrijfsterrein".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -234,7 +234,7 @@ UNION
   SELECT
 		"TRN_openbaar_groen".ogc_fid::text || 'TRN_openbaar_groen_kbk10' as identificatie_lokaal_id,
     'openbaar_groen' as type,
-    "TRN_openbaar_groen".geom, 
+		ST_makeValid(    "TRN_openbaar_groen".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -244,7 +244,7 @@ UNION
   SELECT
 		"TRN_zand".ogc_fid::text || 'TRN_zand_kbk10' as identificatie_lokaal_id,
     'zand' as type,
-    "TRN_zand".geom, 
+		ST_makeValid(    "TRN_zand".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -254,7 +254,7 @@ UNION
   SELECT
 		"TRN_bos-loofbos".ogc_fid::text || 'TRN_bos-loofbos_kbk10' as identificatie_lokaal_id,
     'bos-loofbos' as type,
-    "TRN_bos-loofbos".geom, 
+		ST_makeValid(    "TRN_bos-loofbos".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -264,7 +264,7 @@ UNION
   SELECT
 		"TRN_bos-naaldbos".ogc_fid::text || 'TRN_bos-naaldbos_kbk10' as identificatie_lokaal_id,
     'bos-naaldbos' as type,
-    "TRN_bos-naaldbos".geom, 
+		ST_makeValid(    "TRN_bos-naaldbos".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -274,7 +274,7 @@ UNION
   SELECT
 		"TRN_bos-gemengd_bos".ogc_fid::text || 'TRN_bos-gemengd_bos_kbk10' as identificatie_lokaal_id,
     'bos-gemengd_bos' as type,
-    "TRN_bos-gemengd_bos".geom, 
+		ST_makeValid(    "TRN_bos-gemengd_bos".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -284,7 +284,7 @@ UNION
   SELECT
 		"TRN_bos-griend".ogc_fid::text || 'TRN_bos-griend_kbk10' as identificatie_lokaal_id,
     'bos-griend' as type,
-    "TRN_bos-griend".geom, 
+		ST_makeValid(    "TRN_bos-griend".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -294,7 +294,7 @@ UNION
   SELECT
 		"TRN_boomgaard".ogc_fid::text || 'TRN_boomgaard_kbk10' as identificatie_lokaal_id,
     'boomgaard' as type,
-    "TRN_boomgaard".geom, 
+		ST_makeValid(    "TRN_boomgaard".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -304,7 +304,7 @@ UNION
   SELECT
 		"TRN_boomkwekerij".ogc_fid::text || 'TRN_boomkwekerij_kbk10' as identificatie_lokaal_id,
     'boomkwekerij' as type,
-    "TRN_boomkwekerij".geom, 
+		ST_makeValid(    "TRN_boomkwekerij".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -314,7 +314,7 @@ UNION
   SELECT
 		"TRN_dodenakker".ogc_fid::text || 'TRN_dodenakker_kbk10' as identificatie_lokaal_id,
     'dodenakker' as type,
-    "TRN_dodenakker".geom, 
+		ST_makeValid(    "TRN_dodenakker".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -324,7 +324,7 @@ UNION
   SELECT
 		"TRN_dodenakker_met_bos".ogc_fid::text || 'TRN_dodenakker_met_bos_kbk10' as identificatie_lokaal_id,
     'dodenakker_met_bos' as type,
-    "TRN_dodenakker_met_bos".geom, 
+		ST_makeValid(    "TRN_dodenakker_met_bos".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -334,7 +334,7 @@ UNION
   SELECT
 		"TRN_fruitkwekerij".ogc_fid::text || 'TRN_fruitkwekerij_kbk10' as identificatie_lokaal_id,
     'fruitkwekeri' as type,
-    "TRN_fruitkwekerij".geom, 
+		ST_makeValid(    "TRN_fruitkwekerij".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -344,7 +344,7 @@ UNION
   SELECT
 		"GBW_overdekt".ogc_fid::text || 'GBW_overdekt_kbk10' as identificatie_lokaal_id,
     'overdekt' as type,
-    "GBW_overdekt".geom, 
+		ST_makeValid(    "GBW_overdekt".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -354,7 +354,7 @@ UNION
   SELECT
 		"GBW_gebouw".ogc_fid::text || 'GBW_gebouw_kbk10' as identificatie_lokaal_id,
     'gebouw' as type,
-    "GBW_gebouw".geom, 
+		ST_makeValid(    "GBW_gebouw".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -364,7 +364,7 @@ UNION
   SELECT
 		"GBW_hoogbouw".ogc_fid::text || 'GBW_hoogbouw_kbk10' as identificatie_lokaal_id,
     'hoogbouw' as type,
-    "GBW_hoogbouw".geom, 
+		ST_makeValid(    "GBW_hoogbouw".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -374,7 +374,7 @@ UNION
   SELECT
 		"GBW_kas_warenhuis".ogc_fid::text || 'GBW_kas_warenhuis_kbk10' as identificatie_lokaal_id,
     'kas_warenhuis' as type,
-    "GBW_kas_warenhuis".geom, 
+		ST_makeValid(    "GBW_kas_warenhuis".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -384,7 +384,7 @@ UNION
   SELECT
 		"TRN_binnentuin".ogc_fid::text || 'TRN_binnentuin_kbk10' as identificatie_lokaal_id,
     'binnentuin' as type,
-    "TRN_binnentuin".geom, 
+		ST_makeValid(    "TRN_binnentuin".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -397,7 +397,7 @@ UNION
  SELECT
 		"TRN_agrarisch".ogc_fid::text || 'TRN_agrarisch_kbk50' as identificatie_lokaal_id,
     'TRN_agrarisch' as type,
-    "TRN_agrarisch".geom, 
+		ST_makeValid(    "TRN_agrarisch".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	16  as minzoom, 
@@ -407,7 +407,7 @@ UNION
  SELECT
 		"TRN_overig".ogc_fid::text || 'TRN_overig_kbk50' as identificatie_lokaal_id,
     'overig' as type,
-    "TRN_overig".geom, 
+		ST_makeValid(    "TRN_overig".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	16  as minzoom, 
@@ -417,7 +417,7 @@ UNION
  SELECT
 		"TRN_bedrijfsterrein_dienstverlening".ogc_fid::text || 'TRN_bedrijfsterrein_dienstverlening_kbk50' as identificatie_lokaal_id,
     'bedrijfsterrein_dienstverlening' as type,
-    "TRN_bedrijfsterrein_dienstverlening".geom, 
+		ST_makeValid(    "TRN_bedrijfsterrein_dienstverlening".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	16  as minzoom, 
@@ -427,7 +427,7 @@ UNION
  SELECT
 		"TRN_bos_groen_sport".ogc_fid::text || 'TRN_bos_groen_sport_kbk50' as identificatie_lokaal_id,
     'bos_groen_sport' as type,
-    "TRN_bos_groen_sport".geom, 
+		ST_makeValid(    "TRN_bos_groen_sport".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	16  as minzoom, 
@@ -437,7 +437,7 @@ UNION
  SELECT
 		"TRN_zand".ogc_fid::text || 'TRN_zand_kbk50' as identificatie_lokaal_id,
     'zand' as type,
-    "TRN_zand".geom, 
+		ST_makeValid(    "TRN_zand".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	16  as minzoom, 
@@ -447,7 +447,7 @@ UNION
  SELECT
 		"GBW_bebouwing".ogc_fid::text || 'GBW_bebouwing_kbk50' as identificatie_lokaal_id,
     'bebouwing' as type,
-    "GBW_bebouwing".geom, 
+		ST_makeValid(    "GBW_bebouwing".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	16  as minzoom, 
@@ -457,7 +457,7 @@ UNION
  SELECT
 		"GBW_kassen".ogc_fid::text || 'GBW_kassen_kbk50' as identificatie_lokaal_id,
     'kassen' as type,
-    "GBW_kassen".geom, 
+		ST_makeValid(    "GBW_kassen".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	16  as minzoom, 
@@ -466,4 +466,4 @@ UNION
 WITH DATA;
 
 -- View indexes:
-CREATE INDEX bgt_vw_inrichtingselement_vlak_geom_idx ON bgt.bgt_vw_inrichtingselement_vlak USING gist ( geometrie);
+	 CREATE INDEX bgt_vw_inrichtingselement_vlak_geom_idx ON bgt.bgt_vw_inrichtingselement_vlak USING gist ( geometrie);
