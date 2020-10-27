@@ -148,7 +148,16 @@ UNION
   WHERE 1=1
 
     /* KBK10 */
-
+  UNION
+  SELECT
+		"WDL_waterbassin".ogc_fid::text || 'WDL_waterbassin' as identificatie_lokaal_id,
+    'waterbassin' as type,
+    "WDL_waterbassin".geom, 
+    0  as relatievehoogteligging, 
+ 	 	'kbk10' as bron, 
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
+  FROM kbk10."WDL_waterbassin"
   UNION 
    SELECT
 		"WDL_haven".ogc_fid::text || 'WDL_haven_kbk10' as identificatie_lokaal_id,
