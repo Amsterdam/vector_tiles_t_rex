@@ -113,7 +113,7 @@ query_limit = 1000
 [[tileset.layer]]
 name = "bgt_vw_wegdeel_lijn"
 table_name = "bgt.bgt_vw_wegdeel_lijn"
-geometry_field = "geom"
+geometry_field = "geometrie"
 geometry_type = "MULTILINESTRING"
 srid = 28992
 buffer_size = 0
