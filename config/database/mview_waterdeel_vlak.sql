@@ -7,7 +7,7 @@ TABLESPACE pg_default
 AS SELECT
  		"BGTPLUS_KDL_duiker_V".identificatie_lokaalid || 'BGTPLUS_KDL_duiker_V' as identificatie_lokaalid,
     "BGTPLUS_KDL_duiker_V".plus_type as type,
-    "BGTPLUS_KDL_duiker_V". geometrie, 
+		ST_makeValid(    "BGTPLUS_KDL_duiker_V". geometrie) as geometrie, 
     "BGTPLUS_KDL_duiker_V".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
@@ -18,7 +18,7 @@ UNION
  SELECT
  		"BGT_WDL_greppel_droge_sloot".identificatie_lokaalid || 'BGT_WDL_greppel_droge_sloot' as identificatie_lokaalid,
     "BGT_WDL_greppel_droge_sloot".bgt_type as type,
-    "BGT_WDL_greppel_droge_sloot". geometrie, 
+		ST_makeValid(    "BGT_WDL_greppel_droge_sloot". geometrie) as geometrie, 
     "BGT_WDL_greppel_droge_sloot".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -29,7 +29,7 @@ UNION
  SELECT
  		"BGT_WDL_waterloop".identificatie_lokaalid ||'-'|| "BGT_WDL_waterloop".tijdstipregistratie ||'-'|| 'BGT_WDL_waterloop' as identificatie_lokaalid,
     "BGT_WDL_waterloop".bgt_type as type,
-    "BGT_WDL_waterloop". geometrie, 
+		ST_makeValid(    "BGT_WDL_waterloop". geometrie) as geometrie, 
     "BGT_WDL_waterloop".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -40,7 +40,7 @@ UNION
  SELECT
  		"BGT_WDL_watervlakte".identificatie_lokaalid || 'BGT_WDL_watervlakte' as identificatie_lokaalid,
     "BGT_WDL_watervlakte".bgt_type as type,
-    "BGT_WDL_watervlakte". geometrie, 
+		ST_makeValid(    "BGT_WDL_watervlakte". geometrie) as geometrie, 
     "BGT_WDL_watervlakte".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -54,7 +54,7 @@ UNION
  SELECT
  		"WDL_breed_water".ogc_fid::text || 'WDL_breed_water' as identificatie_lokaal_id,
     'breed_water' as type,
-    "WDL_breed_water".geom, 
+		ST_makeValid(    "WDL_breed_water".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
  	 	13  as minzoom, 
@@ -68,7 +68,7 @@ UNION
  SELECT
  		"WDL_wateroppervlak".ogc_fid::text || 'WDL_wateroppervlak' as identificatie_lokaal_id,
     'breed_water' as type,
-    "WDL_wateroppervlak".geom, 
+		ST_makeValid(    "WDL_wateroppervlak".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	NULL::int  as minzoom, 

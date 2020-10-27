@@ -7,7 +7,7 @@ TABLESPACE pg_default
 AS SELECT
  		"BGT_BTRN_boomteelt".identificatie_lokaalid || 'BGT_BTRN_boomteelt' as identificatie_lokaalid,
     "BGT_BTRN_boomteelt".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_boomteelt".geometrie,
+		ST_makeValid(    "BGT_BTRN_boomteelt".geometrie) as geometrie,
     "BGT_BTRN_boomteelt".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -18,7 +18,7 @@ UNION
  SELECT
  		"BGT_BTRN_bouwland".identificatie_lokaalid || 'BGT_BTRN_bouwland' as identificatie_lokaalid,
     "BGT_BTRN_bouwland".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_bouwland".geometrie,
+		ST_makeValid(    "BGT_BTRN_bouwland".geometrie) as geometrie,
     "BGT_BTRN_bouwland".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -29,7 +29,7 @@ UNION
  SELECT
  		"BGT_BTRN_fruitteelt".identificatie_lokaalid || 'BGT_BTRN_fruitteelt' as identificatie_lokaalid,
     "BGT_BTRN_fruitteelt".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_fruitteelt".geometrie,
+		ST_makeValid(    "BGT_BTRN_fruitteelt".geometrie) as geometrie,
     "BGT_BTRN_fruitteelt".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -40,7 +40,7 @@ UNION
  SELECT
  		"BGT_BTRN_gemengd_bos".identificatie_lokaalid || 'BGT_BTRN_gemengd_bos' as identificatie_lokaalid,
     "BGT_BTRN_gemengd_bos".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_gemengd_bos".geometrie,
+		ST_makeValid(    "BGT_BTRN_gemengd_bos".geometrie) as geometrie,
     "BGT_BTRN_gemengd_bos".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -51,7 +51,7 @@ UNION
  SELECT
  		"BGT_BTRN_grasland_agrarisch".identificatie_lokaalid ||'-'||  "BGT_BTRN_grasland_agrarisch".tijdstipregistratie ||'-'||  'BGT_BTRN_grasland_agrarisch' as identificatie_lokaalid,
     "BGT_BTRN_grasland_agrarisch".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_grasland_agrarisch".geometrie,
+		ST_makeValid(    "BGT_BTRN_grasland_agrarisch".geometrie) as geometrie,
     "BGT_BTRN_grasland_agrarisch".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -62,7 +62,7 @@ UNION
  SELECT
  		"BGT_BTRN_grasland_overig".identificatie_lokaalid ||'-'||  "BGT_BTRN_grasland_overig".tijdstipregistratie ||'-'|| 'BGT_BTRN_grasland_overig' as identificatie_lokaalid,
     "BGT_BTRN_grasland_overig".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_grasland_overig".geometrie,
+		ST_makeValid(    "BGT_BTRN_grasland_overig".geometrie) as geometrie,
     "BGT_BTRN_grasland_overig".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -73,7 +73,7 @@ UNION
  SELECT
  		"BGT_BTRN_groenvoorziening".identificatie_lokaalid || 'BGT_BTRN_groenvoorziening' as identificatie_lokaalid,
     "BGT_BTRN_groenvoorziening".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_groenvoorziening".geometrie,
+		ST_makeValid(    "BGT_BTRN_groenvoorziening".geometrie) as geometrie,
     "BGT_BTRN_groenvoorziening".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -84,7 +84,7 @@ UNION
  SELECT
  		"BGT_BTRN_houtwal".identificatie_lokaalid || 'BGT_BTRN_houtwal' as identificatie_lokaalid,
     "BGT_BTRN_houtwal".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_houtwal".geometrie,
+		ST_makeValid(    "BGT_BTRN_houtwal".geometrie) as geometrie,
     "BGT_BTRN_houtwal".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -95,7 +95,7 @@ UNION
  SELECT
  		"BGT_BTRN_loofbos".identificatie_lokaalid || 'BGT_BTRN_loofbos' as identificatie_lokaalid,
     "BGT_BTRN_loofbos".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_loofbos".geometrie,
+		ST_makeValid(    "BGT_BTRN_loofbos".geometrie) as geometrie,
     "BGT_BTRN_loofbos".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -106,7 +106,7 @@ UNION
  SELECT
  		"BGT_BTRN_moeras".identificatie_lokaalid || 'BGT_BTRN_moeras' as identificatie_lokaalid,
     "BGT_BTRN_moeras".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_moeras".geometrie,
+		ST_makeValid(    "BGT_BTRN_moeras".geometrie) as geometrie,
     "BGT_BTRN_moeras".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -117,7 +117,7 @@ UNION
  SELECT
  		"BGT_BTRN_naaldbos".identificatie_lokaalid || 'BGT_BTRN_naaldbos' as identificatie_lokaalid,
     "BGT_BTRN_naaldbos".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_naaldbos".geometrie,
+		ST_makeValid(    "BGT_BTRN_naaldbos".geometrie) as geometrie,
     "BGT_BTRN_naaldbos".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -128,7 +128,7 @@ UNION
  SELECT
  		"BGT_BTRN_rietland".identificatie_lokaalid || 'BGT_BTRN_rietland' as identificatie_lokaalid,
     "BGT_BTRN_rietland".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_rietland".geometrie,
+		ST_makeValid(    "BGT_BTRN_rietland".geometrie) as geometrie,
     "BGT_BTRN_rietland".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -139,7 +139,7 @@ UNION
  SELECT
  		"BGT_BTRN_struiken".identificatie_lokaalid || 'BGT_BTRN_struiken' as identificatie_lokaalid,
     "BGT_BTRN_struiken".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_struiken".geometrie,
+		ST_makeValid(    "BGT_BTRN_struiken".geometrie) as geometrie,
     "BGT_BTRN_struiken".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -150,7 +150,7 @@ UNION
  SELECT
  		"BGT_KDL_perron".identificatie_lokaalid || 'BGT_KDL_perron' as identificatie_lokaalid,
     "BGT_KDL_perron".bgt_type as type,
-    "BGT_KDL_perron".geometrie,
+		ST_makeValid(    "BGT_KDL_perron".geometrie) as geometrie,
     "BGT_KDL_perron".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -161,7 +161,7 @@ UNION
  SELECT
  		"BGT_KDL_strekdam".identificatie_lokaalid || 'BGT_KDL_strekdam' as identificatie_lokaalid,
     "BGT_KDL_strekdam".bgt_type as type,
-    "BGT_KDL_strekdam".geometrie,
+		ST_makeValid(    "BGT_KDL_strekdam".geometrie) as geometrie,
     "BGT_KDL_strekdam".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -172,7 +172,7 @@ UNION
  SELECT
  		"BGT_OTRN_erf".identificatie_lokaalid ||'-'||  	"BGT_OTRN_erf".tijdstipregistratie ||'-'|| 'BGT_OTRN_erf' as identificatie_lokaalid,
     "BGT_OTRN_erf".bgt_fysiekvoorkomen as type,
-    "BGT_OTRN_erf".geometrie,
+		ST_makeValid(    "BGT_OTRN_erf".geometrie) as geometrie,
     "BGT_OTRN_erf".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -183,7 +183,7 @@ UNION
  SELECT
  		"BGT_OTRN_gesloten_verharding".identificatie_lokaalid || 'BGT_OTRN_gesloten_verharding' as identificatie_lokaalid,
     "BGT_OTRN_gesloten_verharding".bgt_fysiekvoorkomen as type,
-    "BGT_OTRN_gesloten_verharding".geometrie,
+		ST_makeValid(    "BGT_OTRN_gesloten_verharding".geometrie) as geometrie,
     "BGT_OTRN_gesloten_verharding".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -194,7 +194,7 @@ UNION
  SELECT
  		"BGT_OTRN_half_verhard".identificatie_lokaalid || 'BGT_OTRN_half_verhard' as identificatie_lokaalid,
     "BGT_OTRN_half_verhard".bgt_fysiekvoorkomen as type,
-    "BGT_OTRN_half_verhard".geometrie,
+		ST_makeValid(    "BGT_OTRN_half_verhard".geometrie) as geometrie,
     "BGT_OTRN_half_verhard".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -205,7 +205,7 @@ UNION
  SELECT
  		 "BGT_OTRN_onverhard".identificatie_lokaalid || 'BGT_OTRN_onverhard' as identificatie_lokaalid,
     "BGT_OTRN_onverhard".bgt_fysiekvoorkomen as type,
-    "BGT_OTRN_onverhard".geometrie,
+		ST_makeValid(    "BGT_OTRN_onverhard".geometrie) as geometrie,
     "BGT_OTRN_onverhard".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -216,7 +216,7 @@ UNION
  SELECT
  		"BGT_OTRN_open_verharding".identificatie_lokaalid || 'BGT_OTRN_open_verharding' as identificatie_lokaalid,
     "BGT_OTRN_open_verharding".bgt_fysiekvoorkomen as type,
-    "BGT_OTRN_open_verharding".geometrie,
+		ST_makeValid(    "BGT_OTRN_open_verharding".geometrie) as geometrie,
     "BGT_OTRN_open_verharding".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -227,7 +227,7 @@ UNION
  SELECT
  		"BGT_OTRN_zand".identificatie_lokaalid || 'BGT_OTRN_zand' as identificatie_lokaalid,
     "BGT_OTRN_zand".bgt_fysiekvoorkomen as type,
-    "BGT_OTRN_zand".geometrie,
+		ST_makeValid(    "BGT_OTRN_zand".geometrie) as geometrie,
     "BGT_OTRN_zand".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -238,7 +238,7 @@ UNION
  SELECT
  		"BGT_OWDL_oever_slootkant".identificatie_lokaalid ||'-'||  	"BGT_OWDL_oever_slootkant".tijdstipregistratie ||'-'|| 'BGT_OWDL_oever_slootkant' as identificatie_lokaalid,
     "BGT_OWDL_oever_slootkant".bgt_type as type,
-    "BGT_OWDL_oever_slootkant".geometrie,
+		ST_makeValid(    "BGT_OWDL_oever_slootkant".geometrie) as geometrie,
     "BGT_OWDL_oever_slootkant".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -249,7 +249,7 @@ UNION
  SELECT
  		"BGT_WGL_spoorbaan".identificatie_lokaalid || 'BGT_WGL_spoorbaan' as identificatie_lokaalid,
     "BGT_WGL_spoorbaan".bgt_fysiekvoorkomen as type,
-    "BGT_WGL_spoorbaan".geometrie,
+		ST_makeValid(    "BGT_WGL_spoorbaan".geometrie) as geometrie,
     "BGT_WGL_spoorbaan".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
@@ -260,7 +260,7 @@ UNION
  SELECT
  		"BGT_BTRN_heide".identificatie_lokaalid || 'BGT_BTRN_heide' as identificatie_lokaalid,
     "BGT_BTRN_heide".bgt_fysiekvoorkomen as type,
-    "BGT_BTRN_heide".geometrie,
+		ST_makeValid(    "BGT_BTRN_heide".geometrie) as geometrie,
     "BGT_BTRN_heide".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 

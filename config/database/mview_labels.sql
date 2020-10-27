@@ -6,7 +6,7 @@ TABLESPACE pg_default
 AS SELECT		
     "BAG_LBL_Ligplaatsnummeraanduidingreeks"."BAG_identificatie" || 'BAG_LBL_Ligplaatsnummeraanduidingreeks' as identificatie_lokaalid,
     'ligplaats' as type,
-    "BAG_LBL_Ligplaatsnummeraanduidingreeks".geometrie,
+		ST_makeValid(    "BAG_LBL_Ligplaatsnummeraanduidingreeks".geometrie) as geometrie,
     "BAG_LBL_Ligplaatsnummeraanduidingreeks".hoek, 
     "BAG_LBL_Ligplaatsnummeraanduidingreeks".tekst, 
  	'bag/bgt' as bron, 
@@ -18,7 +18,7 @@ union
 SELECT
     "BAG_LBL_Standplaatsnummeraanduidingreeks"."BAG_identificatie" || 'BAG_LBL_Standplaatsnummeraanduidingreeks' as identificatie_lokaalid,
     'standplaats' as type,
-    "BAG_LBL_Standplaatsnummeraanduidingreeks".geometrie,
+		ST_makeValid(    "BAG_LBL_Standplaatsnummeraanduidingreeks".geometrie) as geometrie,
     "BAG_LBL_Standplaatsnummeraanduidingreeks".hoek, 
     "BAG_LBL_Standplaatsnummeraanduidingreeks".tekst, 
  	'bag/bgt' as bron, 
@@ -30,7 +30,7 @@ union
 SELECT
     "BGT_LBL_administratief_gebied".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_LBL_administratief_gebied".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'|| 'BGT_LBL_administratief_gebied' as identificatie_lokaalid,
     "BGT_LBL_administratief_gebied".openbareruimtetype as type,
-    "BGT_LBL_administratief_gebied".geometrie,
+		ST_makeValid(    "BGT_LBL_administratief_gebied".geometrie) as geometrie,
     "BGT_LBL_administratief_gebied".hoek, 
     "BGT_LBL_administratief_gebied".tekst, 
  	'bgt' as bron, 
@@ -42,7 +42,7 @@ union
 SELECT
     "BGT_LBL_kunstwerk".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_LBL_kunstwerk".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'||  'BGT_LBL_kunstwerk' as identificatie_lokaalid,
     "BGT_LBL_kunstwerk".openbareruimtetype as type,
-    "BGT_LBL_kunstwerk".geometrie,
+		ST_makeValid(    "BGT_LBL_kunstwerk".geometrie) as geometrie,
     "BGT_LBL_kunstwerk".hoek, 
     "BGT_LBL_kunstwerk".tekst, 
  	'bgt' as bron, 
@@ -54,7 +54,7 @@ union
 SELECT
     "BGT_LBL_landschappelijk_gebied".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_LBL_landschappelijk_gebied".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'|| 'BGT_LBL_landschappelijk_gebied' as identificatie_lokaalid,
     "BGT_LBL_landschappelijk_gebied".openbareruimtetype as type,
-    "BGT_LBL_landschappelijk_gebied".geometrie,
+		ST_makeValid(    "BGT_LBL_landschappelijk_gebied".geometrie) as geometrie,
     "BGT_LBL_landschappelijk_gebied".hoek, 
     "BGT_LBL_landschappelijk_gebied".tekst, 
  	'bgt' as bron, 
@@ -66,7 +66,7 @@ union
 SELECT
     "BGT_LBL_nummeraanduidingreeks".identificatie_lokaalid ||'-'|| "BGT_LBL_nummeraanduidingreeks".tekst ||'-'|| "BGT_LBL_nummeraanduidingreeks".ogc_fid ||'-'|| 'BGT_LBL_nummeraanduidingreeks' as identificatie_lokaalid,
     'nummeraanduiding' as type,
-    "BGT_LBL_nummeraanduidingreeks".geometrie,
+		ST_makeValid(    "BGT_LBL_nummeraanduidingreeks".geometrie) as geometrie,
     "BGT_LBL_nummeraanduidingreeks".hoek, 
     "BGT_LBL_nummeraanduidingreeks".tekst, 
  	'bgt' as bron, 
@@ -78,7 +78,7 @@ union
 SELECT
     "BGT_LBL_terrein".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_LBL_terrein".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'|| 'BGT_LBL_terrein' as identificatie_lokaalid,
     "BGT_LBL_terrein".openbareruimtetype as type,
-    "BGT_LBL_terrein".geometrie,
+		ST_makeValid(    "BGT_LBL_terrein".geometrie) as geometrie,
     "BGT_LBL_terrein".hoek, 
     "BGT_LBL_terrein".tekst, 
  	'bgt' as bron, 
@@ -90,7 +90,7 @@ union
 SELECT
     "BGT_LBL_water".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_LBL_water".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'|| 'BGT_LBL_water' as identificatie_lokaalid,
     "BGT_LBL_water".openbareruimtetype as type,
-    "BGT_LBL_water".geometrie,
+		ST_makeValid(    "BGT_LBL_water".geometrie) as geometrie,
     "BGT_LBL_water".hoek, 
     "BGT_LBL_water".tekst, 
  	'bgt' as bron, 
@@ -102,7 +102,7 @@ union
 SELECT
     "BGT_LBL_weg".identificatie_lokaalid ||'-'|| row_number() over (partition by "BGT_LBL_weg".identificatie_lokaalid order by tijdstipregistratie desc ) ||'-'|| 'BGT_LBL_weg' as identificatie_lokaalid,
     "BGT_LBL_weg".openbareruimtetype as type,
-    "BGT_LBL_weg".geometrie,
+		ST_makeValid(    "BGT_LBL_weg".geometrie) as geometrie,
     "BGT_LBL_weg".hoek, 
     "BGT_LBL_weg".tekst, 
  	'bgt' as bron, 
