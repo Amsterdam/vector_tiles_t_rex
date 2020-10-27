@@ -11,7 +11,7 @@ AS SELECT
     "BGTPLUS_KDL_duiker_V".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGTPLUS_KDL_duiker_V"
   WHERE 1=1
 UNION
@@ -22,7 +22,7 @@ UNION
     "BGT_WDL_greppel_droge_sloot".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGT_WDL_greppel_droge_sloot"
   WHERE 1=1
 UNION
@@ -33,7 +33,7 @@ UNION
     "BGT_WDL_waterloop".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGT_WDL_waterloop"
   WHERE 1=1
 UNION
@@ -44,7 +44,7 @@ UNION
     "BGT_WDL_watervlakte".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGT_WDL_watervlakte"
   WHERE 1=1
 
@@ -71,7 +71,7 @@ UNION
 		ST_makeValid(    "WDL_wateroppervlak".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	NULL::int  as minzoom, 
+ 	 	8  as minzoom, 
  	 	12  as maxzoom
    FROM kbk50."WDL_wateroppervlak"
   WHERE 1=1
