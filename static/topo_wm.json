@@ -1,7 +1,7 @@
 {
     "version": 8,
     "name": "Example",
-    "glyphs": "http://localhost:6767static/fonts/{fontstack}/{range}.pbf",
+    "glyphs": "http://localhost:6767/static/fonts/{fontstack}/{range}.pbf",
     "sources": {
         "basiskaart": {
             "type": "vector",
@@ -35,6 +35,60 @@
                     "rgba(229, 227, 222, 1.0)"
                 ],
                 "fill-outline-color": "#C9C7C2"
+            }
+        },
+        {
+            "id": "house_numbers",
+            "source": "basiskaart",
+            "source-layer": "labels",
+            "type": "symbol",
+            "minzoom": 16,
+            "filter": [
+                "==",
+                ["get","type"],
+                "nummeraanduiding"
+            ],
+            "layout": {
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-padding": 2.5,
+                "text-font": [
+                    "open-sans"
+                ],
+                "text-anchor": "top",
+                "text-field": [
+                    "to-string",
+                    [
+                        "get",
+                        "tekst"
+                    ]
+                ],
+                "text-size": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    16,
+                    8,
+                    20,
+                    13
+                ],
+                "text-max-width": 3,
+                "text-rotate": {
+                    "type": "identity",
+                    "property": "hoek"
+                },
+                "text-rotation-alignment": "map"
+            },
+            "paint": {
+                "text-halo-blur": 0.5,
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "#ffffff"
             }
         }
     ]
