@@ -1,0 +1,28 @@
+{
+  "options": {
+    "paths": {
+      "root": "",
+      "fonts": "fonts",
+      "sprites": "sprites",
+      "styles": "styles",
+      "mbtiles": ""
+    }
+  },
+  "styles": {
+    "basic": {
+      "style": "topo_wm.json",
+      "tilejson": {
+        "type": "overlay",
+        "bounds": [4.63974, 52.25158, 5.10768, 52.50593]
+      }
+    }
+  },
+  "data": {
+    "bgt-vw-vector": {
+      "mbtiles": "/data/bgt_vw.mbtiles"
+    },
+    "zurich": {
+      "mbtiles": "/data/zurich.mbtiles"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "glyphs": "http://localhost:6767/fonts/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background_",
+      "paint": {
+        "background-color": "rgba(255, 255, 255, 1)"
+      },
+      "type": "background"
+    },
+    {
+      "id": "bgt_vw_gebouw_vlak",
+      "source": "bgt_vw",
+      "source-layer": "bgt_vw_gebouw_vlak",
+      "type": "line"
+    },
+    {
+      "id": "bgt_vw_inrichtingselement_lijn",
+      "source": "bgt_vw",
+      "source-layer": "bgt_vw_inrichtingselement_lijn",
+      "type": "line"
+    },
+    {
+      "id": "bgt_vw_inrichtingselement_punt",
+      "source": "bgt_vw",
+      "source-layer": "bgt_vw_inrichtingselement_punt",
+      "type": "line"
+    },
+    {
+      "id": "bgt_vw_inrichtingselement_vlak",
+      "source": "bgt_vw",
+      "source-layer": "bgt_vw_inrichtingselement_vlak",
+      "type": "line"
+    },
+    {
+      "id": "bgt_vw_spoor_lijn",
+      "source": "bgt_vw",
+      "source-layer": "bgt_vw_spoor_lijn",
+      "type": "line"
+    },
+    {
+      "id": "bgt_vw_terreindeel_vlak",
+      "source": "bgt_vw",
+      "source-layer": "bgt_vw_terreindeel_vlak",
+      "type": "line"
+    },
+    {
+      "id": "bgt_vw_waterdeel_lijn",
+      "source": "bgt_vw",
+      "source-layer": "bgt_vw_waterdeel_lijn",
+      "type": "line"
+    },
+    {
+      "id": "bgt_vw_waterdeel_vlak",
+      "source": "bgt_vw",
+      "source-layer": "bgt_vw_waterdeel_vlak",
+      "type": "line"
+    },
+    {
+      "id": "bgt_vw_wegdeel_lijn",
+      "source": "bgt_vw",
+      "source-layer": "bgt_vw_wegdeel_lijn",
+      "type": "line"
+    },
+    {
+      "id": "bgt_vw_wegdeel_vlak",
+      "source": "bgt_vw",
+      "source-layer": "bgt_vw_wegdeel_vlak",
+      "type": "line"
+    }
+  ],
+  "metadata": {
+    "mapbox:autocomposite": false,
+    "maputnik:renderer": "mbgljs"
+  },
+  "name": "t-rex",
+  "sources": {
+    "bgt_vw": {
+      "type": "vector",
+      "url": "mbtiles://{bgt-vw-vector}"
+    }
+  },
+  "version": 8
+}

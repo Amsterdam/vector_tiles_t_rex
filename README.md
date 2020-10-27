@@ -29,7 +29,7 @@ Before runnning the tileserver, make sure it can actually cache the files to dis
 
 or to use the new mview
 
-`docker-compose run -p 6767:6767 t_rex serve --config  /var/config/topo_wm_100000.toml` 
+`docker-compose run -p 6767:6767 t_rex serve --config  /var/config/topo_wm.toml` 
 
 - Then go to :
  
@@ -45,16 +45,24 @@ or to use the new mview
  `http://localhost:6767/static/leaflet_topo_wm.html`
  
 
- - to generate vector tiles, run cmd:
+ - to generate vector tiles cache, run cmd:
 
- `docker-compose run t_rex generate --config  /var/config/topo_wm_100000.toml`
-
+`docker-compose run t_rex generate --maxzoom 16 --config  /var/config/topo_wm_100000.toml`
+  
+ - Create mbtiles file  
  
-- Load basiskaart schema BGT in other database: 
- 
-`wget -O /tmp/basiskaart_latest.gz -nc https://admin.data.amsterdam.nl/postgres/basiskaart_latest.gz`
+- `~/Development/datapunt/mbutil/mb-util --image_format=pbf cache/bgt_vw data/bgt_vw.mbtiles`
 
-`pg_restore --if-exists -j 4 -O -c --schema=bgt -h host -d database -U user /tmp/basiskaart_latest.gz`
+T-Rex writes the bounds and center in metdata.json with square brackets  around the array. 
+But Tilserver-GL expects these arrays without square brackets. So we have tu opdate the metadata.
+This can be done in the mbtiles file with : 
 
+`sqlite3 data/bgt_vw.mbtiles
+sqlite> update metadata set value="4.63974,52.25158,5.10768,52.50593" where name="bounds"; 
+sqlite> update metadata set value="4.87371,52.378755,12" where name="center";
+`
+- Run Tileserver GL 
 
-Now we have imported basiskaart tables and materialized views in the bgt schema.  
+- `docker run --rm -it -v $(pwd):/data -p 8080:80 maptiler/tileserver-gl -c config/tileserver_cfg.json
+`
+

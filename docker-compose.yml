@@ -33,6 +33,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - "$PWD/data/mbtiles:/data"
-
+      - "$PWD/data:/data"
+      - "$PWD/config:/var/config:ro"
+    command: run.sh --verbose -c /var/config/tileserver_cfg.json
 
