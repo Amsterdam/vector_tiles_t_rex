@@ -47,7 +47,7 @@ or to use the new mview
 
  - to generate vector tiles cache, run cmd:
 
-`docker-compose run t_rex generate --maxzoom 16 --config  /var/config/topo_wm_100000.toml`
+`docker-compose run t_rex generate --maxzoom 16 --config  /var/config/topo_wm.toml`
   
  - Create mbtiles file  
  
