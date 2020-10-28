@@ -27,13 +27,26 @@ services:
       - "$PWD/config:/var/config:ro"
       - "$PWD/cache:/var/cache/mvtcache"
       - "$PWD/static:/static"
+    command: serve --config  /var/config/topo_wm.toml
 
   tileserver_gl:
     image: maptiler/tileserver-gl
     ports:
       - "8080:80"
+    links:
+      - t_rex
     volumes:
       - "$PWD/data:/data"
       - "$PWD/config:/var/config:ro"
     command: run.sh --verbose -c /var/config/tileserver_cfg.json
 
+  topo_wm:
+    build: .
+    user: root
+    links:
+      - tileserver_gl
+      - database
+    command: >
+      mapproxy-seed -c 1 -s /app/seed.yaml -f /app/mapproxy.yaml --seed=topo_wm_kbk,topo_wm_bgt
+    volumes:
+      - "$PWD/tiles:/mnt/tiles"

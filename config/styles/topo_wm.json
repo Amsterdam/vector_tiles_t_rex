@@ -1,7 +1,7 @@
 {
     "version": 8,
     "name": "Example",
-    "glyphs": "http://localhost:6767static/fonts/{fontstack}/{range}.pbf",
+    "glyphs": "http://localhost:6767/static/fonts/{fontstack}/{range}.pbf",
     "sources": {
         "basiskaart": {
             "type": "vector",

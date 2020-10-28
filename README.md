@@ -49,20 +49,58 @@ or to use the new mview
 
 `docker-compose run t_rex generate --maxzoom 16 --config  /var/config/topo_wm.toml`
   
- - Create mbtiles file  
- 
-- `~/Development/datapunt/mbutil/mb-util --image_format=pbf cache/bgt_vw data/bgt_vw.mbtiles`
+ - Create mbtiles file  (optional)
+
+MB tiles is not really required. It is possible refer directly from Tileserver GL to T-rex.
+But for completeness we include this here. First install mb-util from :
+
+https://github.com/mapbox/mbutil
+
+`mb-util --image_format=pbf cache/bgt_vw data/bgt_vw.mbtiles`
 
 T-Rex writes the bounds and center in metdata.json with square brackets  around the array. 
-But Tilserver-GL expects these arrays without square brackets. So we have tu opdate the metadata.
+But Tilserver-GL expects these arrays without square brackets. So we have to opdate the metadata.
 This can be done in the mbtiles file with : 
 
-`sqlite3 data/bgt_vw.mbtiles
-sqlite> update metadata set value="4.63974,52.25158,5.10768,52.50593" where name="bounds"; 
-sqlite> update metadata set value="4.87371,52.378755,12" where name="center";
+`echo "update metadata set value=trim(trim(value,'['), ']') where name in (\"bounds\", \"center\")" | sqlite3 data/bgt_vw.mbtiles
 `
+
 - Run Tileserver GL 
 
-- `docker run --rm -it -v $(pwd):/data -p 8080:80 maptiler/tileserver-gl -c config/tileserver_cfg.json
-`
+`docker run --rm -it -v $(pwd):/data -p 8080:80 maptiler/tileserver-gl -c config/tileserver_cfg.json`
+
+Then we can see results on:
+
+`http://localhost:8080/`
+
+Raster tiles can be seen on:
+
+`http://localhost:8080/styles/basic/?raster#14/52.3757/4.9061`
+
+In order to see the vector tiles we need to add t_rex to point to 127.0.0.1  in /etc/hosts
+
+cat /etc/hosts
+
+```\#
+\# Host Database
+\#
+127.0.0.1	localhost MacBook-Pro-FromMe.local t_rex
+...
+```
+
+But then Tileserver GL serves the T-Rex vector tiles directly in :
+
+`http://localhost:8080/styles/basic/?vector#12/52.37875/4.87371`
+
+- Generate png tiles with mapproxy
+
+Build topo_wm mapproxy image :
+
+`docker-compose build topo_wm`
+
+Then run the maproxy seeding :
+
+`docker-compose run topo_wm`
+
+The resulting tiles are in the ./tiles subdirectory 
 
