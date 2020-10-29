@@ -1,0 +1,34 @@
+{
+    "version": 8,
+    "name": "Example",
+    "glyphs": "http://t_rex:6767/static/fonts/{fontstack}/{range}.pbf",
+    "sources": {
+        "basiskaart": {
+            "type": "vector",
+            "url": "http://t_rex:6767/static/tilejson_direct.json",
+            "minzoom": 3,
+            "maxzoom": 16
+        }
+    },
+    "layers": [
+        {
+            "id": "water",
+            "source":"basiskaart",
+            "source-layer":"bgt_vw_waterdeel_vlak",
+            "type": "fill",
+            "paint": {
+                "fill-color": "#95C6D5"
+            }
+        },
+        {
+            "id": "buildings",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_gebouw_vlak",
+            "type": "fill",
+            "paint": {
+                "fill-color": "#E5E3DE",
+                "fill-outline-color": "#C9C7C2"
+            }
+        }
+    ]
+}
