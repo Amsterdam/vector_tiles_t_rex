@@ -26,7 +26,16 @@
             "source-layer": "bgt_vw_gebouw_vlak",
             "type": "fill",
             "paint": {
-                "fill-color": "#E5E3DE",
+                "fill-color": [
+                    "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "ligplaats",
+                    "rgba(229, 227, 222, 0.6)",
+                    "rgba(229, 227, 222, 1.0)"
+                ],
                 "fill-outline-color": "#C9C7C2"
             }
         }
