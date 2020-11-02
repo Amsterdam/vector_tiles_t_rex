@@ -61,6 +61,17 @@ UNION
  	 	15  as maxzoom
    FROM kbk10."WDL_breed_water"
   WHERE 1=1
+  UNION 
+   SELECT
+		"WDL_haven".ogc_fid::text || 'WDL_haven_kbk10' as identificatie_lokaal_id,
+    'haven' as type,
+		ST_makeValid(    "WDL_haven".geom) as geometrie, 
+    0  as relatievehoogteligging, 
+ 	 	'kbk10' as bron, 
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
+   FROM kbk10."WDL_haven"
+  WHERE 1=1
 
 /* --- KBK50 ---- */
 
