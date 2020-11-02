@@ -11,7 +11,7 @@ AS SELECT
      "BGTPLUS_KDL_keermuur".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGTPLUS_KDL_keermuur"
   WHERE 1=1
 UNION
@@ -22,7 +22,7 @@ UNION
      "BGTPLUS_OSDG_muur_V".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGTPLUS_OSDG_muur_V"
   WHERE 1=1
 UNION
@@ -33,7 +33,7 @@ UNION
      "BGTPLUS_VGT_haag_V".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGTPLUS_VGT_haag_V"
   WHERE 1=1
 UNION
@@ -44,7 +44,7 @@ UNION
      "BGTPLUS_WGI_boomspiegel_V".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGTPLUS_WGI_boomspiegel_V"
   WHERE 1=1
 UNION
@@ -66,7 +66,7 @@ UNION
      "BGTPLUS_WGI_wildrooster_V".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGTPLUS_WGI_wildrooster_V"
   WHERE 1=1
 UNION
@@ -77,7 +77,7 @@ UNION
      "BGT_KDL_gemaal".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGT_KDL_gemaal"
   WHERE 1=1
 UNION
@@ -88,7 +88,7 @@ UNION
      "BGT_KDL_hoogspanningsmast_V".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGT_KDL_hoogspanningsmast_V"
   WHERE 1=1
 UNION
@@ -99,7 +99,7 @@ UNION
      "BGT_KDL_sluis".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGT_KDL_sluis"
   WHERE 1=1
 UNION
@@ -110,7 +110,7 @@ UNION
      "BGT_KDL_steiger".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGT_KDL_steiger"
   WHERE 1=1
 UNION
@@ -121,7 +121,7 @@ UNION
      "BGT_KDL_stuw_V".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGT_KDL_stuw_V"
   WHERE 1=1
 UNION
@@ -132,7 +132,7 @@ UNION
      "BGT_SDG_kademuur_V".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGT_SDG_kademuur_V"
   WHERE 1=1
 UNION
@@ -143,7 +143,7 @@ UNION
      "BGT_SDG_muur_V".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22  as maxzoom
    FROM bgt."BGT_SDG_muur_V"
   WHERE 1=1
 
@@ -158,16 +158,6 @@ UNION
  	 	13  as minzoom, 
  	 	15  as maxzoom
   FROM kbk10."WDL_waterbassin"
-  UNION 
-   SELECT
-		"WDL_haven".ogc_fid::text || 'WDL_haven_kbk10' as identificatie_lokaal_id,
-    'haven' as type,
-		ST_makeValid(    "WDL_haven".geom) as geometrie, 
-    0  as relatievehoogteligging, 
- 	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
- 	 	15  as maxzoom
-   FROM kbk10."WDL_haven"
   WHERE 1=1
   UNION
    SELECT
@@ -400,7 +390,7 @@ UNION
 		ST_makeValid(    "TRN_agrarisch".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	16  as minzoom, 
+ 	 	12  as minzoom, 
  	 	8  as maxzoom
   FROM kbk50."TRN_agrarisch"
  UNION 
@@ -410,7 +400,7 @@ UNION
 		ST_makeValid(    "TRN_overig".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	16  as minzoom, 
+ 	 	12  as minzoom, 
  	 	8  as maxzoom
   FROM kbk50."TRN_overig"
  UNION 
@@ -420,7 +410,7 @@ UNION
 		ST_makeValid(    "TRN_bedrijfsterrein_dienstverlening".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	16  as minzoom, 
+ 	 	12  as minzoom, 
  	 	8  as maxzoom
   FROM kbk50."TRN_bedrijfsterrein_dienstverlening"
  UNION 
@@ -430,7 +420,7 @@ UNION
 		ST_makeValid(    "TRN_bos_groen_sport".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	16  as minzoom, 
+ 	 	12  as minzoom, 
  	 	8  as maxzoom
   FROM kbk50."TRN_bos_groen_sport"
  UNION 
@@ -440,7 +430,7 @@ UNION
 		ST_makeValid(    "TRN_zand".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	16  as minzoom, 
+ 	 	12  as minzoom, 
  	 	8  as maxzoom
   FROM kbk50."TRN_zand"
  UNION 
@@ -450,7 +440,7 @@ UNION
 		ST_makeValid(    "GBW_bebouwing".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	16  as minzoom, 
+ 	 	12  as minzoom, 
  	 	8  as maxzoom
   FROM kbk50."GBW_bebouwing"
    UNION 
@@ -460,7 +450,7 @@ UNION
 		ST_makeValid(    "GBW_kassen".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	16  as minzoom, 
+ 	 	12  as minzoom, 
  	 	8  as maxzoom
   FROM kbk50."GBW_kassen"
 WITH DATA;
