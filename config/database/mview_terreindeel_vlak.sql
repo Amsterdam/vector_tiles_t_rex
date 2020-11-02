@@ -11,7 +11,7 @@ AS SELECT
     "BGT_BTRN_boomteelt".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_boomteelt"
   WHERE 1=1
 UNION
@@ -22,7 +22,7 @@ UNION
     "BGT_BTRN_bouwland".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_bouwland"
   WHERE 1=1
 UNION
@@ -33,7 +33,7 @@ UNION
     "BGT_BTRN_fruitteelt".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_fruitteelt"
   WHERE 1=1
 UNION
@@ -44,7 +44,7 @@ UNION
     "BGT_BTRN_gemengd_bos".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_gemengd_bos"
   WHERE 1=1
 UNION
@@ -55,7 +55,7 @@ UNION
     "BGT_BTRN_grasland_agrarisch".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_grasland_agrarisch"
   WHERE 1=1
 UNION
@@ -66,7 +66,7 @@ UNION
     "BGT_BTRN_grasland_overig".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_grasland_overig"
   WHERE 1=1
 UNION
@@ -77,7 +77,7 @@ UNION
     "BGT_BTRN_groenvoorziening".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_groenvoorziening"
   WHERE 1=1
 UNION
@@ -88,7 +88,7 @@ UNION
     "BGT_BTRN_houtwal".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_houtwal"
   WHERE 1=1
 UNION
@@ -99,7 +99,7 @@ UNION
     "BGT_BTRN_loofbos".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_loofbos"
   WHERE 1=1
 UNION
@@ -110,7 +110,7 @@ UNION
     "BGT_BTRN_moeras".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_moeras"
   WHERE 1=1
 UNION
@@ -121,7 +121,7 @@ UNION
     "BGT_BTRN_naaldbos".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_naaldbos"
   WHERE 1=1
 UNION
@@ -132,7 +132,7 @@ UNION
     "BGT_BTRN_rietland".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_rietland"
   WHERE 1=1
 UNION
@@ -143,7 +143,7 @@ UNION
     "BGT_BTRN_struiken".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_struiken"
   WHERE 1=1
 UNION
@@ -154,7 +154,7 @@ UNION
     "BGT_KDL_perron".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_KDL_perron"
   WHERE 1=1
 UNION
@@ -165,7 +165,7 @@ UNION
     "BGT_KDL_strekdam".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_KDL_strekdam"
   WHERE 1=1
 UNION
@@ -176,7 +176,7 @@ UNION
     "BGT_OTRN_erf".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OTRN_erf"
   WHERE 1=1
 UNION
@@ -187,7 +187,7 @@ UNION
     "BGT_OTRN_gesloten_verharding".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OTRN_gesloten_verharding"
   WHERE 1=1
 UNION
@@ -198,7 +198,7 @@ UNION
     "BGT_OTRN_half_verhard".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OTRN_half_verhard"
   WHERE 1=1
 UNION
@@ -209,7 +209,7 @@ UNION
     "BGT_OTRN_onverhard".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OTRN_onverhard"
   WHERE 1=1
 UNION
@@ -220,7 +220,7 @@ UNION
     "BGT_OTRN_open_verharding".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OTRN_open_verharding"
   WHERE 1=1
 UNION
@@ -231,7 +231,7 @@ UNION
     "BGT_OTRN_zand".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OTRN_zand"
   WHERE 1=1
 UNION
@@ -242,7 +242,7 @@ UNION
     "BGT_OWDL_oever_slootkant".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OWDL_oever_slootkant"
   WHERE 1=1
 UNION
@@ -253,7 +253,7 @@ UNION
     "BGT_WGL_spoorbaan".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_WGL_spoorbaan"
   WHERE 1=1
 UNION
@@ -264,7 +264,7 @@ UNION
     "BGT_BTRN_heide".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_BTRN_heide"
   WHERE 1=1
 WITH DATA;
