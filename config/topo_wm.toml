@@ -24,9 +24,65 @@ geometry_type = "MULTIPOLYGON"
 minzoom = 8
 maxzoom = 22
 srid = 28992
+make_valid = true
 buffer_size = 1
     [[tileset.layer.query]]
     sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_waterdeel_vlak WHERE geometrie && !bbox! AND minzoom <= !zoom! AND !zoom! <= maxzoom"""
+
+[[tileset.layer]]
+name = "bgt_vw_waterdeel_lijn"
+table_name = "bgt.bgt_vw_waterdeel_lijn"
+geometry_field = "geometrie"
+geometry_type = "MULTILINESTRING"
+srid = 28992
+buffer_size = 1
+minzoom = 12
+maxzoom = 15
+#[[tileset.layer.query]]
+#sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_waterdeel_lijn WHERE geometrie && !bbox!"""
+
+[[tileset.layer]]
+name = "bgt_vw_terreindeel_vlak"
+table_name = "bgt.bgt_vw_terreindeel_vlak"
+geometry_field = "geometrie"
+geometry_type = "MULTIPOLYGON"
+srid = 28992
+buffer_size = 1
+simplify = true
+    [[tileset.layer.query]]
+    sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_terreindeel_vlak WHERE geometrie && !bbox! AND minzoom <= !zoom! AND !zoom! <= maxzoom"""
+
+[[tileset.layer]]
+name = "bgt_vw_wegdeel_vlak"
+table_name = "bgt.bgt_vw_wegdeel_vlak"
+geometry_field = "geometrie"
+geometry_type = "MULTIPOLYGON"
+srid = 28992
+buffer_size = 1
+query_limit = 1000
+    [[tileset.layer.query]]
+    sql = """SELECT geometrie,identificatie_lokaalid,type,subtype,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_vlak WHERE geometrie && !bbox! AND minzoom <= !zoom! """
+
+
+[[tileset.layer]]
+name = "bgt_vw_spoor_lijn"
+table_name = "bgt.bgt_vw_spoor_lijn"
+geometry_field = "geometrie"
+geometry_type = "MULTILINESTRING"
+srid = 28992
+buffer_size = 1
+#[[tileset.layer.query]]
+#sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_spoor_lijn WHERE geometrie && !bbox!"""
+
+[[tileset.layer]]
+name = "bgt_vw_inrichtingselement_vlak"
+table_name = "bgt.bgt_vw_inrichtingselement_vlak"
+geometry_field = "geometrie"
+geometry_type = "MULTIPOLYGON"
+srid = 28992
+buffer_size = 0
+[[tileset.layer.query]]
+    sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_inrichtingselement_vlak WHERE geometrie && !bbox! AND minzoom <= !zoom! AND !zoom! <= maxzoom"""
 
 [[tileset.layer]]
 name = "bgt_vw_gebouw_vlak"
@@ -37,16 +93,7 @@ maxzoom = 22
 srid = 28992
 buffer_size = 10
     [[tileset.layer.query]]
-    minzoom = 8
-    maxzoom = 12
-    sql = """SELECT geom AS geometrie, "GBW_beb_ID" AS identificatie_lokaalid, 'pand' AS type, 0 relatievehoogteligging FROM kbk50."GBW_bebouwing" WHERE geom && !bbox!"""
-    [[tileset.layer.query]]
-    minzoom = 13
-    maxzoom = 15
-    sql = """SELECT geom AS geometrie,"GBW_geb_ID" AS identificatie_lokaalid, 'pand' AS type, 0 AS relatievehoogteligging FROM kbk10."GBW_gebouw" WHERE geom && !bbox!"""
-    [[tileset.layer.query]]
-    minzoom = 16
-    sql = "SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_gebouw_vlak WHERE minzoom >= 16 AND geometrie && !bbox!"
+    sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_gebouw_vlak WHERE geometrie && !bbox! AND minzoom <= !zoom! AND !zoom! <= maxzoom"""
 
 [[tileset.layer]]
 name = "labels"
@@ -82,54 +129,8 @@ buffer_size = 20
 #   query_limit = 1000
 #   #[[tileset.layer.query]]
 #   #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_inrichtingselement_punt WHERE geometrie && !bbox!"""
-#   [[tileset.layer]]
-#   name = "bgt_vw_inrichtingselement_vlak"
-#   table_name = "bgt.bgt_vw_inrichtingselement_vlak"
-#   geometry_field = "geometrie"
-#   geometry_type = "MULTIPOLYGON"
-#   srid = 28992
-#   buffer_size = 0
-#   #make_valid = true
-#   simplify = true
-#   query_limit = 1000
-#   #[[tileset.layer.query]]
-#   #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_inrichtingselement_vlak WHERE geometrie && !bbox!"""
-#   [[tileset.layer]]
-#   name = "bgt_vw_spoor_lijn"
-#   table_name = "bgt.bgt_vw_spoor_lijn"
-#   geometry_field = "geometrie"
-#   geometry_type = "MULTILINESTRING"
-#   srid = 28992
-#   buffer_size = 0
-#   #make_valid = true
-#   simplify = true
-#   query_limit = 1000
-#   #[[tileset.layer.query]]
-#   #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_spoor_lijn WHERE geometrie && !bbox!"""
-#   [[tileset.layer]]
-#   name = "bgt_vw_terreindeel_vlak"
-#   table_name = "bgt.bgt_vw_terreindeel_vlak"
-#   geometry_field = "geometrie"
-#   geometry_type = "MULTIPOLYGON"
-#   srid = 28992
-#   buffer_size = 1
-#   #make_valid = true
-#   simplify = true
-#   query_limit = 1000
-#   #[[tileset.layer.query]]
-#   #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_terreindeel_vlak WHERE geometrie && !bbox!"""
-#   [[tileset.layer]]
-#   name = "bgt_vw_waterdeel_lijn"
-#   table_name = "bgt.bgt_vw_waterdeel_lijn"
-#   geometry_field = "geometrie"
-#   geometry_type = "MULTILINESTRING"
-#   srid = 28992
-#   buffer_size = 0
-#   #make_valid = true
-#   simplify = true
-#   query_limit = 1000
-#   #[[tileset.layer.query]]
-#   #sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_waterdeel_lijn WHERE geometrie && !bbox!"""
+
+
 #   [[tileset.layer]]
 #   name = "bgt_vw_wegdeel_lijn"
 #   table_name = "bgt.bgt_vw_wegdeel_lijn"
@@ -143,18 +144,6 @@ buffer_size = 20
 #   #[[tileset.layer.query]]
 #   #sql = """SELECT geom,identificatie_lokaalid::TEXT,type,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_lijn WHERE geom && !bbox!"""
 #   [[tileset.layer]]
-#   name = "bgt_vw_wegdeel_vlak"
-#   table_name = "bgt.bgt_vw_wegdeel_vlak"
-#   geometry_field = "geometrie"
-#   geometry_type = "MULTIPOLYGON"
-#   srid = 28992
-#   buffer_size = 1
-#   make_valid = true
-#   simplify = true
-#   query_limit = 1000
-#   #[[tileset.layer.query]]
-#   #sql = """SELECT geometrie,identificatie_lokaalid,type,subtype,subsubsubtype,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_vlak WHERE geometrie && !bbox!"""
-
 
 #[cache.file]
 #base = "/tmp/mvtcache"
