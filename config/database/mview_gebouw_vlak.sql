@@ -10,7 +10,7 @@ AS SELECT
     "BGTPLUS_GISE_bordes".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGTPLUS_GISE_bordes"
   WHERE 1=1
 UNION
@@ -21,7 +21,7 @@ UNION
     "BGTPLUS_GISE_luifel".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGTPLUS_GISE_luifel"
   WHERE 1=1
 UNION
@@ -32,7 +32,7 @@ UNION
     "BGTPLUS_GISE_onbekend".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGTPLUS_GISE_onbekend"
   WHERE 1=1
 UNION
@@ -43,7 +43,7 @@ UNION
     "BGTPLUS_GISE_toegangstrap".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGTPLUS_GISE_toegangstrap"
   WHERE 1=1
 UNION
@@ -54,7 +54,7 @@ UNION
     "BGTPLUS_OBW_bunker".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGTPLUS_OBW_bunker"
   WHERE 1=1
 UNION
@@ -65,7 +65,7 @@ UNION
     "BGTPLUS_OBW_onbekend".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGTPLUS_OBW_onbekend"
   WHERE 1=1
 UNION
@@ -76,7 +76,7 @@ UNION
     "BGTPLUS_OBW_schuur".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGTPLUS_OBW_schuur"
   WHERE 1=1
 UNION
@@ -87,7 +87,7 @@ UNION
     "BGTPLUS_OBW_voedersilo".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGTPLUS_OBW_voedersilo"
   WHERE 1=1
 UNION
@@ -98,7 +98,7 @@ UNION
     "BGT_OBW_bassin".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OBW_bassin"
   WHERE 1=1
 UNION
@@ -109,7 +109,7 @@ UNION
     "BGT_OBW_bezinkbak".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OBW_bezinkbak"
   WHERE 1=1
 UNION
@@ -120,7 +120,7 @@ UNION
     "BGT_OBW_lage_trafo".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OBW_lage_trafo"
   WHERE 1=1
 UNION
@@ -131,7 +131,7 @@ UNION
     "BGT_OBW_open_loods".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OBW_open_loods"
   WHERE 1=1
 UNION
@@ -142,7 +142,7 @@ UNION
     "BGT_OBW_opslagtank".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OBW_opslagtank"
   WHERE 1=1
 UNION
@@ -153,7 +153,7 @@ UNION
     "BGT_OBW_overkapping".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OBW_overkapping"
   WHERE 1=1
 UNION
@@ -164,7 +164,7 @@ UNION
     "BGT_OBW_transitie".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OBW_transitie"
   WHERE 1=1
 UNION
@@ -175,7 +175,7 @@ UNION
     "BGT_OBW_windturbine".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_OBW_windturbine"
   WHERE 1=1
 UNION
@@ -186,7 +186,7 @@ UNION
     "BGT_PND_pand".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BGT_PND_pand"
   WHERE 1=1
 UNION
@@ -197,7 +197,7 @@ UNION
     "CFT_Onderbouw".relatievehoogteligging, 
  	 	'cft' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."CFT_Onderbouw"
   WHERE 1=1
 UNION
@@ -208,7 +208,7 @@ UNION
     "CFT_Overbouw".relatievehoogteligging, 
  	 	'cft' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."CFT_Overbouw"
   WHERE 1=1
 
@@ -221,7 +221,7 @@ UNION
     0 as relatievehoogteligging, 
  	 	'bag' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BAG_Standplaats"
   WHERE 1=1
 UNION
@@ -232,11 +232,69 @@ UNION
     0 as relatievehoogteligging, 
  	 	'bag' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
    FROM bgt."BAG_Ligplaats"
   WHERE 1=1
-
-
+UNION
+  SELECT
+		"GBW_overdekt".ogc_fid::text || 'GBW_overdekt_kbk10' as identificatie_lokaal_id,
+    'overdekt' as type,
+		ST_makeValid(    "GBW_overdekt".geom) as geometrie, 
+    0  as relatievehoogteligging, 
+ 	 	'kbk10' as bron, 
+ 	 	13  as minzoom, 
+ 	 	15 as maxzoom
+  FROM kbk10."GBW_overdekt"
+ UNION
+  SELECT
+		"GBW_gebouw".ogc_fid::text || 'GBW_gebouw_kbk10' as identificatie_lokaal_id,
+    'gebouw' as type,
+		ST_makeValid(    "GBW_gebouw".geom) as geometrie, 
+    0  as relatievehoogteligging, 
+ 	 	'kbk10' as bron, 
+ 	 	13  as minzoom, 
+ 	 	15 as maxzoom
+  FROM kbk10."GBW_gebouw"
+ UNION 
+  SELECT
+		"GBW_hoogbouw".ogc_fid::text || 'GBW_hoogbouw_kbk10' as identificatie_lokaal_id,
+    'hoogbouw' as type,
+		ST_makeValid(    "GBW_hoogbouw".geom) as geometrie, 
+    0  as relatievehoogteligging, 
+ 	 	'kbk10' as bron, 
+ 	 	13  as minzoom, 
+ 	 	15 as maxzoom
+  FROM kbk10."GBW_hoogbouw"
+ UNION 
+  SELECT
+		"GBW_kas_warenhuis".ogc_fid::text || 'GBW_kas_warenhuis_kbk10' as identificatie_lokaal_id,
+    'kas_warenhuis' as type,
+		ST_makeValid(    "GBW_kas_warenhuis".geom) as geometrie, 
+    0  as relatievehoogteligging, 
+ 	 	'kbk10' as bron, 
+ 	 	13  as minzoom, 
+ 	 	15 as maxzoom
+  FROM kbk10."GBW_kas_warenhuis"
+ UNION 
+ SELECT
+		"GBW_bebouwing".ogc_fid::text || 'GBW_bebouwing_kbk50' as identificatie_lokaal_id,
+    'bebouwing' as type,
+		ST_makeValid(    "GBW_bebouwing".geom) as geometrie, 
+    0  as relatievehoogteligging, 
+ 	 	'kbk50' as bron, 
+ 	 	12  as minzoom, 
+ 	 	8  as maxzoom
+  FROM kbk50."GBW_bebouwing"
+   UNION 
+ SELECT
+		"GBW_kassen".ogc_fid::text || 'GBW_kassen_kbk50' as identificatie_lokaal_id,
+    'kassen' as type,
+		ST_makeValid(    "GBW_kassen".geom) as geometrie, 
+    0  as relatievehoogteligging, 
+ 	 	'kbk50' as bron, 
+ 	 	12  as minzoom, 
+ 	 	8  as maxzoom
+  FROM kbk50."GBW_kassen"
 WITH DATA;
 
 -- View indexes:
