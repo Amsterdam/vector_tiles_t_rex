@@ -1,0 +1,474 @@
+{
+    "version": 8,
+    "name": "Example",
+    "glyphs": "http://t_rex:6767/static/fonts/{fontstack}/{range}.pbf",
+    "sources": {
+        "basiskaart": {
+            "type": "vector",
+            "url": "http://t_rex:6767/static/tilejson_direct.json",
+            "minzoom": 3,
+            "maxzoom": 16
+        }
+    },
+    "layers": [
+        {
+            "id": "water",
+            "source":"basiskaart",
+            "source-layer":"bgt_vw_waterdeel_vlak",
+            "type": "fill",
+            "paint": {
+                "fill-color": "#95C6D5"
+            }
+        },
+        {
+            "id": "water_line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_waterdeel_lijn",
+            "type": "line",
+            "filter": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                [
+                    "smalle_waterloop",
+                    "brede_waterloop"
+                ],
+                true,
+                false
+            ],
+            "layout": {
+                "line-cap": "round",
+                "line-join": "round",
+                "visibility": "visible"
+            },
+            "paint": {
+                "line-color": "#95C6D5",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    0,
+                    11.5,
+                    1,
+                    12,
+                    1.5,
+                    13,
+                    1.2
+                ]
+            }
+        },
+        {
+            "id": "infrastructure_road-casing",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_vlak",
+            "type": "line",
+            "filter": [
+                "match",
+                ["string", [
+                    "get",
+                    "type"
+                ]],
+                ["parkeervlak", "rijbaan lokale weg","fietspad","inrit","transitie","rijbaan autoweg","rijbaan regionale weg","OV-baan","overweg","baan voor vliegverkeer"],
+                true,
+                false
+
+            ],
+            "paint": {
+                "line-color": "#C9C7C2",
+                "line-width": 2
+            }
+        },
+        {
+            "id": "infrastructure_road-fill",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_vlak",
+            "type": "fill",
+            "filter": [
+                "match",
+                ["string", [
+                    "get",
+                    "type"
+                ]],
+                ["parkeervlak","rijbaan lokale weg","fietspad","inrit","transitie","rijbaan autoweg","rijbaan regionale weg","OV-baan","overweg","baan voor vliegverkeer"],
+                true,
+                false
+            ],
+            "paint": {
+                "fill-color": "#ffffff"
+            }
+        },
+        {
+            "id": "infrastructure_pedestrian-casing",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_vlak",
+            "type": "line",
+            "filter": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                ["voetpad","verkeerseiland","voetpad op trap","voetgangersgebied","woonerf","ruiterpad"],
+                true,
+                false
+            ],
+            "paint": {
+                "line-color": "#C9C7C2",
+                "line-width": 2
+            }
+        },
+        {
+            "id": "infrastructure_pedestrian_fill",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_vlak",
+            "type": "fill",
+            "filter": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                ["voetpad","verkeerseiland","voetpad op trap","voetgangersgebied","woonerf","ruiterpad"],
+                true,
+                false
+            ],
+            "paint": {
+                "fill-color": "#f7f3f5"
+            }
+        },
+        {
+            "id": "infrastructure_bridge",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_inrichtingselement_vlak",
+            "type": "fill",
+            "filter": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                ["aanlegsteiger","steiger"],
+                true,
+                false
+            ],
+            "paint": {
+                "fill-color": "#f7f3f5"
+            }
+        },
+        {
+            "id": "terrain",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_terreindeel_vlak",
+            "type": "fill",
+            "filter": [">=","relatievehoogteligging",0],
+            "paint": {
+                "fill-color": [
+                    "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "boomteelt",
+                    "#CBE0B8",
+                    "bouwland",
+                    "#CBE0B8",
+                    "erf",
+                    "#F9F9E7",
+                    "fruitteelt",
+                    "#CBE0B8",
+                    "gemengd bos",
+                    "#CBE0B8",
+                    "gesloten verharding",
+                    "#FFFFFF",
+                    "grasland agrarisch",
+                    "#DCEACF",
+                    "grasland overig",
+                    "#DCEACF",
+                    "groenvoorziening",
+                    "#DCEACF",
+                    "half verhard",
+                    "#FFFFFF",
+                    "heide",
+                    "#ddd6e5",
+                    "houtwal",
+                    "#F9F9E7",
+                    "loofbos",
+                    "#CBE0B8",
+                    "moeras",
+                    "#CBE0B8",
+                    "naaldbos",
+                    "#CBE0B8",
+                    "onverhard",
+                    "#F9F9E7",
+                    "open verharding",
+                    "#FFFFFF",
+                    "oever, slootkant",
+                    "#F9F9E7",
+                    "perron",
+                    "#FFFFFF",
+                    "rietland",
+                    "#F9F9E7",
+                    "strekdam",
+                    "#FFFFFF",
+                    "struiken",
+                    "#DCEACF",
+                    "zand",
+                    "#F9F9E7",
+                    "#EBE5E7"
+                ],
+                "fill-outline-color": "#c9c7c2"
+            }
+        },
+        {
+            "id": "railways",
+            "type": "line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_spoor_lijn",
+            "filter": [
+                "!in",
+                "type",
+                "industrial",
+                "touristic"
+            ],
+            "paint": {
+                "line-color": [
+                    "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "light_rail",
+                    "#6b5b4c",
+                    "tram",
+                    "#6b5b4c",
+                    "metro",
+                    "#cecac2",
+                    "rail",
+                    "#999999",
+                    "#ffffff"
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.1
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "type"
+                        ],
+                        "tram",
+                        0,
+                        "metro",
+                        0,
+                        "rail",
+                        0,
+                        0
+                    ],
+                    11,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "type"
+                        ],
+                        "tram",
+                        0,
+                        "metro",
+                        0,
+                        "rail",
+                        0.5,
+                        0
+                    ],
+                    15.5,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "type"
+                        ],
+                        "light_rail",
+                        0.5,
+                        "tram",
+                        0.5,
+                        "metro",
+                        0.5,
+                        "rail",
+                        0.8,
+                        0
+                    ],
+                    20,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "type"
+                        ],
+                        "light_rail",
+                        2,
+                        "tram",
+                        2,
+                        "metro",
+                        2,
+                        "rail",
+                        2,
+                        0
+                    ]
+                ],
+                "line-opacity": [
+                    "case",
+                    [
+                        "get",
+                        "tunnel"
+                    ],
+                    0.5,
+                    1
+                ]
+            }
+        },
+        {
+            "id": "railway-hatching",
+            "type": "line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_spoor_lijn",
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "type"
+                ],
+                "rail"
+            ],
+            "paint": {
+                "line-color": "#999999",
+                "line-dasharray": [
+                    0.2,
+                    4
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1.1
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    14.5,
+                    0,
+                    15,
+                    3,
+                    20,
+                    8
+                ]
+            }
+        },
+        {
+            "id": "buildings",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_gebouw_vlak",
+            "type": "fill",
+            "filter": [">=","relatievehoogteligging",0],
+            "paint": {
+                "fill-color": [
+                    "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "ligplaats",
+                    "rgba(229, 227, 222, 0.6)",
+                    "rgba(229, 227, 222, 1.0)"
+                ],
+                "fill-outline-color": "#C9C7C2"
+            }
+        },
+        {
+            "id": "courtyards",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_terreindeel_vlak",
+            "type": "fill",
+            "maxzoom": 16,
+            "minzoom": 14,
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "type"
+                ],
+                "binnentuin"
+            ],
+            "paint": {
+                "fill-color": "#F9F9E7",
+                "fill-outline-color": "#C9C7C2"
+            }
+        },
+        {
+            "id": "house_numbers",
+            "source": "basiskaart",
+            "source-layer": "labels",
+            "type": "symbol",
+            "minzoom": 16,
+            "filter": [
+                "==",
+                ["get","type"],
+                "nummeraanduiding"
+            ],
+            "layout": {
+                "text-allow-overlap": false,
+                "text-ignore-placement": false,
+                "text-padding": 2.5,
+                "text-font": [
+                    "open-sans"
+                ],
+                "text-anchor": "center",
+                "text-field": [
+                    "to-string",
+                    [
+                        "get",
+                        "tekst"
+                    ]
+                ],
+                "text-size": [
+                    "interpolate",
+                    [
+                        "exponential",
+                        1
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    16,
+                    8,
+                    20,
+                    13
+                ],
+                "text-max-width": 3,
+                "text-rotate": {
+                    "type": "identity",
+                    "property": "hoek"
+                },
+                "text-rotation-alignment": "map"
+            },
+            "paint": {
+                "text-halo-blur": 0.5,
+                "text-color": "#666",
+                "text-halo-width": 1,
+                "text-halo-color": "#ffffff"
+            }
+        }
+    ]
+}
