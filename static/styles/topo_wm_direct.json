@@ -1,7 +1,7 @@
 {
     "version": 8,
     "name": "Example",
-    "glyphs": "http://t_rex:6767/static/fonts/{fontstack}/{range}.pbf",
+    "glyphs": "{fontstack}/{range}.pbf",
     "sources": {
         "basiskaart": {
             "type": "vector",
@@ -422,6 +422,7 @@
             "source-layer": "labels",
             "type": "symbol",
             "minzoom": 16,
+            "maxzoom": 22,
             "filter": [
                 "==",
                 ["get","type"],
