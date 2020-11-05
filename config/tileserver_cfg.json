@@ -3,16 +3,13 @@
     "paths": {
       "root": "/static",
       "fonts": "fonts",
-      "sprites": "sprites",
-      "styles": "styles",
-      "mbtiles": ""
+      "styles": "styles"
     }
   },
   "styles": {
     "basic": {
       "style": "topo_wm_direct.json",
       "tilejson": {
-        "type": "overlay",
         "bounds": [4.63974, 52.25158, 5.10768, 52.50593],
         "minzoom": 3,
         "maxzoom": 22
