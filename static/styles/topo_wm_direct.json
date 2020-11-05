@@ -5,9 +5,7 @@
     "sources": {
         "basiskaart": {
             "type": "vector",
-            "url": "http://t_rex:6767/static/tilejson_direct.json",
-            "minzoom": 3,
-            "maxzoom": 16
+            "url": "http://t_rex:6767/static/tilejson_direct.json"
         }
     },
     "layers": [
