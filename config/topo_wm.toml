@@ -48,7 +48,6 @@ geometry_field = "geometrie"
 geometry_type = "MULTIPOLYGON"
 srid = 28992
 buffer_size = 1
-simplify = true
     [[tileset.layer.query]]
     sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_terreindeel_vlak WHERE geometrie && !bbox! AND minzoom <= !zoom! AND !zoom! <= maxzoom"""
 
