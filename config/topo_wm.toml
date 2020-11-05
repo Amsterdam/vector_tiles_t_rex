@@ -98,7 +98,7 @@ buffer_size = 10
 [[tileset.layer]]
 name = "labels"
 geometry_field = "geometrie"
-geometry_type = "MULTIPOINT"
+geometry_type = "POINT"
 srid = 28992
 buffer_size = 20
     [[tileset.layer.query]]
@@ -154,8 +154,8 @@ buffer_size = 20
 bind = "0.0.0.0"
 port = 6767
 
-[cache.file]
-base = "/var/cache/mvtcache"
+#[cache.file]
+# base = "/var/cache/mvtcache"
 
 [[webserver.static]]
 path = "/static"

@@ -1,7 +1,7 @@
 {
   "options": {
     "paths": {
-      "root": "",
+      "root": "/static",
       "fonts": "fonts",
       "sprites": "sprites",
       "styles": "styles",

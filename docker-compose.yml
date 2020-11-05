@@ -38,6 +38,7 @@ services:
     volumes:
       - "$PWD/data:/data"
       - "$PWD/config:/var/config:ro"
+      - "$PWD/static:/static:ro"
     command: run.sh --verbose -c /var/config/tileserver_cfg.json
 
   topo_wm:
