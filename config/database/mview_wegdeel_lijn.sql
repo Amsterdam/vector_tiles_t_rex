@@ -25,7 +25,7 @@ UNION
 		ST_makeValid(        "WGL_straat_in_tunnel".geom) as geometrie, 
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	NULL::int  as minzoom, 
+ 	 	8 as minzoom, 
  	 	12 as maxzoom
     FROM kbk50."WGL_straat_in_tunnel"
     WHERE 1=1
@@ -36,7 +36,7 @@ UNION
 		ST_makeValid(        "WGL_hoofdweg_in_tunnel".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	NULL::int  as minzoom, 
+ 	 	8 as minzoom, 
  	 	12 as maxzoom
     FROM kbk50."WGL_hoofdweg_in_tunnel"
     WHERE 1=1
@@ -47,7 +47,7 @@ UNION
 		ST_makeValid(        "WGL_regionale_weg_in_tunnel".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	NULL::int  as minzoom, 
+ 	 	8 as minzoom, 
  	 	12  as maxzoom
     FROM kbk50."WGL_regionale_weg_in_tunnel"
     WHERE 1=1
@@ -58,7 +58,7 @@ UNION
 		ST_makeValid(        "WGL_autosnelweg_in_tunnel".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	NULL::int  as minzoom,
+ 	 	8 as minzoom,
  	 	12  as maxzoom
     FROM kbk50."WGL_autosnelweg_in_tunnel"
     WHERE 1=1
@@ -69,7 +69,7 @@ UNION
 		ST_makeValid(        "WGL_straat".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	NULL::int  as minzoom, 
+ 	 	8 as minzoom, 
  	 	12  as maxzoom
     FROM kbk50."WGL_straat"
     WHERE 1=1
@@ -80,7 +80,7 @@ UNION
 		ST_makeValid(        "WGL_hoofdweg".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	NULL::int  as minzoom,
+ 	 	8 as minzoom,
  	 	12  as maxzoom
     FROM kbk50."WGL_hoofdweg"
     WHERE 1=1
@@ -91,7 +91,7 @@ UNION
 		ST_makeValid(        "WGL_autosnelweg".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	NULL::int  as minzoom,
+ 	 	8 as minzoom,
  	 	12  as maxzoom
     FROM kbk50."WGL_autosnelweg"
     WHERE 1=1

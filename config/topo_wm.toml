@@ -95,6 +95,19 @@ buffer_size = 10
     sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_gebouw_vlak WHERE geometrie && !bbox! AND minzoom <= !zoom! AND !zoom! <= maxzoom"""
 
 [[tileset.layer]]
+name = "bgt_vw_wegdeel_lijn"
+table_name = "bgt.bgt_vw_wegdeel_lijn"
+geometry_field = "geometrie"
+geometry_type = "MULTILINESTRING"
+minzoom = 8
+maxzoom = 22
+srid = 28992
+buffer_size = 0
+    [[tileset.layer.query]]
+    sql = """SELECT geometrie,identificatie_lokaalid::TEXT,type,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_lijn WHERE geometrie && !bbox! AND minzoom <= !zoom! AND !zoom! <= maxzoom"""
+
+
+[[tileset.layer]]
 name = "labels"
 geometry_field = "geometrie"
 geometry_type = "POINT"

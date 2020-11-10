@@ -494,6 +494,16 @@
             }
         },
         {
+            "id": "roads-outline",
+            "type": "line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_lijn",
+            "paint": {
+                "line-color": "#333333",
+                "line-width": 1
+            }
+        },
+        {
             "id": "house_numbers",
             "source": "basiskaart",
             "source-layer": "labels",
