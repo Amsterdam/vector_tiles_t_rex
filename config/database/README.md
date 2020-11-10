@@ -39,6 +39,10 @@
 - TRN_spoorbaanlichaam
 - WGL_smalle_weg-case
 - WGL_smalle_weg-fill
+- WGL_autoveer
+- WGL_hartlijn
+- WGL_rolbaan_platform
+- WGL_voetveer
 
 -----  BGT spoor
 - SBL_metro_overdekt
@@ -90,6 +94,8 @@
 - WGL_autosnelweg-case
 - WGL_autosnelweg-fill
 - WGL_autosnelweg-centerline
+- WGL_veerverbinding
+- WGL_straat_in_tunnel
 
 
 -----  BGT spoor
