@@ -25,7 +25,7 @@ minzoom = 8
 maxzoom = 22
 srid = 28992
 make_valid = true
-buffer_size = 1
+buffer_size = 5
     [[tileset.layer.query]]
     sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_waterdeel_vlak WHERE geometrie && !bbox! AND minzoom <= !zoom! AND !zoom! <= maxzoom"""
 
@@ -47,7 +47,7 @@ table_name = "bgt.bgt_vw_terreindeel_vlak"
 geometry_field = "geometrie"
 geometry_type = "MULTIPOLYGON"
 srid = 28992
-buffer_size = 1
+buffer_size = 5
     [[tileset.layer.query]]
     sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_terreindeel_vlak WHERE geometrie && !bbox! AND minzoom <= !zoom! AND !zoom! <= maxzoom"""
 

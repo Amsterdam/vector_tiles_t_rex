@@ -10,12 +10,167 @@
     },
     "layers": [
         {
+            "id": "background",
+            "type": "background",
+            "paint": {
+                "background-color": "#95C6D5"
+            }
+        },
+        {
             "id": "water",
             "source":"basiskaart",
             "source-layer":"bgt_vw_waterdeel_vlak",
             "type": "fill",
             "paint": {
                 "fill-color": "#95C6D5"
+            }
+        },
+        {
+            "id": "built_up_areas",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_terreindeel_vlak",
+            "type": "fill",
+            "filter": ["match",
+                [
+                    "get",
+                    "type"
+                ],
+                ["bedrijfsterrein","overig" ],
+                true,
+                false
+            ],
+            "paint": {
+                "fill-color": [
+                    "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "bedrijfsterrein",
+                    "#f6f6f4",
+                    "overig",
+                    "#f6f6f4",
+                    "#f00"
+                ],
+                "fill-outline-color": "#c9c7c2"
+            }
+        },
+        {
+            "id": "terrain",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_terreindeel_vlak",
+            "type": "fill",
+            "filter": ["match",
+                [
+                    "get",
+                    "type"
+                ],
+                ["bedrijfsterrein","overig" ],
+                false,
+                true
+            ],
+            "paint": {
+                "fill-color": [
+                    "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "basaltblokken_steenglooiing",
+                    "#f6f6f4",
+                    "boomgaard",
+                    "#CBE0B8",
+                    "boomteelt",
+                    "#CBE0B8",
+                    "bos_groen_sport",
+                    "#CBE0B8",
+                    "bouwland",
+                    "#dceacf",
+                    "dodenakker",
+                    "#CBE0B8",
+                    "dodenakker_met_bos",
+                    "#CBE0B8",
+                    "erf",
+                    "#F9F9E7",
+                    "fruitteelt",
+                    "#CBE0B8",
+                    "gemengd bos",
+                    "#CBE0B8",
+                    "gesloten verharding",
+                    "#FFFFFF",
+                    "grasland agrarisch",
+                    "#DCEACF",
+                    "grasland overig",
+                    "#DCEACF",
+                    "groenvoorziening",
+                    "#DCEACF",
+                    "half verhard",
+                    "#FFFFFF",
+                    "heide",
+                    "#ddd6e5",
+                    "houtwal",
+                    "#F9F9E7",
+                    "loofbos",
+                    "#CBE0B8",
+                    "moeras",
+                    "#CBE0B8",
+                    "naaldbos",
+                    "#CBE0B8",
+                    "onverhard",
+                    "#F9F9E7",
+                    "open verharding",
+                    "#FFFFFF",
+                    "oever, slootkant",
+                    "#F9F9E7",
+                    "perron",
+                    "#FFFFFF",
+                    "rietland",
+                    "#F9F9E7",
+                    "strekdam",
+                    "#FFFFFF",
+                    "struiken",
+                    "#DCEACF",
+                    "zand",
+                    "#F9F9E7",
+                    "#f00"
+                ],
+                "fill-outline-color": "#c9c7c2"
+            }
+        },
+        {
+            "id": "roadside",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_vlak",
+            "type": "fill",
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "type"
+                ],
+                "berm"
+            ],
+            "paint": {
+                "fill-color": [
+                    "match",
+                    [
+                        "get",
+                        "subtype"
+                    ],
+                    "open verharding",
+                    "#F6F3F4",
+                    "gesloten verharding",
+                    "#F6F3F4",
+                    "transitie",
+                    "#F6F3F4",
+                    "half verhard",
+                    "#F6F3F4",
+                    "groenvoorziening",
+                    "#DCEACF",
+                    "onverhard",
+                    "#DCEACF",
+                    "#f00"
+                ]
             }
         },
         {
@@ -76,7 +231,6 @@
                 ["parkeervlak", "rijbaan lokale weg","fietspad","inrit","transitie","rijbaan autoweg","rijbaan regionale weg","OV-baan","overweg","baan voor vliegverkeer"],
                 true,
                 false
-
             ],
             "paint": {
                 "line-color": "#C9C7C2",
@@ -158,80 +312,6 @@
             ],
             "paint": {
                 "fill-color": "#f7f3f5"
-            }
-        },
-        {
-            "id": "terrain",
-            "source": "basiskaart",
-            "source-layer": "bgt_vw_terreindeel_vlak",
-            "type": "fill",
-            "filter": [">=","relatievehoogteligging",0],
-            "paint": {
-                "fill-color": [
-                    "match",
-                    [
-                        "get",
-                        "type"
-                    ],
-                    "basaltblokken_steenglooiing",
-                    "#f6f6f4",
-                    "boomgaard",
-                    "#CBE0B8",
-                    "boomteelt",
-                    "#CBE0B8",
-                    "bouwland",
-                    "#CBE0B8",
-                    "dodenakker",
-                    "#CBE0B8",
-                    "dodenakker_met_bos",
-                    "#CBE0B8",
-                    "erf",
-                    "#F9F9E7",
-                    "fruitteelt",
-                    "#CBE0B8",
-                    "gemengd bos",
-                    "#CBE0B8",
-                    "gesloten verharding",
-                    "#FFFFFF",
-                    "grasland agrarisch",
-                    "#DCEACF",
-                    "grasland overig",
-                    "#DCEACF",
-                    "groenvoorziening",
-                    "#DCEACF",
-                    "half verhard",
-                    "#FFFFFF",
-                    "heide",
-                    "#ddd6e5",
-                    "houtwal",
-                    "#F9F9E7",
-                    "loofbos",
-                    "#CBE0B8",
-                    "moeras",
-                    "#CBE0B8",
-                    "naaldbos",
-                    "#CBE0B8",
-                    "onverhard",
-                    "#F9F9E7",
-                    "open verharding",
-                    "#FFFFFF",
-                    "oever, slootkant",
-                    "#F9F9E7",
-                    "perron",
-                    "#FFFFFF",
-                    "rietland",
-                    "#F9F9E7",
-                    "strekdam",
-                    "#FFFFFF",
-                    "struiken",
-                    "#DCEACF",
-                    "zand",
-                    "#F9F9E7",
-                    "bedrijfsterrein",
-                    "#f6f6f4",
-                    "#f00"
-                ],
-                "fill-outline-color": "#c9c7c2"
             }
         },
         {

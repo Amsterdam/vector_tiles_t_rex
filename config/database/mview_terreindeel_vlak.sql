@@ -300,16 +300,16 @@ UNION
  	 	13  as minzoom, 
  	 	15 as maxzoom
   FROM kbk10."TRN_akkerland"
---  UNION 
---  SELECT
---		"TRN_overig".ogc_fid::text || 'TRN_overig_kbk10' as identificatie_lokaal_id,
---    'overig' as type,
---		ST_makeValid(    "TRN_overig".geom) as geometrie, 
---    0  as relatievehoogteligging, 
--- 	 	'kbk10' as bron, 
--- 	 	13  as minzoom, 
--- 	 	15 as maxzoom
---  FROM kbk10."TRN_overig"
+  UNION 
+  SELECT
+	  "TRN_overig".ogc_fid::text || 'TRN_overig_kbk10' as identificatie_lokaal_id,
+	  'overig' as type,
+	  ST_makeValid(    "TRN_overig".geom) as geometrie, 
+	  0  as relatievehoogteligging, 
+	  'kbk10' as bron, 
+	  13  as minzoom, 
+	  15 as maxzoom
+  FROM kbk10."TRN_overig"
   UNION 
   SELECT
 		"TRN_bedrijfsterrein".ogc_fid::text || 'TRN_bedrijfsterrein_kbk10' as identificatie_lokaal_id,
@@ -447,8 +447,8 @@ UNION
 		ST_makeValid(    "TRN_agrarisch".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	12  as minzoom, 
- 	 	8  as maxzoom
+ 	 	8 as minzoom,
+ 	 	12 as minzoom
   FROM kbk50."TRN_agrarisch"
  UNION 
  SELECT
@@ -457,18 +457,18 @@ UNION
 		ST_makeValid(    "TRN_overig".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	12  as minzoom, 
- 	 	8  as maxzoom
+ 	 	8 as minzoom,
+ 	 	12 as minzoom
   FROM kbk50."TRN_overig"
  UNION 
  SELECT
 		"TRN_bedrijfsterrein_dienstverlening".ogc_fid::text || 'TRN_bedrijfsterrein_dienstverlening_kbk50' as identificatie_lokaal_id,
-    'bedrijfsterrein_dienstverlening' as type,
+    'bedrijfsterrein' as type,
 		ST_makeValid(    "TRN_bedrijfsterrein_dienstverlening".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	12  as minzoom, 
- 	 	8  as maxzoom
+ 	 	8 as minzoom,
+ 	 	12 as minzoom
   FROM kbk50."TRN_bedrijfsterrein_dienstverlening"
  UNION 
  SELECT
@@ -477,8 +477,8 @@ UNION
 		ST_makeValid(    "TRN_bos_groen_sport".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	12  as minzoom, 
- 	 	8  as maxzoom
+ 	 	8 as minzoom,
+ 	 	12 as minzoom
   FROM kbk50."TRN_bos_groen_sport"
  UNION 
  SELECT
@@ -487,8 +487,8 @@ UNION
 		ST_makeValid(    "TRN_zand".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	12  as minzoom, 
- 	 	8  as maxzoom
+ 	 	8 as minzoom,
+ 	 	12 as minzoom
   FROM kbk50."TRN_zand"
 
 
