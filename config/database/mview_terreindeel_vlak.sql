@@ -1,6 +1,4 @@
 DROP  MATERIALIZED VIEW IF exists bgt.bgt_vw_terreindeel_vlak;
-drop INDEX IF exists bgt_vw_terreindeel_vlak_geom_idx;
-
 
 CREATE MATERIALIZED VIEW bgt.bgt_vw_terreindeel_vlak
 TABLESPACE pg_default

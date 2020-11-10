@@ -11,7 +11,7 @@ https://t-rex.tileserver.ch/
 
 - Create the mviews which contains the BGT en KBK10 and KBK50 data, run from the repro root dir
 
-`docker exec -it vector_tiles_t_rex_database_1 bash `psql -h localhost -p5402 -U basiskaart -d basiskaart -f ./config/database/create_all_mviews.sql` `
+`docker exec -it vector_tiles_t_rex_database_1 bash `psql -h localhost -p5402 -U basiskaart -d basiskaart -f ./config/database/create_all_mviews.sql` | echo please wait...`
 
 - To generate a new version for config.toml do:
 

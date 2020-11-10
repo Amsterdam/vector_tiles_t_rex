@@ -1,6 +1,4 @@
 DROP  MATERIALIZED VIEW IF exists bgt.bgt_vw_spoor_lijn;
-drop INDEX IF exists bgt_vw_spoor_lijn_geom_idx;
-
 
 CREATE MATERIALIZED VIEW bgt.bgt_vw_spoor_lijn 
 TABLESPACE pg_default AS

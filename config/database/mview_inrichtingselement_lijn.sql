@@ -1,5 +1,4 @@
 DROP  MATERIALIZED VIEW IF exists bgt.bgt_vw_inrichtingselement_lijn;
-drop INDEX IF exists bgt_vw_inrichtingselement_lijn_geom_idx;
 
 CREATE MATERIALIZED VIEW bgt.bgt_vw_inrichtingselement_lijn
 TABLESPACE pg_default

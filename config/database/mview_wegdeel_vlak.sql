@@ -1,5 +1,4 @@
 DROP  MATERIALIZED VIEW IF exists bgt.bgt_vw_wegdeel_vlak;
-drop INDEX IF exists bgt_vw_wegdeel_vlak_geom_idx;
 
 CREATE MATERIALIZED VIEW bgt.bgt_vw_wegdeel_vlak
 TABLESPACE pg_default
@@ -229,7 +228,7 @@ UNION
     /* KBK10 */
 
     SELECT 
-        "WGL_startbaan_landingsbaan".ogc_fid::text || 'WGL_startbaan_landingsbaan' as identificatie_lokaal_id,
+        "WGL_startbaan_landingsbaan".ogc_fid::text ||'-'|| 'WGL_startbaan_landingsbaan' as identificatie_lokaal_id,
         'startbaan_landingsbaan' as type,
         NULL as subtype,
         NULL as subsubtype,
@@ -242,7 +241,7 @@ UNION
     WHERE 1=1
 UNION
     SELECT 
-        "TRN_spoorbaanlichaam".ogc_fid::text || 'TRN_spoorbaanlichaam' as identificatie_lokaal_id,
+        "TRN_spoorbaanlichaam".ogc_fid::text ||'-'|| 'TRN_spoorbaanlichaam' as identificatie_lokaal_id,
         'spoorbaanlichaam' as type,
         NULL as subtype,
         NULL as subsubtype,
@@ -252,6 +251,45 @@ UNION
  	 	13  as minzoom, 
  	 	15  as maxzoom
     FROM kbk10."TRN_spoorbaanlichaam"
+    WHERE 1=1
+UNION
+    SELECT 
+        "WGL_autosnelweg".ogc_fid::text ||'-'|| 'WGL_autosnelweg' as identificatie_lokaal_id,
+        'autosnelweg' as type,
+        NULL as subtype,
+        NULL as subsubtype,
+		ST_makeValid(        "WGL_autosnelweg".geom) as geometrie,
+        0  as relatievehoogteligging, 
+ 	    'kbk10' as bron, 
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
+    FROM kbk10."WGL_autosnelweg"
+    WHERE 1=1
+UNION
+    SELECT 
+        "WGL_autosnelweg".ogc_fid::text ||'-'|| 'WGL_autosnelweg' as identificatie_lokaal_id,
+        'autosnelweg' as type,
+        NULL as subtype,
+        NULL as subsubtype,
+		ST_makeValid(        "WGL_autosnelweg".geom) as geometrie,
+        0  as relatievehoogteligging, 
+ 	    'kbk10' as bron, 
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
+    FROM kbk10."WGL_autosnelweg"
+    WHERE 1=1
+UNION
+    SELECT 
+        "WGL_rolbaan_platform".ogc_fid::text ||'-'|| 'WGL_rolbaan_platform' as identificatie_lokaal_id,
+        'rolbaan_platform' as type,
+        NULL as subtype,
+        NULL as subsubtype,
+		ST_makeValid(        "WGL_rolbaan_platform".geom) as geometrie,
+        0  as relatievehoogteligging, 
+ 	    'kbk10' as bron, 
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
+    FROM kbk10."WGL_rolbaan_platform"
     WHERE 1=1
 WITH DATA;
 
