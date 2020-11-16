@@ -13,7 +13,7 @@
             "id": "background",
             "type": "background",
             "paint": {
-                "background-color": "#95C6D5"
+                "background-color": "#ffffff"
             }
         },
         {
@@ -103,7 +103,7 @@
                     "grasland overig",
                     "#DCEACF",
                     "groenvoorziening",
-                    "#DCEACF",
+                    "#F9F9E7",
                     "half verhard",
                     "#FFFFFF",
                     "heide",
@@ -122,6 +122,8 @@
                     "#FFFFFF",
                     "oever, slootkant",
                     "#F9F9E7",
+                    "spoorbaanlichaam",
+                    "#dddcda",
                     "perron",
                     "#FFFFFF",
                     "rietland",
@@ -228,12 +230,22 @@
                     "get",
                     "type"
                 ]],
-                ["parkeervlak", "rijbaan lokale weg","fietspad","inrit","transitie","rijbaan autoweg","rijbaan regionale weg","OV-baan","overweg","baan voor vliegverkeer"],
+                ["parkeervlak", "rijbaan lokale weg","fietspad","inrit","transitie","rijbaan autoweg","rijbaan regionale weg","OV-baan","overweg","baan voor vliegverkeer", "rolbaan_platform",  "startbaan_landingsbaan", "autosnelweg"],
                 true,
                 false
             ],
             "paint": {
-                "line-color": "#C9C7C2",
+                "line-color": [ "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "rolbaan_platform",
+                    "#ffffff",
+                    "startbaan_landingsbaan",
+                    "#ffffff",
+                    "#C9C7C2"
+                ],
                 "line-width": 2
             }
         },
@@ -248,7 +260,7 @@
                     "get",
                     "type"
                 ]],
-                ["parkeervlak","rijbaan lokale weg","fietspad","inrit","transitie","rijbaan autoweg","rijbaan regionale weg","OV-baan","overweg","baan voor vliegverkeer"],
+                ["parkeervlak","rijbaan lokale weg","fietspad","inrit","transitie","rijbaan autoweg","rijbaan regionale weg","OV-baan","overweg","baan voor vliegverkeer", "rolbaan_platform", "startbaan_landingsbaan", "autosnelweg"],
                 true,
                 false
             ],

@@ -60,7 +60,7 @@ srid = 28992
 buffer_size = 1
 query_limit = 1000
     [[tileset.layer.query]]
-    sql = """SELECT geometrie,identificatie_lokaalid,type,subtype,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_vlak WHERE geometrie && !bbox! AND minzoom <= !zoom! """
+    sql = """SELECT geometrie,identificatie_lokaalid,type,subtype,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_vlak WHERE geometrie && !bbox! AND minzoom <= !zoom! AND !zoom! <= maxzoom"""
 
 
 [[tileset.layer]]
@@ -71,7 +71,7 @@ geometry_type = "MULTILINESTRING"
 srid = 28992
 buffer_size = 1
 #[[tileset.layer.query]]
-#sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_spoor_lijn WHERE geometrie && !bbox!"""
+#sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_spoor_lijn WHERE geometrie && !bbox! AND minzoom <= !zoom! AND !zoom! <= maxzoom"""
 
 [[tileset.layer]]
 name = "bgt_vw_inrichtingselement_vlak"

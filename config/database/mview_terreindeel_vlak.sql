@@ -319,6 +319,17 @@ UNION
  	 	15 as maxzoom
   FROM kbk10."TRN_bedrijfsterrein"
   UNION 
+    SELECT 
+        "TRN_spoorbaanlichaam".ogc_fid::text ||'-'|| 'TRN_spoorbaanlichaam' as identificatie_lokaal_id,
+        'spoorbaanlichaam' as type,
+		ST_makeValid(        "TRN_spoorbaanlichaam".geom) as geometrie,
+        0  as relatievehoogteligging, 
+ 	    'kbk10' as bron, 
+ 	 	13  as minzoom, 
+ 	 	15  as maxzoom
+    FROM kbk10."TRN_spoorbaanlichaam"
+    WHERE 1=1
+UNION
   SELECT
 		"TRN_openbaar_groen".ogc_fid::text || 'TRN_openbaar_groen_kbk10' as identificatie_lokaal_id,
     'groenvoorziening' as type,
