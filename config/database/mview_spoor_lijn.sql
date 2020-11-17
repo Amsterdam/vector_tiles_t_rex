@@ -9,7 +9,7 @@ TABLESPACE pg_default AS
         "BGT_SPR_sneltram".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
     FROM bgt."BGT_SPR_sneltram"
     WHERE  1=1
 UNION
@@ -20,7 +20,7 @@ UNION
         "BGT_SPR_tram".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
     FROM bgt."BGT_SPR_tram"
     WHERE 1=1
 UNION
@@ -31,7 +31,7 @@ UNION
         "BGT_SPR_trein".relatievehoogteligging, 
  	 	'bgt' as bron, 
  	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	22 as maxzoom
     FROM bgt."BGT_SPR_trein"
     WHERE 1=1
 

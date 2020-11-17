@@ -10,46 +10,46 @@ TABLESPACE pg_default AS
 		ST_makeValid(        "WGL_smalle_weg".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	15  as minzoom, 
  	 	15  as maxzoom
     from
         kbk10."WGL_smalle_weg"
     where 1 = 1
-    UNION ALL
-      select
-        "WGL_autoveer".ogc_fid::text ||'-'|| 'WGL_autoveer' as identificatie_lokaalid,
-        'autoveer' as type,
-		ST_makeValid(        "WGL_autoveer".geom) as geometrie,
-        0  as relatievehoogteligging, 
- 	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
- 	 	15  as maxzoom
-    from
-        kbk10."WGL_autoveer"
-    where 1 = 1
-    UNION ALL
-      select
-        "WGL_hartlijn".ogc_fid::text ||'-'|| 'WGL_hartlijn' as identificatie_lokaalid,
-        'hartlijn' as type,
-		ST_makeValid(        "WGL_hartlijn".geom) as geometrie,
-        0  as relatievehoogteligging, 
- 	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
- 	 	15  as maxzoom
-    from
-        kbk10."WGL_hartlijn"
-    where 1 = 1
-UNION
-    SELECT 
-        "WGL_voetveer".ogc_fid::text ||'-'|| 'WGL_voetveer' as identificatie_lokaalid,
-        'voetveer' as type,
-		ST_makeValid(        "WGL_voetveer".geom) as geometrie,
-        0  as relatievehoogteligging, 
- 	 	'kbk10' as bron, 
- 	 	13 as minzoom,
- 	 	15  as maxzoom
-    FROM kbk10."WGL_voetveer"
-    WHERE 1=1
+ --   UNION ALL
+ --     select
+ --       "WGL_autoveer".ogc_fid::text ||'-'|| 'WGL_autoveer' as identificatie_lokaalid,
+ --       'autoveer' as type,
+--		ST_makeValid(        "WGL_autoveer".geom) as geometrie,
+ --       0  as relatievehoogteligging, 
+ --	 	'kbk10' as bron, 
+ --	 	13  as minzoom, 
+ --	 	15  as maxzoom
+ --   from
+ --       kbk10."WGL_autoveer"
+ --   where 1 = 1
+ --   UNION ALL
+ --     select
+ --       "WGL_hartlijn".ogc_fid::text ||'-'|| 'WGL_hartlijn' as identificatie_lokaalid,
+ --       'hartlijn' as type,
+--		ST_makeValid(        "WGL_hartlijn".geom) as geometrie,
+ --       0  as relatievehoogteligging, 
+ --	 	'kbk10' as bron, 
+ --	 	13  as minzoom, 
+ --	 	15  as maxzoom
+ --   from
+ --       kbk10."WGL_hartlijn"
+ --   where 1 = 1
+-- UNION
+ --   SELECT 
+ --       "WGL_voetveer".ogc_fid::text ||'-'|| 'WGL_voetveer' as identificatie_lokaalid,
+ --       'voetveer' as type,
+--		ST_makeValid(        "WGL_voetveer".geom) as geometrie,
+ --       0  as relatievehoogteligging, 
+ --	 	'kbk10' as bron, 
+ --	 	13 as minzoom,
+ --	 	15  as maxzoom
+ --   FROM kbk10."WGL_voetveer"
+ --   WHERE 1=1
     
  /* --- KBK50 ---- */
 UNION

@@ -103,7 +103,7 @@
                     "grasland overig",
                     "#DCEACF",
                     "groenvoorziening",
-                    "#F9F9E7",
+                    "#DCEACF",
                     "half verhard",
                     "#FFFFFF",
                     "heide",
@@ -506,13 +506,75 @@
             }
         },
         {
-            "id": "roads-outline",
+            "id": "streets-outline",
             "type": "line",
             "source": "basiskaart",
             "source-layer": "bgt_vw_wegdeel_lijn",
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "type"
+                ],
+                "smalle_weg"
+            ],
             "paint": {
-                "line-color": "#333333",
-                "line-width": 1
+                "line-color": "#c9c7c2",
+                "line-width": 3
+            }
+        },
+        {
+            "id": "streets-fill",
+            "type": "line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_lijn",
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "type"
+                ],
+                "smalle_weg"
+            ],
+            "paint": {
+                "line-color": "#ffffff",
+                "line-width": 2
+            }
+        },
+        {
+            "id": "motorway-fill",
+            "type": "line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_lijn",
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "type"
+                ],
+                "autosnelweg"
+            ],
+            "paint": {
+                "line-color": "#ff0000",
+                "line-width": 2
+            }
+        },
+        {
+            "id": "motorway-fill",
+            "type": "line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_lijn",
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "type"
+                ],
+                "autosnelweg"
+            ],
+            "paint": {
+                "line-color": "#ff0000",
+                "line-width": 2
             }
         },
         {

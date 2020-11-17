@@ -241,7 +241,7 @@ UNION
 		ST_makeValid(    "GBW_overdekt".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as minzoom, 
  	 	15 as maxzoom
   FROM kbk10."GBW_overdekt"
  UNION
@@ -251,7 +251,7 @@ UNION
 		ST_makeValid(    "GBW_gebouw".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as minzoom, 
  	 	15 as maxzoom
   FROM kbk10."GBW_gebouw"
  UNION 
@@ -261,7 +261,7 @@ UNION
 		ST_makeValid(    "GBW_hoogbouw".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as minzoom, 
  	 	15 as maxzoom
   FROM kbk10."GBW_hoogbouw"
  UNION 
@@ -271,7 +271,7 @@ UNION
 		ST_makeValid(    "GBW_kas_warenhuis".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13 as minzoom, 
+ 	 	14 as minzoom, 
  	 	15 as maxzoom
   FROM kbk10."GBW_kas_warenhuis"
  UNION 
@@ -282,7 +282,7 @@ UNION
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	8 as minzoom, 
- 	 	12 as maxzoom
+ 	 	13 as maxzoom
   FROM kbk50."GBW_bebouwing"
    UNION 
  SELECT
@@ -292,7 +292,7 @@ UNION
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	8 as minzoom, 
- 	 	12 as maxzoom
+ 	 	13 as maxzoom
   FROM kbk50."GBW_kassen"
 WITH DATA;
 

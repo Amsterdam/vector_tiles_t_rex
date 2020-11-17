@@ -275,7 +275,7 @@ UNION
 		ST_makeValid(    "TRN_basaltblokken_steenglooiing".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_basaltblokken_steenglooiing"
   UNION
@@ -285,7 +285,7 @@ UNION
 		ST_makeValid(    "TRN_grasland".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_grasland"
   UNION 
@@ -295,7 +295,7 @@ UNION
 		ST_makeValid(    "TRN_akkerland".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_akkerland"
   UNION 
@@ -305,7 +305,7 @@ UNION
 	  ST_makeValid(    "TRN_overig".geom) as geometrie, 
 	  0  as relatievehoogteligging, 
 	  'kbk10' as bron, 
-	  13  as minzoom, 
+	  14 as maxzoom,
 	  15 as maxzoom
   FROM kbk10."TRN_overig"
   UNION 
@@ -315,7 +315,7 @@ UNION
 		ST_makeValid(    "TRN_bedrijfsterrein".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_bedrijfsterrein"
   UNION 
@@ -325,7 +325,7 @@ UNION
 		ST_makeValid(        "TRN_spoorbaanlichaam".geom) as geometrie,
         0  as relatievehoogteligging, 
  	    'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15  as maxzoom
     FROM kbk10."TRN_spoorbaanlichaam"
     WHERE 1=1
@@ -336,7 +336,7 @@ UNION
 		ST_makeValid(    "TRN_openbaar_groen".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_openbaar_groen"
   UNION 
@@ -346,7 +346,7 @@ UNION
 		ST_makeValid(    "TRN_zand".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_zand"
   UNION 
@@ -356,7 +356,7 @@ UNION
 		ST_makeValid(    "TRN_bos-loofbos".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_bos-loofbos"
   UNION 
@@ -366,7 +366,7 @@ UNION
 		ST_makeValid(    "TRN_bos-naaldbos".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_bos-naaldbos"
   UNION 
@@ -376,7 +376,7 @@ UNION
 		ST_makeValid(    "TRN_bos-gemengd_bos".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_bos-gemengd_bos"
   UNION 
@@ -386,7 +386,7 @@ UNION
 		ST_makeValid(    "TRN_bos-griend".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_bos-griend"
   UNION 
@@ -396,7 +396,7 @@ UNION
 		ST_makeValid(    "TRN_boomgaard".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_boomgaard"
   UNION 
@@ -406,7 +406,7 @@ UNION
 		ST_makeValid(    "TRN_boomkwekerij".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_boomkwekerij"
   UNION 
@@ -416,7 +416,7 @@ UNION
 		ST_makeValid(    "TRN_dodenakker".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_dodenakker"
   UNION 
@@ -426,7 +426,7 @@ UNION
 		ST_makeValid(    "TRN_dodenakker_met_bos".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_dodenakker_met_bos"
   UNION 
@@ -436,7 +436,7 @@ UNION
 		ST_makeValid(    "TRN_fruitkwekerij".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14 as maxzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_fruitkwekerij"
   UNION
@@ -457,7 +457,7 @@ UNION
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	8 as minzoom,
- 	 	12 as minzoom
+ 	 	13 as maxzoom
   FROM kbk50."TRN_agrarisch"
  UNION 
  SELECT
@@ -467,7 +467,7 @@ UNION
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	8 as minzoom,
- 	 	12 as minzoom
+ 	 	13 as maxzoom
   FROM kbk50."TRN_overig"
  UNION 
  SELECT
@@ -477,7 +477,7 @@ UNION
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	8 as minzoom,
- 	 	12 as minzoom
+ 	 	13 as maxzoom
   FROM kbk50."TRN_bedrijfsterrein_dienstverlening"
  UNION 
  SELECT
@@ -487,7 +487,7 @@ UNION
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	8 as minzoom,
- 	 	12 as minzoom
+ 	 	13 as maxzoom
   FROM kbk50."TRN_bos_groen_sport"
  UNION 
  SELECT
@@ -497,7 +497,7 @@ UNION
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	8 as minzoom,
- 	 	12 as minzoom
+ 	 	13 as maxzoom
   FROM kbk50."TRN_zand"
 
 

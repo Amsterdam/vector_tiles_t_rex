@@ -55,7 +55,7 @@ UNION
 		ST_makeValid(    "WDL_breed_water".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14  as minzoom, 
  	 	15  as maxzoom
    FROM kbk10."WDL_breed_water"
   WHERE 1=1
@@ -66,7 +66,7 @@ UNION
 		ST_makeValid(    "WDL_haven".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14  as minzoom, 
  	 	15  as maxzoom
    FROM kbk10."WDL_haven"
   WHERE 1=1
@@ -81,7 +81,7 @@ UNION
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	8  as minzoom, 
- 	 	12  as maxzoom
+ 	 	13  as maxzoom
    FROM kbk50."WDL_wateroppervlak"
   WHERE 1=1
 
