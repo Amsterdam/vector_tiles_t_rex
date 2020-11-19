@@ -52,7 +52,21 @@
                     "#f6f6f4",
                     "#f00"
                 ],
-                "fill-outline-color": "#c9c7c2"
+                "fill-outline-color": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    "rgba(201,199,194,0.0)",
+                    11.9,
+                    "rgba(201,199,194,0.0)",
+                    12,
+                    "rgba(201,199,194,1.0)"
+                ]
             }
         },
         {
@@ -133,7 +147,7 @@
                     "struiken",
                     "#DCEACF",
                     "zand",
-                    "#F9F9E7",
+                    "#fbf0de",
                     "#f00"
                 ],
                 "fill-outline-color": [
@@ -199,7 +213,7 @@
                     "struiken",
                     "#DCEACF",
                     "zand",
-                    "#F9F9E7",
+                    "#fbf0de",
                     "#f00"
                 ]
             }
@@ -545,7 +559,21 @@
                     "rgba(229, 227, 222, 0.6)",
                     "rgba(229, 227, 222, 1.0)"
                 ],
-                "fill-outline-color": "#C9C7C2"
+                "fill-outline-color": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    "rgba(201,199,194,0.0)",
+                    11.9,
+                    "rgba(201,199,194,0.0)",
+                    12,
+                    "rgba(201,199,194,1.0)"
+                ]
             }
         },
         {
@@ -653,6 +681,42 @@
             }
         },
         {
+            "id": "mainroads-outline",
+            "type": "line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_lijn",
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "type"
+                ],
+                "hoofdweg"
+            ],
+            "paint": {
+                "line-color": "#c9c7c2",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    2,
+                    11,
+                    3,
+                    12,
+                    3.5,
+                    13,
+                    5.2,
+                    13.9,
+                    5.2
+                ]
+            }
+        },
+        {
             "id": "smallstreets-fill",
             "type": "line",
             "source": "basiskaart",
@@ -735,6 +799,42 @@
                     3,
                     13.9,
                     3
+                ]
+            }
+        },
+        {
+            "id": "mainroads-fill",
+            "type": "line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_lijn",
+            "filter": [
+                "==",
+                [
+                    "get",
+                    "type"
+                ],
+                "hoofdweg"
+            ],
+            "paint": {
+                "line-color": "#ffffff",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    1.7,
+                    11,
+                    2,
+                    12,
+                    2.7,
+                    13,
+                    4,
+                    13.9,
+                    4
                 ]
             }
         },
