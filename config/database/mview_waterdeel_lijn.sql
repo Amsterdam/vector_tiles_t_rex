@@ -8,8 +8,8 @@ AS SELECT
 		ST_makeValid(    "BGTPLUS_KDL_duiker_L".geometrie) as geometrie,
     "BGTPLUS_KDL_duiker_L".relatievehoogteligging, 
  	 	'bgtplus' as bron, 
- 	 	16  as minzoom, 
- 	 	NULL::int  as maxzoom
+ 	 	16 as minzoom, 
+ 	 	22 as maxzoom
    FROM bgt."BGTPLUS_KDL_duiker_L"
   WHERE  1=1
 
@@ -22,8 +22,8 @@ AS SELECT
 		ST_makeValid(    "WDL_brede_waterloop".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	NULL::int  as minzoom, 
- 	 	12  as maxzoom
+ 	 	8 as minzoom, 
+ 	 	13 as maxzoom
    FROM kbk50."WDL_brede_waterloop"
   WHERE 1=1
 
@@ -34,8 +34,8 @@ AS SELECT
 		ST_makeValid(    "WDL_smalle_waterloop".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
- 	 	NULL::int  as minzoom, 
- 	 	12  as maxzoom
+ 	 	11 as minzoom, 
+ 	 	13 as maxzoom
    FROM kbk50."WDL_smalle_waterloop"
   WHERE 1=1
 
