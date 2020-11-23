@@ -266,6 +266,8 @@
                     "type"
                 ],
                 [
+                    "smal_water_tot_3m",
+                    "smal_water_3_tot_6m",
                     "smalle_waterloop",
                     "brede_waterloop"
                 ],
@@ -292,7 +294,13 @@
                     12,
                     0.7,
                     13,
-                    1.2
+                    1.2,
+                    15,
+                    1.2,
+                    16,
+                    2,
+                    22,
+                    2
                 ]
             }
         },
