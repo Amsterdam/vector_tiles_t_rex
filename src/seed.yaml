@@ -18,12 +18,11 @@ seeds:
     coverages: ['bgt']
     levels:
      from: 17
-     to: 20
-     # TODO : This used to be 21, but for some reason this is not yet working on level 21
+     # TODO : 21 needs a special tileserver_gl version. See README
+     to: 21
     refresh_before:
      days: 7
 #     minutes: 15
-
 
 coverages:
   kbk:

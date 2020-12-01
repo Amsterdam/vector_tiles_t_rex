@@ -98,9 +98,24 @@ Build topo_wm mapproxy image :
 
 `docker-compose build topo_wm`
 
-Then run the maproxy seeding :
+Then run the mapproxy seeding :
 
 `docker-compose run topo_wm`
 
-The resulting tiles are in the ./tiles subdirectory 
+The resulting tiles are in the ./tiles subdirectory
 
+The current Tileserver GL docker image only renders rasterfiles up to level 20.
+
+A pull request has been merged in the maptiler tileserver-gl to render up to level 22, but did not yet make it to the
+docker image.
+
+In order to use this locally do the following:
+
+```git clone git@github.com:maptiler/tileserver-gl.git
+cd tileserver-gl
+docker build --tag local/tileserver_gl .
+```
+
+Then in docker-compose use image:
+
+ `local/tileserver_gl`
