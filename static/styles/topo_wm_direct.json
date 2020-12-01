@@ -872,14 +872,18 @@
             "minzoom": 16,
             "maxzoom": 22,
             "filter": [
-                "==",
-                ["get","type"],
-                "nummeraanduiding"
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                ["nummeraanduiding","standplaats", "ligplaats"],
+                true,
+                false
             ],
             "layout": {
                 "text-allow-overlap": false,
                 "text-ignore-placement": false,
-                "text-padding": 2.5,
                 "text-font": [
                     "open-sans"
                 ],
@@ -905,7 +909,7 @@
                     20,
                     13
                 ],
-                "text-max-width": 3,
+                "text-max-width": 4,
                 "text-rotate": {
                     "type": "identity",
                     "property": "hoek"
