@@ -865,11 +865,56 @@
             }
         },
         {
+            "id": "names",
+            "source": "basiskaart",
+            "source-layer": "labels",
+            "type": "symbol",
+            "minzoom": 17,
+            "filter": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                ["Weg","Water"],
+                true,
+                false
+            ],
+            "layout": {
+                "text-font": [
+                    "open-sans"
+                ],
+                "text-anchor": "center",
+                "text-field": ["upcase", ["to-string",["get", "tekst"]]],
+                "text-size": 11,
+                "text-rotate": {
+                    "type": "identity",
+                    "property": "hoek"
+                },
+                "text-rotation-alignment": "map"
+            },
+            "paint": {
+                "text-color":  [
+                    "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "Weg",
+                    "#666",
+                    "Water",
+                    "#fff",
+                    "#600"
+                ]
+            }
+        },
+
+        {
             "id": "house_numbers",
             "source": "basiskaart",
             "source-layer": "labels",
             "type": "symbol",
-            "minzoom": 16,
+            "minzoom": 18,
             "maxzoom": 22,
             "filter": [
                 "match",
@@ -882,7 +927,7 @@
                 false
             ],
             "layout": {
-                "text-allow-overlap": false,
+                "text-allow-overlap": true,
                 "text-ignore-placement": false,
                 "text-font": [
                     "open-sans"
@@ -904,8 +949,8 @@
                     [
                         "zoom"
                     ],
-                    16,
-                    8,
+                    18,
+                    10,
                     20,
                     13
                 ],
@@ -917,10 +962,7 @@
                 "text-rotation-alignment": "map"
             },
             "paint": {
-                "text-halo-blur": 0.5,
-                "text-color": "#666",
-                "text-halo-width": 1,
-                "text-halo-color": "#ffffff"
+                "text-color": "#666"
             }
         }
     ]
