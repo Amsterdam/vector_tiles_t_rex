@@ -29,6 +29,24 @@ services:
       - "$PWD/static:/static"
     command: serve --config  /var/config/topo_wm.toml
 
+  t_rex_rd:
+    image: sourcepole/t-rex
+    ports:
+      - "6768:6768"
+    links:
+      - database
+    environment:
+      - DATABASE_NAME=basiskaart
+      - DATABASE_USER=basiskaart
+      - DATABASE_PASSWORD=insecure
+    volumes:
+      - "$PWD/data/in:/var/data/in:ro"
+      - "$PWD/data/out:/var/data/out"
+      - "$PWD/config:/var/config:ro"
+      - "$PWD/cache:/var/cache/mvtcache"
+      - "$PWD/static:/static"
+    command: serve --config  /var/config/topo_rd.toml
+
   tileserver_gl:
     image: maptiler/tileserver-gl
     # image: local/tileserver_gl
