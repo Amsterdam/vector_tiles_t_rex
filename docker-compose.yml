@@ -48,10 +48,11 @@ services:
     command: serve --port 6768 --config  /var/config/topo_rd.toml
 
   tileserver_gl:
-    image: maptiler/tileserver-gl:v3.0.0
+    image: maptiler/tileserver-gl:latest
+    #image: maptiler/tileserver-gl:v3.0.0
     # image: local/tileserver_gl
     ports:
-      - "8080:80"
+      - "8081:8080"
     links:
       - t_rex
       - t_rex_rd
