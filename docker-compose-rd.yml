@@ -14,7 +14,7 @@ services:
   t_rex:
     image: sourcepole/t-rex
     ports:
-      - "6767:6767"
+      - "6768:6767"
     links:
       - database
     environment:
