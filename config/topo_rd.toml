@@ -20,6 +20,7 @@ origin = "TopLeft"
 [[tileset]]
 name = "basiskaart_rd"
 extent = [104000,474000,136000,502100]
+center = [122805,487728]
 minzoom = 0
 cache_limits = {minzoom = 0, maxzoom = 16, no_cache = false}
 
@@ -219,7 +220,7 @@ buffer_size = 20
 [webserver]
 # Bind address. Use 0.0.0.0 to listen on all adresses.
 bind = "0.0.0.0"
-port = 6767
+port = 6768
 
 [cache.file]
 base = "/var/cache/mvtcache"

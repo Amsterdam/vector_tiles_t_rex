@@ -11,10 +11,11 @@
     52.373012,
     12
   ],
-  "description":"basiskaart",
+  "srid" :28992,
+  "description":"Basiskaart Amsterdam Rijksdriehoekstelsel",
   "maxzoom":16,
   "minzoom":3,
-  "name":"basiskaart",
+  "name":"basiskaart_rd",
   "scheme":"xyz",
   "tiles": [
     "http://t_rex_rd:6768/basiskaart_rd/{z}/{x}/{y}.pbf"

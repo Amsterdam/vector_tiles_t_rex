@@ -3,9 +3,9 @@
     "name": "basiskaart_rd",
     "glyphs": "{fontstack}/{range}.pbf",
     "sources": {
-        "basiskaart": {
+        "basiskaart_rd": {
             "type": "vector",
-            "url": "tilejson_direct.json"
+            "url": "http://t_rex_rd:6768/static/tilejson_direct_rd.json"
         }
     },
     "layers": [
@@ -18,7 +18,7 @@
         },
         {
             "id": "water",
-            "source":"basiskaart",
+            "source":"basiskaart_rd",
             "source-layer":"bgt_vw_waterdeel_vlak",
             "type": "fill",
             "paint": {
@@ -27,7 +27,7 @@
         },
         {
             "id": "built_up_areas",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_terreindeel_vlak",
             "type": "fill",
             "filter": ["match",
@@ -71,7 +71,7 @@
         },
         {
             "id": "terrain",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_terreindeel_vlak",
             "type": "fill",
             "filter": ["match",
@@ -220,7 +220,7 @@
         },
         {
             "id": "roadside",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_vlak",
             "type": "fill",
             "filter": [
@@ -256,7 +256,7 @@
         },
         {
             "id": "water_line",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_waterdeel_lijn",
             "type": "line",
             "filter": [
@@ -306,7 +306,7 @@
         },
         {
             "id": "infrastructure_road-casing",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_vlak",
             "type": "line",
             "filter": [
@@ -336,7 +336,7 @@
         },
         {
             "id": "infrastructure_road-fill",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_vlak",
             "type": "fill",
             "filter": [
@@ -355,7 +355,7 @@
         },
         {
             "id": "infrastructure_pedestrian-casing",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_vlak",
             "type": "line",
             "filter": [
@@ -375,7 +375,7 @@
         },
         {
             "id": "infrastructure_pedestrian_fill",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_vlak",
             "type": "fill",
             "filter": [
@@ -394,7 +394,7 @@
         },
         {
             "id": "infrastructure_bridge",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_inrichtingselement_vlak",
             "type": "fill",
             "filter": [
@@ -414,7 +414,7 @@
         {
             "id": "railways",
             "type": "line",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_spoor_lijn",
             "filter": [">=","relatievehoogteligging",0],
             "paint": {
@@ -516,7 +516,7 @@
         {
             "id": "railway-hatching",
             "type": "line",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_spoor_lijn",
             "filter": [
                 "==",
@@ -552,7 +552,7 @@
         },
         {
             "id": "buildings",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_gebouw_vlak",
             "type": "fill",
             "filter": [">=","relatievehoogteligging",0],
@@ -586,7 +586,7 @@
         },
         {
             "id": "courtyards",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_terreindeel_vlak",
             "type": "fill",
             "maxzoom": 16,
@@ -607,7 +607,7 @@
         {
             "id": "smallstreets-outline",
             "type": "line",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_lijn",
             "filter": [
                 "==",
@@ -625,7 +625,7 @@
         {
             "id": "streets-outline",
             "type": "line",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_lijn",
             "filter": [
                 "==",
@@ -657,7 +657,7 @@
         {
             "id": "regionalroads-outline",
             "type": "line",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_lijn",
             "filter": [
                 "==",
@@ -691,7 +691,7 @@
         {
             "id": "mainroads-outline",
             "type": "line",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_lijn",
             "filter": [
                 "==",
@@ -727,7 +727,7 @@
         {
             "id": "smallstreets-fill",
             "type": "line",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_lijn",
             "filter": [
                 "==",
@@ -745,7 +745,7 @@
         {
             "id": "streets-fill",
             "type": "line",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_lijn",
             "filter": [
                 "==",
@@ -777,7 +777,7 @@
         {
             "id": "regionalroads-fill",
             "type": "line",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_lijn",
             "filter": [
                 "==",
@@ -813,7 +813,7 @@
         {
             "id": "mainroads-fill",
             "type": "line",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_lijn",
             "filter": [
                 "==",
@@ -849,7 +849,7 @@
         {
             "id": "motorway-fill",
             "type": "line",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "bgt_vw_wegdeel_lijn",
             "filter": [
                 "==",
@@ -866,7 +866,7 @@
         },
         {
             "id": "names",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "labels",
             "type": "symbol",
             "minzoom": 17,
@@ -911,7 +911,7 @@
 
         {
             "id": "house_numbers",
-            "source": "basiskaart",
+            "source": "basiskaart_rd",
             "source-layer": "labels",
             "type": "symbol",
             "minzoom": 18,

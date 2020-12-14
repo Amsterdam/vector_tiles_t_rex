@@ -45,15 +45,16 @@ services:
       - "$PWD/config:/var/config:ro"
       - "$PWD/cache:/var/cache/mvtcache"
       - "$PWD/static:/static"
-    command: serve --config  /var/config/topo_rd.toml
+    command: serve --port 6768 --config  /var/config/topo_rd.toml
 
   tileserver_gl:
-    image: maptiler/tileserver-gl
+    image: maptiler/tileserver-gl:v3.0.0
     # image: local/tileserver_gl
     ports:
       - "8080:80"
     links:
       - t_rex
+      - t_rex_rd
     volumes:
       - "$PWD/data:/data"
       - "$PWD/config:/var/config:ro"
