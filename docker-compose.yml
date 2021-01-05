@@ -27,13 +27,13 @@ services:
       - "$PWD/config:/var/config:ro"
       - "$PWD/cache:/var/cache/mvtcache"
       - "$PWD/static:/static"
-    command: serve --config  /var/config/topo_wm.toml
+    command: serve --config /var/config/topo_wm.toml --loglevel trace
 
   tileserver_gl:
     image: maptiler/tileserver-gl
     # image: local/tileserver_gl
     ports:
-      - "8080:80"
+      - "8080:8080"
     links:
       - t_rex
     volumes:
