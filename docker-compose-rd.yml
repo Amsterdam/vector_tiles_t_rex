@@ -11,7 +11,7 @@ services:
       POSTGRES_USER: basiskaart
       POSTGRES_PASSWORD: insecure
 
-  t_rex:
+  t_rex_rd:
     image: sourcepole/t-rex
     ports:
       - "6768:6767"
