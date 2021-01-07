@@ -27,7 +27,7 @@ services:
       - "$PWD/config:/var/config:ro"
       - "$PWD/cache:/var/cache/mvtcache"
       - "$PWD/static:/static"
-    command: serve --config /var/config/topo_wm.toml --loglevel trace
+    command: serve --config /var/config/topo_wm.toml
 
   tileserver_gl:
     image: maptiler/tileserver-gl
