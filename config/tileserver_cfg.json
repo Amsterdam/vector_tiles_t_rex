@@ -7,12 +7,20 @@
     }
   },
   "styles": {
-    "basic": {
+    "wm": {
       "style": "topo_wm_direct.json",
       "tilejson": {
         "bounds": [4.63974, 52.25158, 5.10768, 52.50593],
         "minzoom": 3,
         "maxzoom": 22
+      }
+    },
+    "rd": {
+      "style": "topo_rd_direct.json",
+      "tilejson": {
+        "bounds": [-22.500004, 0, 0, 21.943049],
+        "minzoom": 3,
+        "maxzoom": 16
       }
     }
   }

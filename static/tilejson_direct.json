@@ -12,6 +12,7 @@
     12
   ],
   "description":"basiskaart",
+  "format": "pbf",
   "maxzoom":16,
   "minzoom":3,
   "name":"basiskaart",

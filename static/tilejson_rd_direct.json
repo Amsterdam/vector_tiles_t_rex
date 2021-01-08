@@ -1,0 +1,24 @@
+{
+  "attribution":"",
+  "bounds":[
+    -22.500004,
+    0,
+    0,
+    21.943049
+  ],
+  "center":[
+    -13.359377,
+    10.141932,
+    10
+  ],
+  "description":"Basiskaart Amsterdam Rijksdriehoekstelsel",
+  "format": "pbf",
+  "maxzoom":16,
+  "minzoom":3,
+  "name":"basiskaart",
+  "scheme":"xyz",
+  "tiles": [
+    "http://t_rex_rd:6767/basiskaart_rd/{z}/{x}/{y}.pbf"
+  ],
+  "version":"2.0.0"
+}
