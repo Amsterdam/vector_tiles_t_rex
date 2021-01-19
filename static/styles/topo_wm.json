@@ -1,7 +1,7 @@
 {
     "version": 8,
     "name": "topo_wm",
-    "glyphs": "{fontstack}/{range}.pbf",
+    "glyphs": "http://t_rex:6767/static/fonts/{fontstack}/{range}.pbf",
     "sources": {
         "basiskaart": {
             "type": "vector",
