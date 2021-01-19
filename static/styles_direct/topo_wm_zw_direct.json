@@ -877,6 +877,29 @@
             }
         },
         {
+            "id": "road-names",
+            "type": "symbol",
+            "source": "basiskaart",
+            "source-layer": "road_names",
+            "maxzoom": 16.9,
+            "minzoom": 14,
+            "layout": {
+                "text-max-angle": 40,
+                "text-padding": 2,
+                "text-size": 12,
+                "text-font": [
+                    "open-sans"
+                ],
+                "text-field": "{wegnaam}",
+                "text-rotation-alignment": "map",
+                "symbol-placement": "line",
+                "symbol-spacing": 400
+            },
+            "paint": {
+                "text-color": "#765"
+            }
+        },
+        {
             "id": "names",
             "source": "basiskaart",
             "source-layer": "labels",
