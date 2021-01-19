@@ -1,5 +1,5 @@
 {
-  "attribution":"",
+  "attribution":"<a href=\"https://kadaster.nl\">Kadaster</a>",
   "bounds":[
     -22.500004,
     0,
@@ -9,16 +9,17 @@
   "center":[
     -13.359377,
     10.141932,
-    10
+    7
   ],
-  "description":"Basiskaart Amsterdam Rijksdriehoekstelsel",
+  "description":"Topografie Amsterdam (RD)",
   "format": "pbf",
-  "maxzoom":16,
+  "maxzoom":11,
   "minzoom":3,
-  "name":"basiskaart",
+  "name":"topo_rd",
   "scheme":"xyz",
+  "tilejson": "2.2.0",
   "tiles": [
     "http://t_rex_rd:6767/basiskaart_rd/{z}/{x}/{y}.pbf"
   ],
-  "version":"2.0.0"
+  "version":"1.0.0"
 }

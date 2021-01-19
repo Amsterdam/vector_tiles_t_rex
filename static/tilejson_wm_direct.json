@@ -1,5 +1,5 @@
 {
-  "attribution":"",
+  "attribution":"<a href=\"https://kadaster.nl\">Kadaster</a>",
   "bounds":[
     4.63974,
     52.25158,
@@ -11,14 +11,15 @@
     52.373012,
     12
   ],
-  "description":"basiskaart",
+  "description":"Topografie Amsterdam (WM)",
   "format": "pbf",
   "maxzoom":16,
   "minzoom":3,
-  "name":"basiskaart",
+  "name":"topo_wm",
   "scheme":"xyz",
+  "tilejson": "2.2.0",
   "tiles": [
     "http://t_rex:6767/basiskaart_wm/{z}/{x}/{y}.pbf"
   ],
-  "version":"2.0.0"
+  "version":"1.0.0"
 }
