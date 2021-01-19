@@ -1,6 +1,6 @@
 {
     "version": 8,
-    "name": "basiskaart_rd",
+    "name": "topo_rd_zw",
     "glyphs": "http://t_rex_rd:6768/static/fonts/{fontstack}/{range}.pbf",
     "sources": {
         "basiskaart": {
