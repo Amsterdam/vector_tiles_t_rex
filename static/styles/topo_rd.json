@@ -609,6 +609,8 @@
             "type": "line",
             "source": "basiskaart",
             "source-layer": "bgt_vw_wegdeel_lijn",
+            "maxzoom": 10,
+            "minzoom": 10,
             "filter": [
                 "==",
                 [
@@ -627,6 +629,8 @@
             "type": "line",
             "source": "basiskaart",
             "source-layer": "bgt_vw_wegdeel_lijn",
+            "maxzoom": 9,
+            "minzoom": 6,            
             "filter": [
                 "==",
                 [
@@ -659,6 +663,8 @@
             "type": "line",
             "source": "basiskaart",
             "source-layer": "bgt_vw_wegdeel_lijn",
+            "maxzoom": 9,
+            "minzoom": 6,
             "filter": [
                 "==",
                 [
@@ -729,6 +735,8 @@
             "type": "line",
             "source": "basiskaart",
             "source-layer": "bgt_vw_wegdeel_lijn",
+            "maxzoom": 10,
+            "minzoom": 10,
             "filter": [
                 "==",
                 [
@@ -747,6 +755,8 @@
             "type": "line",
             "source": "basiskaart",
             "source-layer": "bgt_vw_wegdeel_lijn",
+            "maxzoom": 9,
+            "minzoom": 6,
             "filter": [
                 "==",
                 [
@@ -779,6 +789,8 @@
             "type": "line",
             "source": "basiskaart",
             "source-layer": "bgt_vw_wegdeel_lijn",
+            "maxzoom": 9,
+            "minzoom": 6,
             "filter": [
                 "==",
                 [
