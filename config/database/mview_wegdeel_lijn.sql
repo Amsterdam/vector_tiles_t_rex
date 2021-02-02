@@ -58,7 +58,7 @@ FROM (
 			"NAAM" AS wegnaam,
 			COALESCE("AWEGNUM","NWEGNUM","SWEGNUM") AS wegnummer,
 			"WGL_hartlijn".geom AS geometrie,
-			0 AS relatievehoogteligging, 
+			NULL::integer AS relatievehoogteligging,
 			'kbk10' AS bron,
 			14 AS minzoom,
 			15 AS maxzoom
