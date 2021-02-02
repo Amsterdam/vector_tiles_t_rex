@@ -109,9 +109,13 @@ geometry_type = "MULTILINESTRING"
 srid = 28992
 buffer_size = 1
     [[tileset.layer.query]]
-    minzoom = 8
+    minzoom = 11
+    maxzoom = 12
+    sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_spoor_lijn WHERE geometrie && !bbox! AND minzoom = 11 AND maxzoom <= 13"""
+    [[tileset.layer.query]]
+    minzoom = 13
     maxzoom = 13
-    sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_spoor_lijn WHERE geometrie && !bbox! AND minzoom >= 8 AND maxzoom <= 13"""
+    sql = """SELECT geometrie,identificatie_lokaalid,type,relatievehoogteligging FROM bgt.bgt_vw_spoor_lijn WHERE geometrie && !bbox! AND minzoom >= 11 AND maxzoom <= 13"""
     [[tileset.layer.query]]
     minzoom = 14
     maxzoom = 15

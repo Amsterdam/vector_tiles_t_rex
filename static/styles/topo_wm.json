@@ -412,145 +412,6 @@
             }
         },
         {
-            "id": "railways",
-            "type": "line",
-            "source": "basiskaart",
-            "source-layer": "bgt_vw_spoor_lijn",
-            "filter": [">=","relatievehoogteligging",0],
-            "paint": {
-                "line-color": [
-                    "match",
-                    [
-                        "get",
-                        "type"
-                    ],
-                    "sneltram",
-                    "#FC7F7F",
-                    "tram",
-                    "#FC7F7F",
-                    "trein",
-                    "#9D9D9D",
-                    "#ffffff"
-                ],
-                "line-width": [
-                    "interpolate",
-                    [
-                        "exponential",
-                        1.1
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    10,
-                    [
-                        "match",
-                        [
-                            "get",
-                            "type"
-                        ],
-                        "sneltram",
-                        0,
-                        "tram",
-                        0,
-                        "trein",
-                        0,
-                        0
-                    ],
-                    11,
-                    [
-                        "match",
-                        [
-                            "get",
-                            "type"
-                        ],
-                        "sneltram",
-                        0,
-                        "tram",
-                        0,
-                        "trein",
-                        0.5,
-                        0
-                    ],
-                    15.5,
-                    [
-                        "match",
-                        [
-                            "get",
-                            "type"
-                        ],
-                        "sneltram",
-                        0.5,
-                        "tram",
-                        0.5,
-                        "trein",
-                        3.5,
-                        0
-                    ],
-                    20,
-                    [
-                        "match",
-                        [
-                            "get",
-                            "type"
-                        ],
-                        "sneltram",
-                        2,
-                        "tram",
-                        2,
-                        "trein",
-                        3.5,
-                        0
-                    ]
-                ],
-                "line-opacity": [
-                    "case",
-                    [
-                        "get",
-                        "tunnel"
-                    ],
-                    0.5,
-                    1
-                ]
-            }
-        },
-        {
-            "id": "railway-hatching",
-            "type": "line",
-            "source": "basiskaart",
-            "source-layer": "bgt_vw_spoor_lijn",
-            "filter": [
-                "==",
-                [
-                    "get",
-                    "type"
-                ],
-                "trein"
-            ],
-            "paint": {
-                "line-color": "#ffffff",
-                "line-dasharray": [
-                    8,
-                    8
-                ],
-                "line-width": [
-                    "interpolate",
-                    [
-                        "exponential",
-                        1.1
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    14.5,
-                    0,
-                    15,
-                    2,
-                    20,
-                    2.5
-                ]
-            }
-        },
-        {
             "id": "buildings",
             "source": "basiskaart",
             "source-layer": "bgt_vw_gebouw_vlak",
@@ -665,13 +526,9 @@
             "source-layer": "bgt_vw_wegdeel_lijn",
             "maxzoom": 14,
             "minzoom": 10,
-            "filter": [
-                "==",
-                [
-                    "get",
-                    "type"
-                ],
-                "regionale_weg"
+            "filter": [ "all", 
+                ["==", "type", "regionale_weg"],
+                [">=", "relatievehoogteligging", 0]
             ],
             "paint": {
                 "line-color": "#c9c7c2",
@@ -699,13 +556,9 @@
             "type": "line",
             "source": "basiskaart",
             "source-layer": "bgt_vw_wegdeel_lijn",
-            "filter": [
-                "==",
-                [
-                    "get",
-                    "type"
-                ],
-                "hoofdweg"
+            "filter": [ "all", 
+                ["==", "type", "hoofdweg"],
+                [">=", "relatievehoogteligging", 0]
             ],
             "paint": {
                 "line-color": "#c9c7c2",
@@ -791,13 +644,9 @@
             "source-layer": "bgt_vw_wegdeel_lijn",
             "maxzoom": 14,
             "minzoom": 10,
-            "filter": [
-                "==",
-                [
-                    "get",
-                    "type"
-                ],
-                "regionale_weg"
+            "filter": [ "all", 
+                ["==", "type", "regionale_weg"],
+                [">=", "relatievehoogteligging", 0]
             ],
             "paint": {
                 "line-color": "#ffffff",
@@ -827,13 +676,9 @@
             "type": "line",
             "source": "basiskaart",
             "source-layer": "bgt_vw_wegdeel_lijn",
-            "filter": [
-                "==",
-                [
-                    "get",
-                    "type"
-                ],
-                "hoofdweg"
+            "filter": [ "all", 
+                ["==", "type", "hoofdweg"],
+                [">=", "relatievehoogteligging", 0]
             ],
             "paint": {
                 "line-color": "#ffffff",
@@ -859,17 +704,148 @@
             }
         },
         {
+            "id": "railways",
+            "type": "line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_spoor_lijn",
+            "filter": [">=","relatievehoogteligging",0],
+            "minzoom": 11,
+            "paint": {
+                "line-color": [
+                    "match",
+                    [
+                        "get",
+                        "type"
+                    ],
+                    "sneltram",
+                    "#FC7F7F",
+                    "tram",
+                    "#FC7F7F",
+                    "trein",
+                    "#9D9D9D",
+                    "#ffffff"
+                ],
+                "line-width": [
+                    "interpolate",
+                    ["linear"],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "type"
+                        ],
+                        "sneltram",
+                        0,
+                        "tram",
+                        0,
+                        "trein",
+                        3,
+                        0
+                    ],
+                    13,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "type"
+                        ],
+                        "sneltram",
+                        3,
+                        "tram",
+                        0,
+                        "trein",
+                        3,
+                        0
+                    ],
+                    15.5,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "type"
+                        ],
+                        "sneltram",
+                        3.5,
+                        "tram",
+                        0.5,
+                        "trein",
+                        3.5,
+                        0
+                    ],
+                    20,
+                    [
+                        "match",
+                        [
+                            "get",
+                            "type"
+                        ],
+                        "sneltram",
+                        3.5,
+                        "tram",
+                        2,
+                        "trein",
+                        3.5,
+                        0
+                    ]
+                ],
+                "line-opacity": [
+                    "case",
+                    [
+                        "get",
+                        "tunnel"
+                    ],
+                    0.5,
+                    1
+                ]
+            }
+        },
+        {
+            "id": "railway-hatching",
+            "type": "line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_spoor_lijn",
+            "filter": ["all",
+                ["in","type", "trein", "sneltram"],
+                [">=","relatievehoogteligging",0]
+            ],
+            "minzoom": 11,
+            "paint": {
+                "line-color": "#ffffff",
+                "line-dasharray": [        
+                    8,
+                    8
+                ],
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    11,
+                    1,
+                    12,
+                    2,
+                    15,
+                    2,
+                    20,
+                    2.5
+                ]
+            }
+        },
+        {
             "id": "motorway-fill",
             "type": "line",
             "source": "basiskaart",
             "source-layer": "bgt_vw_wegdeel_lijn",
-            "filter": [
-                "==",
-                [
-                    "get",
-                    "type"
-                ],
-                "autosnelweg"
+            "filter": [ "all", 
+                ["==", "type", "autosnelweg"],
+                [">=", "relatievehoogteligging", 0]
             ],
             "paint": {
                 "line-color": "#ff0000",
@@ -888,37 +864,28 @@
                 "text-padding": 2,
                 "text-size": 12,
                 "text-font": [
-                    "open-sans"
+                    "AvenirNextLTPro"
                 ],
-                "text-field": "{wegnaam}",
+                "text-field": ["upcase", ["to-string",["get", "wegnaam"]]],
                 "text-rotation-alignment": "map",
                 "symbol-placement": "line",
                 "symbol-spacing": 400
             },
             "paint": {
-                "text-color": "#765"
+                "text-color": "#787878"
             }
-        },        
+        },
         {
-            "id": "names",
+            "id": "water-names",
             "source": "basiskaart",
             "source-layer": "labels",
             "type": "symbol",
             "minzoom": 17,
             "filter": [
-                "match",
-                [
-                    "get",
-                    "type"
-                ],
-                ["Weg","Water"],
-                true,
-                false
+                "==", "type", "Water"
             ],
             "layout": {
-                "text-font": [
-                    "open-sans"
-                ],
+                "text-font": ["AvenirNextLTProBoldItalic"],
                 "text-anchor": "center",
                 "text-field": ["upcase", ["to-string",["get", "tekst"]]],
                 "text-size": 11,
@@ -929,28 +896,135 @@
                 "text-rotation-alignment": "map"
             },
             "paint": {
-                "text-color":  [
-                    "match",
-                    [
-                        "get",
-                        "type"
-                    ],
-                    "Weg",
-                    "#666",
-                    "Water",
-                    "#fff",
-                    "#600"
-                ]
+                "text-color":  "#fff"
             }
         },
-
+        {
+            "id": "street-names",
+            "source": "basiskaart",
+            "source-layer": "labels",
+            "type": "symbol",
+            "minzoom": 17,
+            "filter": [
+                "==", "type", "Weg"
+            ],
+            "layout": {
+                "text-font": ["AvenirNextLTPro"],
+                "text-anchor": "center",
+                "text-field": ["upcase", ["to-string",["get", "tekst"]]],
+                "text-size": 11,
+                "text-rotate": {
+                    "type": "identity",
+                    "property": "hoek"
+                },
+                "text-rotation-alignment": "map"
+            },
+            "paint": {
+                "text-color": "#787878"
+            }
+        },
+        {
+            "id": "kunstwerk",
+            "source": "basiskaart",
+            "source-layer": "labels",
+            "type": "symbol",
+            "minzoom": 18,
+            "filter": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                ["Kunstwerk"],
+                true,
+                false
+            ],
+            "layout": {
+                "text-font": [
+                    "AvenirNextLTProItalic"
+                ],
+                "text-anchor": "center",
+                "text-field": ["to-string",["get", "tekst"]],
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear",
+                        1
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    18,
+                    13,
+                    21,
+                    15
+                ],
+                "text-rotate": {
+                    "type": "identity",
+                    "property": "hoek"
+                },
+                "text-rotation-alignment": "map"
+            },
+            "paint": {
+                "text-color": "#787878"
+            }
+        },
+        {
+            "id": "landschappelijkgebied",
+            "source": "basiskaart",
+            "source-layer": "labels",
+            "type": "symbol",
+            "minzoom": 17,
+            "filter": [
+                "match",
+                [
+                    "get",
+                    "type"
+                ],
+                ["Administratief gebied", "Landschappelijk gebied", "Terrein"],
+                true,
+                false
+            ],
+            "layout": {
+                "text-font": [
+                    "AvenirNextLTPro"
+                ],
+                "text-anchor": "center",
+                "text-field": ["upcase", ["to-string",["get", "tekst"]]],
+                "text-size": [
+                    "interpolate",
+                    [
+                        "linear",
+                        1
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    17,
+                    11,
+                    19,
+                    14,
+                    20,
+                    16,
+                    21,
+                    16
+                ],
+                "text-rotate": {
+                    "type": "identity",
+                    "property": "hoek"
+                },
+                "text-rotation-alignment": "map"
+            },
+            "paint": {
+                "text-color":  "#787878"
+            }
+        },
         {
             "id": "house_numbers",
             "source": "basiskaart",
             "source-layer": "labels",
             "type": "symbol",
             "minzoom": 18,
-            "maxzoom": 22,
             "filter": [
                 "match",
                 [
@@ -965,7 +1039,7 @@
                 "text-allow-overlap": true,
                 "text-ignore-placement": false,
                 "text-font": [
-                    "open-sans"
+                    "AvenirNextLTPro"
                 ],
                 "text-anchor": "center",
                 "text-field": [
@@ -997,7 +1071,7 @@
                 "text-rotation-alignment": "map"
             },
             "paint": {
-                "text-color": "#666"
+                "text-color": "#787878"
             }
         }
     ]
