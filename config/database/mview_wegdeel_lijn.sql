@@ -158,7 +158,7 @@ UNION
         -1  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	8 as minzoom,
- 	 	13 as maxzoom
+ 	 	15 as maxzoom
     FROM kbk50."WGL_autosnelweg_in_tunnel"
     WHERE 1=1
 UNION
@@ -197,7 +197,7 @@ UNION
         0  as relatievehoogteligging, 
  	 	'kbk50' as bron, 
  	 	8 as minzoom,
- 	 	13 as maxzoom
+ 	 	15 as maxzoom
     FROM kbk50."WGL_autosnelweg"
     WHERE 1=1
 -- UNION

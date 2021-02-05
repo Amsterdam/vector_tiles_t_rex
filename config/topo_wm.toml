@@ -168,11 +168,15 @@ buffer_size = 1
     [[tileset.layer.query]]
     minzoom = 8
     maxzoom = 13
-    sql = """SELECT geometrie,identificatie_lokaalid::TEXT,type,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_lijn WHERE geometrie && !bbox! AND minzoom >= 8 AND maxzoom <= 13"""
+    sql = """SELECT geometrie,identificatie_lokaalid::TEXT,type,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_lijn WHERE geometrie && !bbox! AND minzoom >= 8 AND maxzoom <= 13 OR type = 'autosnelweg'"""
+    [[tileset.layer.query]]
+    minzoom = 14
+    maxzoom = 14
+    sql = """SELECT geometrie,identificatie_lokaalid::TEXT,type,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_lijn WHERE geometrie && !bbox! AND maxzoom = 15"""
     [[tileset.layer.query]]
     minzoom = 15
     maxzoom = 15
-    sql = """SELECT geometrie,identificatie_lokaalid::TEXT,type,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_lijn WHERE geometrie && !bbox! AND minzoom >= 15 AND maxzoom <= 15"""
+    sql = """SELECT geometrie,identificatie_lokaalid::TEXT,type,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_lijn WHERE geometrie && !bbox! AND maxzoom = 15"""
 
 [[tileset.layer]]
 name = "road_names"

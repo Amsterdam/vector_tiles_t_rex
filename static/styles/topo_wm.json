@@ -117,9 +117,9 @@
                     "grasland overig",
                     "#DCEACF",
                     "groenvoorziening",
-                    "#DCEACF",
+                    "#f6f6f4",
                     "half verhard",
-                    "#FFFFFF",
+                    "#dddcda",
                     "heide",
                     "#ddd6e5",
                     "houtwal",
@@ -139,7 +139,7 @@
                     "spoorbaanlichaam",
                     "#dddcda",
                     "perron",
-                    "#FFFFFF",
+                    "#f7f3f5",
                     "rietland",
                     "#F9F9E7",
                     "strekdam",
@@ -183,7 +183,7 @@
                     "grasland overig",
                     "#DCEACF",
                     "groenvoorziening",
-                    "#DCEACF",
+                    "#f6f6f4",
                     "half verhard",
                     "#FFFFFF",
                     "heide",
@@ -816,8 +816,8 @@
             "paint": {
                 "line-color": "#ffffff",
                 "line-dasharray": [        
-                    8,
-                    8
+                    4,
+                    4
                 ],
                 "line-width": [
                     "interpolate",
@@ -839,6 +839,40 @@
             }
         },
         {
+            "id": "motorway-case",
+            "type": "line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_lijn",
+            "filter": [ "all", 
+                ["==", "type", "autosnelweg"],
+                [">=", "relatievehoogteligging", 0]
+            ],
+            "maxzoon": 15.9,
+            "minzoom": 10,
+            "paint": {
+                "line-color": "#ff9100",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    3,
+                    11,
+                    4.5,
+                    12,
+                    6,
+                    13,
+                    7,
+                    15.9,
+                    7
+                ]
+            }
+        },
+        {
             "id": "motorway-fill",
             "type": "line",
             "source": "basiskaart",
@@ -847,9 +881,59 @@
                 ["==", "type", "autosnelweg"],
                 [">=", "relatievehoogteligging", 0]
             ],
+            "maxzoon": 15.9,
+            "minzoom": 10,
             "paint": {
-                "line-color": "#ff0000",
-                "line-width": 2
+                "line-color": "#ffffff",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    2,
+                    11,
+                    3,
+                    12,
+                    4,
+                    13,
+                    5,
+                    15.9,
+                    5
+                ]
+            }
+        },
+        {
+            "id": "motorway-centerline",
+            "type": "line",
+            "source": "basiskaart",
+            "source-layer": "bgt_vw_wegdeel_lijn",
+            "filter": [ "all", 
+                ["==", "type", "autosnelweg"],
+                [">=", "relatievehoogteligging", 0]
+            ],
+            "maxzoon": 12,
+            "minzoom": 10,
+            "paint": {
+                "line-color": "#ff9100",
+                "line-width": [
+                    "interpolate",
+                    [
+                        "linear"
+                    ],
+                    [
+                        "zoom"
+                    ],
+                    10,
+                    0.2,
+                    11,
+                    0.3,
+                    12,
+                    0.4
+                ]
             }
         },
         {
