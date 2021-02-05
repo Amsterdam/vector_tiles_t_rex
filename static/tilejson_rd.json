@@ -14,7 +14,7 @@
   "description":"Topografie Amsterdam (RD)",
   "format": "pbf",
   "maxzoom":11,
-  "minzoom":3,
+  "minzoom":5,
   "name":"topo_rd",
   "scheme":"xyz",
   "tilejson": "2.2.0",
