@@ -248,7 +248,7 @@
                 [
                     "in",
                     "type",
-                    "parkeervlak", "rijbaan lokale weg","fietspad","inrit","transitie","rijbaan autoweg","rijbaan regionale weg","OV-baan","overweg","baan voor vliegverkeer", "rolbaan_platform",  "startbaan_landingsbaan", "autosnelweg",
+                    "parkeervlak", "rijbaan lokale weg","fietspad","inrit","transitie","rijbaan autoweg","rijbaan regionale weg","OV-baan","overweg","baan voor vliegverkeer", "rolbaan_platform",  "startbaan_landingsbaan", "autosnelweg", "rijbaan autosnelweg",
                     true,
                     false
                 ]
@@ -278,7 +278,7 @@
                 [
                     "in",
                     "type",
-                    "parkeervlak","rijbaan lokale weg","fietspad","inrit","transitie","rijbaan autoweg","rijbaan regionale weg","OV-baan","overweg","baan voor vliegverkeer", "rolbaan_platform", "startbaan_landingsbaan", "autosnelweg",
+                    "parkeervlak","rijbaan lokale weg","fietspad","inrit","transitie","rijbaan autoweg","rijbaan regionale weg","OV-baan","overweg","baan voor vliegverkeer", "rolbaan_platform", "startbaan_landingsbaan", "autosnelweg", "rijbaan autosnelweg",
                     true,
                     false
                 ]
