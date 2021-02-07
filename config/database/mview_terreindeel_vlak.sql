@@ -442,11 +442,11 @@ UNION
   UNION
   SELECT
 		"TRN_binnentuin".ogc_fid::text || 'TRN_binnentuin_kbk10' as identificatie_lokaal_id,
-    'binnentuin' as type,
+    'erf' as type,
 		ST_makeValid(    "TRN_binnentuin".geom) as geometrie, 
     0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	15  as minzoom, 
+ 	 	14  as minzoom,
  	 	15 as maxzoom
   FROM kbk10."TRN_binnentuin"
 UNION 
