@@ -1,6 +1,6 @@
 {
     "version": 8,
-    "name": "topo_wm",
+    "name": "topo_wm_rd",
     "glyphs": "http://t_rex:6767/static/fonts/{fontstack}/{range}.pbf",
     "sources": {
         "basiskaart": {
@@ -22,7 +22,7 @@
             "source-layer":"bgt_vw_waterdeel_vlak",
             "type": "fill",
             "paint": {
-                "fill-color": "#95C6D5"
+                "fill-color": "#BEBEBE"
             }
         },
         {
@@ -47,9 +47,9 @@
                         "type"
                     ],
                     "bedrijfsterrein",
-                    "#f6f6f4",
+                    "#D3D2CF",
                     "overig",
-                    "#f6f6f4",
+                    "#F0F0F0",
                     "#f00"
                 ],
                 "fill-outline-color": [
@@ -93,61 +93,63 @@
                     "basaltblokken_steenglooiing",
                     "#f6f6f4",
                     "boomgaard",
-                    "#CBE0B8",
+                    "#DCDCDC",
                     "boomteelt",
-                    "#CBE0B8",
+                    "#DCDCDC",
                     "bos_groen_sport",
-                    "#CBE0B8",
+                    "#DCDCDC",
                     "bouwland",
-                    "#dceacf",
+                    "#F5F4F2",
                     "dodenakker",
-                    "#CBE0B8",
+                    "#DCDCDC",
                     "dodenakker_met_bos",
-                    "#CBE0B8",
+                    "#DCDCDC",
                     "erf",
-                    "#F9F9E7",
+                    "#F0F0F0",
                     "fruitteelt",
-                    "#CBE0B8",
+                    "#DCDCDC",
                     "gemengd bos",
-                    "#CBE0B8",
+                    "#DCDCDC",
                     "gesloten verharding",
                     "#FFFFFF",
                     "grasland agrarisch",
-                    "#DCEACF",
+                    "#EDECE9",
                     "grasland overig",
-                    "#DCEACF",
+                    "#EDECE9",
+                    "griend",
+                    "#EDECE9",                    
                     "groenvoorziening",
-                    "#DCEACF",
+                    "#EDECE9",
                     "half verhard",
-                    "#dddcda",
+                    "#F5F4F2",
                     "heide",
-                    "#ddd6e5",
+                    "#F0F0F0",
                     "houtwal",
-                    "#F9F9E7",
+                    "#F0F0F0",
                     "loofbos",
-                    "#CBE0B8",
+                    "#DCDCDC",
                     "moeras",
-                    "#CBE0B8",
+                    "#DCDCDC",
                     "naaldbos",
-                    "#CBE0B8",
+                    "#DCDCDC",
                     "onverhard",
-                    "#F9F9E7",
+                    "#F0F0F0",
                     "open verharding",
                     "#FFFFFF",
                     "oever, slootkant",
-                    "#F9F9E7",
+                    "#F0F0F0",
                     "spoorbaanlichaam",
-                    "#dddcda",
+                    "#F5F4F2",
                     "perron",
-                    "#f7f3f5",
+                    "#F6F6F4",
                     "rietland",
-                    "#F9F9E7",
+                    "#F0F0F0",
                     "strekdam",
                     "#FFFFFF",
                     "struiken",
-                    "#DCEACF",
+                    "#EDECE9",
                     "zand",
-                    "#fbf0de",
+                    "#F0F0F0",
                     "#f00"
                 ]
             }
@@ -173,17 +175,17 @@
                         "subtype"
                     ],
                     "open verharding",
-                    "#F6F3F4",
+                    "#FBFBFB",
                     "gesloten verharding",
-                    "#F6F3F4",
+                    "#FBFBFB",
                     "transitie",
-                    "#F6F3F4",
+                    "#FBFBFB",
                     "half verhard",
-                    "#F6F3F4",
+                    "#FBFBFB",
                     "groenvoorziening",
-                    "#DCEACF",
+                    "#EDECE9",
                     "onverhard",
-                    "#DCEACF",
+                    "#EDECE9",
                     "#f00"
                 ]
             }
@@ -214,7 +216,7 @@
                 "visibility": "visible"
             },
             "paint": {
-                "line-color": "#95C6D5",
+                "line-color": "#BEBEBE",
                 "line-width": [
                     "interpolate",
                     [
@@ -259,10 +261,12 @@
                         "get",
                         "type"
                     ],
+                    "baan voor vliegverkeer",
+                    "#D3D2CF",
                     "rolbaan_platform",
-                    "#ffffff",
+                    "#C9C7C2",
                     "startbaan_landingsbaan",
-                    "#ffffff",
+                    "#D3D2CF",
                     "#C9C7C2"
                 ],
                 "line-width": 2
@@ -291,6 +295,12 @@
                     ],
                     "autosnelweg",
                     "#FEFAFA",
+                    "baan voor vliegverkeer",
+                    "#DEDCD9",
+                    "rolbaan_platform",
+                    "#ffffff",
+                    "startbaan_landingsbaan",
+                    "#DEDCD9",
                     "#ffffff"
                 ]
             }
@@ -331,7 +341,7 @@
                 false
             ],
             "paint": {
-                "fill-color": "#f7f3f5"
+                "fill-color": "#F6F6F4"
             }
         },
         {
@@ -350,7 +360,7 @@
                 false
             ],
             "paint": {
-                "fill-color": "#f7f3f5"
+                "fill-color": "#F6F6F4"
             }
         },
         {
@@ -368,11 +378,11 @@
                         "type"
                     ],
                     "sneltram",
-                    "#FC7F7F",
+                    "#ACACAC",
                     "tram",
-                    "#FC7F7F",
+                    "#ACACAC",
                     "trein",
-                    "#9D9D9D",
+                    "#ACACAC",
                     "#ffffff"
                 ],
                 "line-width": [
@@ -393,7 +403,7 @@
                         "tram",
                         0,
                         "trein",
-                        3,
+                        2,
                         0
                     ],
                     13,
@@ -404,11 +414,11 @@
                             "type"
                         ],
                         "sneltram",
-                        3,
+                        2,
                         "tram",
                         0,
                         "trein",
-                        3,
+                        2,
                         0
                     ],
                     15.5,
@@ -419,11 +429,11 @@
                             "type"
                         ],
                         "sneltram",
-                        3.5,
+                        2,
                         "tram",
-                        0.5,
+                        2,
                         "trein",
-                        3.5,
+                        2,
                         0
                     ],
                     20,
@@ -434,48 +444,13 @@
                             "type"
                         ],
                         "sneltram",
-                        3.5,
+                        2,
                         "tram",
                         2,
                         "trein",
-                        3.5,
+                        2,
                         0
                     ]
-                ]
-            }
-        },
-        {
-            "id": "railway-hatching",
-            "type": "line",
-            "source": "basiskaart",
-            "source-layer": "bgt_vw_spoor_lijn",
-            "filter": ["all",
-                ["in","type", "trein", "sneltram"],
-                [">=","relatievehoogteligging",0]
-            ],
-            "minzoom": 11,
-            "paint": {
-                "line-color": "#ffffff",
-                "line-dasharray": [        
-                    4,
-                    4
-                ],
-                "line-width": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    11,
-                    1,
-                    12,
-                    2,
-                    15,
-                    2,
-                    20,
-                    2.5
                 ]
             }
         },
@@ -493,10 +468,12 @@
                         "type"
                     ],
                     "ligplaats",
-                    "rgba(229, 227, 222, 0.6)",
+                    "#dbdbdb",
+                    "standplaats",
+                    "#dbdbdb",
                     "overkapping",
-                    "rgba(229, 227, 222, 0.6)",
-                    "rgba(229, 227, 222, 1.0)"
+                    "#E4E3DF",
+                    "#E4E3DF"
                 ],
                 "fill-outline-color": [
                     "interpolate",
@@ -531,7 +508,7 @@
                 "erf"
             ],
             "paint": {
-                "fill-color": "#F9F9E7",
+                "fill-color": "#F0F0F0",
                 "fill-outline-color": "#C9C7C2"
             }
         },
@@ -565,7 +542,7 @@
                 "smalle_weg"
             ],
             "paint": {
-                "line-color": "#c9c7c2",
+                "line-color": "#B4B4B4",
                 "line-width": 3
             }
         },
@@ -802,11 +779,11 @@
                         "type"
                     ],
                     "sneltram",
-                    "#FC7F7F",
+                    "#ACACAC",
                     "tram",
-                    "#FC7F7F",
+                    "#ACACAC",
                     "trein",
-                    "#9D9D9D",
+                    "#ACACAC",
                     "#ffffff"
                 ],
                 "line-dasharray": [        
@@ -880,7 +857,7 @@
             "maxzoon": 15.9,
             "minzoom": 10,
             "paint": {
-                "line-color": "#ff9100",
+                "line-color": "#787878",
                 "line-dasharray": [        
                     2,
                     2
@@ -919,7 +896,7 @@
             "maxzoon": 15.9,
             "minzoom": 10,
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#DFDFDF",
                 "line-opacity": 0.5,
                 "line-width": [
                     "interpolate",
@@ -948,7 +925,7 @@
             "maxzoon": 15.9,
             "minzoom": 10,
             "paint": {
-                "line-color": "#ff9100",
+                "line-color": "#787878",
                 "line-width": [
                     "interpolate",
                     [
@@ -982,7 +959,7 @@
             "maxzoon": 15.9,
             "minzoom": 10,
             "paint": {
-                "line-color": "#ffffff",
+                "line-color": "#DFDFDF",
                 "line-width": [
                     "interpolate",
                     [
@@ -1001,36 +978,6 @@
                     5,
                     15.9,
                     5
-                ]
-            }
-        },
-        {
-            "id": "motorway-centerline",
-            "type": "line",
-            "source": "basiskaart",
-            "source-layer": "bgt_vw_wegdeel_lijn",
-            "filter": [ "all", 
-                ["==", "type", "autosnelweg"],
-                [">=", "relatievehoogteligging", 0]
-            ],
-            "maxzoon": 12,
-            "minzoom": 10,
-            "paint": {
-                "line-color": "#ff9100",
-                "line-width": [
-                    "interpolate",
-                    [
-                        "linear"
-                    ],
-                    [
-                        "zoom"
-                    ],
-                    10,
-                    0.2,
-                    11,
-                    0.3,
-                    12,
-                    0.4
                 ]
             }
         },
