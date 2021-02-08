@@ -1058,7 +1058,7 @@
                 "text-padding": 2,
                 "text-size": 12,
                 "text-font": [
-                    "AvenirNextLTPro"
+                    "AvenirNextLTProBold"
                 ],
                 "text-field": ["upcase", ["to-string",["get", "wegnaam"]]],
                 "text-rotation-alignment": "map",
@@ -1105,7 +1105,7 @@
                 "==", "type", "Weg"
             ],
             "layout": {
-                "text-font": ["AvenirNextLTPro"],
+                "text-font": ["AvenirNextLTProBold"],
                 "text-anchor": "center",
                 "text-field": ["upcase", ["to-string",["get", "tekst"]]],
                 "text-size": 11,
@@ -1185,7 +1185,7 @@
             ],
             "layout": {
                 "text-font": [
-                    "AvenirNextLTPro"
+                    "AvenirNextLTProBold"
                 ],
                 "text-anchor": "center",
                 "text-field": ["upcase", ["to-string",["get", "tekst"]]],
@@ -1238,7 +1238,7 @@
                 "text-allow-overlap": true,
                 "text-ignore-placement": false,
                 "text-font": [
-                    "AvenirNextLTPro"
+                    "AvenirNextLTProBold"
                 ],
                 "text-anchor": "center",
                 "text-field": [
