@@ -235,7 +235,7 @@ UNION
 		ST_makeValid(        "WGL_startbaan_landingsbaan".geom) as geometrie,
         0  as relatievehoogteligging, 
  	 	'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14  as minzoom, 
  	 	15  as maxzoom
     FROM kbk10."WGL_startbaan_landingsbaan"
     WHERE 1=1
@@ -248,20 +248,7 @@ UNION
 		ST_makeValid(        "WGL_autosnelweg".geom) as geometrie,
         0  as relatievehoogteligging, 
  	    'kbk10' as bron, 
- 	 	13  as minzoom, 
- 	 	15  as maxzoom
-    FROM kbk10."WGL_autosnelweg"
-    WHERE 1=1
-UNION
-    SELECT 
-        "WGL_autosnelweg".ogc_fid::text ||'-'|| 'WGL_autosnelweg' as identificatie_lokaal_id,
-        'autosnelweg' as type,
-        NULL as subtype,
-        NULL as subsubtype,
-		ST_makeValid(        "WGL_autosnelweg".geom) as geometrie,
-        0  as relatievehoogteligging, 
- 	    'kbk10' as bron, 
- 	 	13  as minzoom, 
+ 	 	14  as minzoom, 
  	 	15  as maxzoom
     FROM kbk10."WGL_autosnelweg"
     WHERE 1=1
