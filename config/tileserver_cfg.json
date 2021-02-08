@@ -13,7 +13,7 @@
         "attribution":"<a href=\"https://kadaster.nl\">Kadaster</a>",
         "bounds": [4.63974, 52.25158, 5.10768, 52.50593],
         "description": "Topografie, standaard visualisatie (WM)",
-        "minzoom": 3,
+        "minzoom": 10,
         "maxzoom": 22
       }
     },
@@ -23,7 +23,7 @@
         "attribution":"<a href=\"https://kadaster.nl\">Kadaster</a>",
         "bounds": [4.63974, 52.25158, 5.10768, 52.50593],
         "description": "Topografie, light visualisatie (WM)",
-        "minzoom": 3,
+        "minzoom": 10,
         "maxzoom": 22
       }
     },
@@ -33,7 +33,7 @@
         "attribution":"<a href=\"https://kadaster.nl\">Kadaster</a>",
         "bounds": [4.63974, 52.25158, 5.10768, 52.50593],
         "description": "Topografie, zwart-wit visualisatie (WM)",
-        "minzoom": 3,
+        "minzoom": 10,
         "maxzoom": 22
       }
     },
@@ -43,7 +43,7 @@
         "attribution":"<a href=\"https://kadaster.nl\">Kadaster</a>",
         "bounds": [-22.500004, 0, 0, 21.943049],
         "description": "Topografie, standaard visualisatie (RD)",
-        "minzoom": 3,
+        "minzoom": 5,
         "maxzoom": 16
       }
     },
@@ -53,7 +53,7 @@
         "attribution":"<a href=\"https://kadaster.nl\">Kadaster</a>",
         "bounds": [-22.500004, 0, 0, 21.943049],
         "description": "Topografie, light visualisatie (RD)",
-        "minzoom": 3,
+        "minzoom": 5,
         "maxzoom": 16
       }
     },
@@ -63,9 +63,9 @@
         "attribution":"<a href=\"https://kadaster.nl\">Kadaster</a>",
         "bounds": [-22.500004, 0, 0, 21.943049],
         "description": "Topografie, zwart-wit visualisatie (RD)",
-        "minzoom": 3,
+        "minzoom": 5,
         "maxzoom": 16
       }
-    }
+    }    
   }
 }
