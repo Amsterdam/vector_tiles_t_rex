@@ -116,6 +116,8 @@
                     "#DCEACF",
                     "grasland overig",
                     "#DCEACF",
+                    "griend",
+                    "#DCEACF",
                     "groenvoorziening",
                     "#DCEACF",
                     "half verhard",
@@ -259,6 +261,8 @@
                         "get",
                         "type"
                     ],
+                    "baan voor vliegverkeer",
+                    "#ffffff",
                     "rolbaan_platform",
                     "#ffffff",
                     "startbaan_landingsbaan",
@@ -291,6 +295,10 @@
                     ],
                     "autosnelweg",
                     "#FEFAFA",
+                    "baan voor vliegverkeer",
+                    "#ffffff",
+                    "startbaan_landingsbaan",
+                    "#ffffff",
                     "#ffffff"
                 ]
             }
@@ -494,6 +502,8 @@
                     ],
                     "ligplaats",
                     "rgba(229, 227, 222, 0.6)",
+                    "standplaats",
+                    "rgba(229, 227, 222, 1.0)",
                     "overkapping",
                     "rgba(229, 227, 222, 0.6)",
                     "rgba(229, 227, 222, 1.0)"
