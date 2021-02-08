@@ -1,6 +1,6 @@
 {
     "version": 8,
-    "name": "topo_wm_rd",
+    "name": "topo_wm_zw",
     "glyphs": "http://t_rex:6767/static/fonts/{fontstack}/{range}.pbf",
     "sources": {
         "basiskaart": {
