@@ -175,7 +175,7 @@ buffer_size = 1
     [[tileset.layer.query]]
     minzoom = 3
     maxzoom = 8
-    sql = """SELECT geometrie,identificatie_lokaalid::TEXT,type,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_lijn WHERE geometrie && !bbox! AND minzoom >= 8 AND maxzoom <= 13"""
+    sql = """SELECT geometrie,identificatie_lokaalid::TEXT,type,relatievehoogteligging FROM bgt.bgt_vw_wegdeel_lijn WHERE geometrie && !bbox! AND minzoom >= 8 AND maxzoom <= 13 OR type = 'autosnelweg'"""
     [[tileset.layer.query]]
     minzoom = 9
     maxzoom = 9
