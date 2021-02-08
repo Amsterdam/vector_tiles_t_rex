@@ -1,11 +1,11 @@
 {
     "version": 8,
     "name": "topo_rd_light",
-    "glyphs": "http://t_rex_rd:6768/static/fonts/{fontstack}/{range}.pbf",
+    "glyphs": "http://t_rex_rd:6767/static/fonts/{fontstack}/{range}.pbf",
     "sources": {
         "basiskaart": {
             "type": "vector",
-            "url": "http://t_rex_rd:6768/static/tilejson_rd_direct.json"
+            "url": "http://t_rex_rd:6767/static/tilejson_rd_direct.json"
         }
     },
     "layers": [
