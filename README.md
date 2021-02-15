@@ -41,11 +41,11 @@ View the vector tiles in Rijksdriehoekstelsel (EPSG:28992) projection:
 
 To generate vector tiles cache, run cmd:
 
-`docker-compose run t_rex generate --maxzoom 16 --config /var/config/topo_wm.toml`
+`docker-compose run t_rex generate --minzoom 10 --maxzoom 16 --config /var/config/topo_wm.toml --extent 4.49712476945351,52.1630507756721,5.60867873764429,52.6147675426215`
 
 To generate vector tiles cache, run cmd:
 
-`docker-compose run t_rex_rd generate --maxzoom 11 --config /var/config/topo_rd.toml`
+`docker-compose run t_rex_rd generate --minzoom 5 --maxzoom 11 --config /var/config/topo_rd.toml --extend 4.49712476945351,52.1630507756721,5.60867873764429,52.6147675426215`
 
 ## Serve raster tiles
 
