@@ -5,7 +5,7 @@
     "sources": {
         "basiskaart": {
             "type": "vector",
-            "url": "http://t_rex:6767/static/tilejson_wm.json"
+            "url": "http://t_rex:6767/static/tilejson_wm_direct.json"
         }
     },
     "layers": [
