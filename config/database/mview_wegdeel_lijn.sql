@@ -29,60 +29,60 @@ TABLESPACE pg_default AS
  --   from
  --       kbk10."WGL_autoveer"
  --   where 1 = 1
-    UNION
-SELECT
-	ogc_fid::text || '-' || (geometrie).path[1]::text ||'-'|| 'WGL_hartlijn' as identificatie_lokaalid,
-	type,
-	wegnaam,
-	wegnummer,
-	ST_Multi((geometrie).geom)::geometry('MULTILINESTRING',28992) AS geometrie,
-	relatievehoogteligging,
-	bron,
-	minzoom,
-	maxzoom
-FROM (
-	SELECT
-		min(f.ogc_fid) as ogc_fid,
-		f.type,
-		f.wegnaam,
-		f.wegnummer,
-		ST_Dump(st_linemerge(ST_Union(f.geometrie))) AS geometrie,
-		f.relatievehoogteligging,
-		f.bron,
-		f.minzoom,
-		f.maxzoom
-	FROM (
-		  SELECT
-			ogc_fid,
-			"TYPEWEG" AS type,
-			"NAAM" AS wegnaam,
-			COALESCE("AWEGNUM","NWEGNUM","SWEGNUM") AS wegnummer,
-			"WGL_hartlijn".geom AS geometrie,
-			NULL::integer AS relatievehoogteligging,
-			'kbk10' AS bron,
-			14 AS minzoom,
-			15 AS maxzoom
-		FROM
-			kbk10."WGL_hartlijn"
-		WHERE
-			"NAAM" != 'NULL'
-		OR
-			"SWEGNUM" != 'NULL'
-		OR
-			"NWEGNUM" != 'NULL'
-		OR
-			"AWEGNUM" != 'NULL'
-		) as f
-	where
-		type != 'veerverbinding'
-	GROUP BY
-		type,
-		wegnaam,
-		wegnummer,
-		relatievehoogteligging,
-		bron,
-		minzoom,
-		maxzoom) AS g
+--    UNION
+--SELECT
+--	ogc_fid::text || '-' || (geometrie).path[1]::text ||'-'|| 'WGL_hartlijn' as identificatie_lokaalid,
+--	type,
+--	wegnaam,
+--	wegnummer,
+--	ST_Multi((geometrie).geom)::geometry('MULTILINESTRING',28992) AS geometrie,
+--	relatievehoogteligging,
+--	bron,
+--	minzoom,
+--	maxzoom
+--FROM (
+--	SELECT
+--		min(f.ogc_fid) as ogc_fid,
+--		f.type,
+--		f.wegnaam,
+--		f.wegnummer,
+--		ST_Dump(st_linemerge(ST_Union(f.geometrie))) AS geometrie,
+--		f.relatievehoogteligging,
+--		f.bron,
+--		f.minzoom,
+--		f.maxzoom
+--	FROM (
+--		  SELECT
+--			ogc_fid,
+--			"TYPEWEG" AS type,
+--			"NAAM" AS wegnaam,
+--			COALESCE("AWEGNUM","NWEGNUM","SWEGNUM") AS wegnummer,
+--			"WGL_hartlijn".geom AS geometrie,
+--			NULL::integer AS relatievehoogteligging,
+--			'kbk10' AS bron,
+--			14 AS minzoom,
+--			15 AS maxzoom
+--		FROM
+--			kbk10."WGL_hartlijn"
+--		WHERE
+--			"NAAM" != 'NULL'
+--		OR
+--			"SWEGNUM" != 'NULL'
+--		OR
+--			"NWEGNUM" != 'NULL'
+--		OR
+--			"AWEGNUM" != 'NULL'
+--		) as f
+--	where
+--		type != 'veerverbinding'
+--	GROUP BY
+--		type,
+--		wegnaam,
+--		wegnummer,
+--		relatievehoogteligging,
+--		bron,
+--		minzoom,
+--		maxzoom) AS g
 -- UNION
  --   SELECT 
  --       "WGL_voetveer".ogc_fid::text ||'-'|| 'WGL_voetveer' as identificatie_lokaalid,
