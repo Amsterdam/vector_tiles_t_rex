@@ -199,7 +199,7 @@ geometry_type = "POINT"
 srid = 28992
 buffer_size = 20
     [[tileset.layer.query]]
-    minzoom = 17
+    minzoom = 16
     sql = """SELECT geometrie,identificatie_lokaalid,type,tekst,hoek FROM bgt.bgt_vw_labels WHERE geometrie && !bbox!"""
 
 [[tileset.layer]]
