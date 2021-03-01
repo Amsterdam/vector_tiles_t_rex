@@ -72,4 +72,26 @@ services:
     volumes:
       - "$PWD/tiles:/mnt/tiles"
 
+  topo_rd:
+    build: .
+    user: root
+    links:
+      - tileserver_gl
+    command: >
+      mapproxy-seed -c 1 -s /app/seed.yaml -f /app/mapproxy.yaml --seed=topo_rd
+    volumes:
+      - "$PWD/tiles:/mnt/tiles"
 
+  mapproxy:
+    build: .
+    user: root    
+    ports:
+      - "8000:8000"
+    links: 
+      - tileserver_gl
+    volumes:
+      - "$PWD/tiles:/mnt/tiles"
+    environment:
+      UWSGI_HTTP: "0.0.0.0:8000"
+      UWSGI_MASTER: 1
+      UWSGI_PROCESSES: 4

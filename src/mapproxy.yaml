@@ -20,23 +20,37 @@ services:
         fees: 'None'
     restful: false
     kvp: true
+  tms:
+    use_grid_names: true
+    # origin for /tiles service
+    origin: 'nw'
 
 layers:
   - name: topo_wm
     title: Basiskaart Amsterdam (Web Mercator)
     md:
       abstract: Basiskaart Amsterdam in Web Mercator projectie
-    sources: [topo_wm_tiles]
+    sources: [topo_wm_cache]
+
+  - name: topo_rd
+    title: Basiskaart Amsterdam (Rijksdriehoekstelsel)
+    md:
+      abstract: Basiskaart Amsterdam in Rijksdriehoekstelsel projectie
+    sources: [topo_rd_cache]    
 
 caches:
 #### TOPO Webmercator (wm) - KBK & BGT - Standaard kleur
-  topo_wm_tiles:
-    grids: [webmercator]
-    sources: [basiskaart_wm_tiles]
-
   topo_wm_cache:
     grids: [webmercator]
     sources: [basiskaart_wm_tiles]
+    cache_dir: /mnt/tiles
+    cache:
+      type: file
+      directory_layout: tms
+
+  topo_rd_cache:
+    grids: [rd]
+    sources: [basiskaart_rd_tiles]
     cache_dir: /mnt/tiles
     cache:
       type: file
@@ -55,15 +69,35 @@ sources:
   basiskaart_wm_tiles:
     type: tile
     grid: webmercator
-    url: http://tileserver_gl/styles/basic/%(z)s/%(x)s/%(y)s.png
+    coverage:
+      bbox: [94100,464250,170000,514160]
+      srs: 'EPSG:28992'
+    url: http://tileserver_gl:8080/topo_wm/%(z)s/%(x)s/%(y)s.png
+    # http://OS_URL_REPLACE/topo_wm_cache_EPSG3857/%(z)s/%(x)s/%(y)s.png
+
+  basiskaart_rd_tiles:
+    type: tile
+    grid: rd_inv
+    coverage:
+      bbox: [94100,464250,170000,514160]
+      srs: 'EPSG:28992'
+    url: http://tileserver_gl:8080/styles/topo_rd/%(z)s/%(x)s/%(y)s.png
     # http://OS_URL_REPLACE/topo_wm_cache_EPSG3857/%(z)s/%(x)s/%(y)s.png
 
 
 grids:
-  nl_grid:
+  rd:
     srs: EPSG:28992
     tile_size: [256,256]
     origin: sw
+    res: [3440.64,1720.32,860.16,430.08,215.04,107.52,53.76,26.88,13.44,6.72,3.36,1.68,0.84,0.42,0.21,0.105,0.0525]
+    #     0       1       2      3      4      5      6     7     8     9    10   11   12   13   14   15    16
+    bbox: [-285401.920,22598.080,595401.9199999999,903401.9199999999]
+
+  rd_inv:
+    srs: EPSG:28992
+    tile_size: [256,256]
+    origin: nw
     res: [3440.64,1720.32,860.16,430.08,215.04,107.52,53.76,26.88,13.44,6.72,3.36,1.68,0.84,0.42,0.21,0.105,0.0525]
     #     0       1       2      3      4      5      6     7     8     9    10   11   12   13   14   15    16
     bbox: [-285401.920,22598.080,595401.9199999999,903401.9199999999]

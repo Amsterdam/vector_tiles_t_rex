@@ -24,6 +24,14 @@ seeds:
      days: 7
 #     minutes: 15
 
+  topo_rd:
+    caches: [topo_rd_cache]
+    grids: [rd]
+    coverages: ['kbk']
+    levels:
+      from: 10
+      to: 11
+
 coverages:
   kbk:
     bbox: [94100,464250,170000,514160]
